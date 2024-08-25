@@ -1,0 +1,722 @@
+@charset "utf-8";
+
+:root {
+	--color-accent: #B49141;
+	--color-outline: #555555;
+	--color-background: #0C0C0C;
+	--color-title: ghostwhite;
+	--color-text: whitesmoke;
+	--color-sub: darkgray;
+}
+
+@media all { /* GENERAL */ 
+	
+	html {
+	padding: 0;
+	margin: 0;
+	}
+	
+	body {
+	box-sizing: border-box;
+	font-family: 'Cavana';
+	min-width: 320px;
+	margin: 0;
+	}
+	
+	body * {    
+	box-sizing: border-box;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+	}
+	
+	header {width: 100%}
+	
+	header > * ,
+	footer > * {
+	vertical-align: middle;
+	position: relative;
+	float: left;
+	top: 50%;
+	transform: translateY(-50%);
+	}
+	
+	nav {
+	display: flex;
+	flex: 0 0 auto;
+	text-align: center;
+	letter-spacing: 0.06em;
+	}
+	
+	main {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	}
+	
+	footer {
+	width: 100%;
+	user-select: none;
+	letter-spacing: initial;
+	}
+	
+	h1, h3 {font-weight: 700}
+	h5 {font-weight: 400}
+	
+	h2, h4 {
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	}
+	
+	p {
+	text-align: justify;
+	line-height: 1.2em;
+	font-weight: 360;
+	}
+	
+	img {	
+	display: block;
+	object-fit: cover;
+	}
+	
+	a, abbr {text-decoration: none}
+	nav a.button {text-transform: uppercase}
+	
+	a.button {
+	display: block;
+	font-weight: 650;
+	padding: 8px 10px;
+	text-align: center;
+	border: thin solid;
+	border-radius: 3px;
+	border-color: transparent;
+	}
+	
+	a.door {
+	display: block;
+	border: thin solid;
+	}
+	
+	figure {border: thin solid}
+	figure.photo {position: relative}
+	figure.video {aspect-ratio: 16/9}
+	
+	figcaption {
+	padding: 3px;
+	line-height: 1;
+	font-size: 14px;
+	font-weight: 300;
+	position: absolute;
+	max-width: 100%;
+	width: 100%;
+	bottom: 0;
+	}
+	
+	figcaption:empty {padding: 0px}
+	
+	#logo {white-space: nowrap}
+	#avatar {clip-path: circle()}
+	#menu, #hamburger {float: right}
+	
+	#description {
+	margin-bottom: -6px;
+	letter-spacing: 0.1em;
+	}
+	
+	#loadbox {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	}
+	
+	#credit {
+	font-family: Helvetica;
+	font-size: 9pt;
+	height: auto;
+	width: auto;
+	line-height: 1;
+	text-align: left;
+	}
+	
+	#socialbar {
+	display: flex;
+	float: right;
+	gap: 8px;
+	}
+	
+	#socialbar a {
+	font-family: 'Social';
+	font-size: 30px;
+	}
+	
+}
+
+@media screen { /* DIGITAL */ 
+	
+	html, body {
+	background: var(--color-background);
+	color: var(--color-text);
+	}
+	
+	body > iframe {
+	display: none;
+	height: 0;
+	}
+	
+	header {
+	z-index: 3;
+	position: fixed;
+	user-select: none;
+	}
+	
+	h1, h2, h3, h4, h5, h6, p, a, i {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	}
+	
+	h1, h3 {color: var(--color-title)}
+	h2, h4 {color: var(--color-sub)}
+	h5 {color: lightgray}
+	a {color: inherit}
+	
+	main iframe {
+	height: 100%;
+	width: 100%;
+	}
+	
+	main a:hover, main a:active {
+	text-decoration: underline;
+	color: inherit;
+	}
+	
+	a.button {
+	border-color: transparent;
+	color: var(--color-title);
+	}
+	
+	a.button:hover {
+	border-color: var(--color-accent);
+	color: var(--color-accent);
+	}
+	
+	a.button:focus {
+	background: var(--color-background);
+	border-color: var(--color-accent);
+	color: var(--color-accent);
+	outline: none;
+	}
+	
+	a.button:active {
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+	color: var(--color-background);
+	}
+	
+	a.current-page {
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+	color: var(--color-background);
+	pointer-events: none;
+	}
+	
+	mark {
+	background-color: gray;
+	color: black;
+	}
+	
+	figcaption {
+	color: lightgray;
+	background-color: rgba(0,0,0,0.7);
+	}
+	
+	figure {border-color: var(--color-outline)}
+	#credit {color: lightgray}
+	
+	#tumblrbtn {
+	width: 72px;
+	height: 24px;
+	opacity: 0.85;
+	display: block;
+	transition: 0.25s;
+	margin-right: 8px;
+	border-radius: 3px;
+	border: 2px solid white;
+	background-size: 175%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: url('https://assets.tumblr.com/images/logo_page/1x/wordmark-white.png');
+	}
+	
+	#tumblrbtn:hover ,
+	#tumblrbtn:focus {
+	background-color: white;
+	background-image: url('https://assets.tumblr.com/images/logo_page/1x/wordmark-black.png');
+	}
+	
+	#loadbox {
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	overflow: hidden;
+	user-select: none;
+	transition: 0.7s ease-in-out;
+	background-color: var(--color-background);
+	}
+	
+}
+
+@media (pointer: fine) { /* CURSOR */ 
+	
+	#socialbar a {
+	cursor: pointer;
+	color: rgba(0,0,0,0);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+	
+	#fbook {background-image: url('https://dl.dropbox.com/s/hljacyuxqrjd5fi/facebook_white.svg')}
+	#igram {background-image: url('https://dl.dropbox.com/s/zuu1lf5jh3h6x8j/instagram_white.svg')}
+	#tktok {background-image: url('https://dl.dropbox.com/s/2xyonlen7auhz7k/tiktok_white.svg')}
+	#myspc {background-image: url('https://dl.dropbox.com/s/176fajnlw6tk7a6/myspace_white.svg')}
+	#deezr {background-image: url('https://dl.dropbox.com/s/f84okqwgalh3mz7/deezer_white.svg')}
+	#sptfy {background-image: url('https://dl.dropbox.com/s/oyr2992wgv2e6th/spotify_white.svg')}
+	#ytmsc {background-image: url('https://dl.dropbox.com/s/0f16w1c2o471k8z/ytmusic_white.svg')}
+	#bndcp {background-image: url('https://dl.dropbox.com/s/u0sw87vnzudkdnk/bandcamp_white.svg')}
+	#sndcd {background-image: url('https://dl.dropbox.com/s/tj778895mrm4nw1/soundcloud_white.svg')}
+	#thrds {background-image: url('https://www.dropbox.com/scl/fi/bacpeocltcwzr86u7egvy/threads_white.svg?rlkey=rdwc6vd0xidlwrq02hqygt1dj&raw=1')}
+	#kofi {background-image: url('https://www.dropbox.com/scl/fi/lfhkk4ltnk2dl0dxlx5yo/kofi_white.svg?rlkey=92i2gjl10jyxwjgw0xouvp4vy&raw=1')}
+	
+	#fbook:focus, #fbook:hover {background-image: url('https://dl.dropbox.com/s/3ca30s1h2bfg04x/facebook_color.svg')}
+	#igram:focus, #igram:hover {background-image: url('https://dl.dropbox.com/s/fkunj8iyunwm67g/instagram_color.svg')}
+	#tktok:focus, #tktok:hover {background-image: url('https://dl.dropbox.com/s/oqj4i4nb010dafx/tiktok_color.svg')}
+	#myspc:focus, #myspc:hover {background-image: url('https://dl.dropbox.com/s/w4oq8jab76t710h/myspace_color.svg')}
+	#deezr:focus, #deezr:hover {background-image: url('https://dl.dropbox.com/s/p5rsvqupo26q02t/deezer_color.svg')}
+	#sptfy:focus, #sptfy:hover {background-image: url('https://dl.dropbox.com/s/v5cfh9sjxrk53y5/spotify_color.svg')}
+	#ytmsc:focus, #ytmsc:hover {background-image: url('https://dl.dropbox.com/s/hpgk01u03wsb5nv/ytmusic_color.svg')}
+	#bndcp:focus, #bndcp:hover {background-image: url('https://dl.dropbox.com/s/ch87tdjn4zs1env/bandcamp_color.svg')}
+	#sndcd:focus, #sndcd:hover {background-image: url('https://dl.dropbox.com/s/nhfeu5h7l96oy1i/soundcloud_color.svg')}
+	#thrds:focus, #thrds:hover {background-image: url('https://www.dropbox.com/scl/fi/8qbwobqz516r0iqq0aqer/threads_color.svg?rlkey=c4lasbgtjl0v8wcuyotr9elp1&raw=1')}
+	#kofi:focus, #kofi:hover {background-image: url('https://www.dropbox.com/scl/fi/0b7p6w2ojm4oqviaksqi1/kofi_color.svg?rlkey=a6242lbh6to1g0pjju9pjexfj&raw=1')}
+	
+}
+
+@media (monochrome) { /* BLACK&WHITE */ 
+	
+	::-webkit-scrollbar {display: none}
+	
+	::selection {
+	background: black;
+	color: white;
+	}
+	
+	html, body {
+	background: none;
+	color: black;
+	}
+	
+	a {color: black}
+	a.current-page {border-color: black}
+	figure {border-color: black}
+	#avatar {display: none}
+	
+}
+
+@media (orientation: portrait) { /* VERTICAL */ 
+	
+	body {
+	overflow-x: hidden;
+	overflow-y: overlay;
+	}
+	
+	header, footer {background: var(--color-background)}
+	
+	main {
+	flex-direction: column;
+	align-items: center;
+	}
+	
+	main > * {
+	height: auto;
+	width: 100%;
+	}
+	
+	main img {
+	width: 100%;
+	height: auto;
+	}
+	
+	a.door {
+	width: 100%;
+	height: auto;
+	}
+	
+	hr {
+	width: 100%;
+	height: 1px;
+	border: none;
+	}
+	
+	figure::before {
+	width: 100%;
+	height: 1px;
+	content: '';
+	display: block;
+	position: sticky;
+	margin-top: -1px;
+	background: var(--color-outline);
+	}
+	
+}
+
+@media (orientation: landscape) { /* HORIZONTAL */ 
+	
+	body {overflow: hidden}
+	header {pointer-events: none}
+	header * {pointer-events: all}
+	
+	main {
+	width: 100vw;
+	height: 100vh;
+	overflow-y: hidden;
+	overflow-x: overlay;
+	flex-direction: row;
+	align-items: flex-start;
+	}
+	
+	main.posts {will-change: transform}
+	
+	main > * {
+	flex: 0 0 auto;
+	height: 100%;
+	width: auto;
+	}
+	
+	main img {
+	height: 100%;
+	width: auto;
+	}
+	
+	aside {
+	display: flex;
+	text-align: right;
+	flex-direction: column;
+	justify-content: center;
+	}
+	
+	footer {
+	pointer-events: none;
+	position: fixed;
+	bottom: 0;
+	}
+	
+	footer * {pointer-events: all}
+	
+	@media (pointer: fine) { /* Draggable Cursor */ 
+	
+	main {
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+	}
+	
+	main:active {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabing;
+	cursor: grabbing;
+	}
+	
+	}
+	
+}
+
+@media (min-width: 1111px) { /* DESKTOP */ 
+	
+	h1 {font-size: 40px}
+	h2 {font-size: 18px}
+	h3 {font-size: 34px}
+	h4 {font-size: 17px}
+	h5 {font-size: 24px}
+	p {font-size: 20px}
+	
+	header {
+	height: 120px;
+	padding: 35px;
+	}
+	
+	#hamburger {display: none}
+	#toggler {display: none}
+	
+	#avatar {
+	width: 50px;
+	height: 50px;
+	}
+	
+	#icon {width: 50px}
+	#logo {margin-left: 10px}
+	#title {font-size: 32px}
+	#description {font-size: 16px}
+	
+	nav {
+	gap: 0.7vw;
+	z-index: 0;
+	background: none;
+	height: fit-content;
+	flex-direction: row;
+	justify-content: space-between;
+	}
+	
+	nav a.button {
+	height: 40px;
+	font-size: 16px;
+	padding: 12px 1vw;
+	}
+	
+	main {gap: 40px}
+	aside h2 {margin-top: 10px}
+	article > h3 {margin-top: 15px}
+	
+	footer {
+	height: 100px;
+	padding: 0 40px;
+	}
+	
+	@media (orientation: portrait) { /* Desktop Vertical */ 
+	
+	main {padding: 120px 40px 0}
+	aside {text-align: justify}
+	figure::before {top: 120px}
+	aside h2 {margin-top: 7px}
+	footer {height: 100px}
+	
+	}
+	
+	@media (orientation: landscape) { /* Desktop Horizontal */ 
+	
+	main {padding: 120px 40px 100px}
+	a.door {height: calc(100% - 65px)}
+	
+	aside {
+	min-width: 320px;
+	width: calc(1234px - 100vh);
+	max-width: 650px;
+	}
+	
+	}
+	
+}
+
+@media (max-width: 1110px), (max-height: 650px) { /* TABLET */ 
+	
+	header {
+	height: 100px;
+	padding: 26px 30px;
+	}
+	
+	h1 {font-size: 36px}
+	h2 {font-size: 17px}
+	h3 {font-size: 30px}
+	h4 {font-size: 16px}
+	h5 {font-size: 22px}
+	p {font-size: 19px}
+	
+	#icon,
+	#avatar {
+	width: 48px;
+	height: 48px;
+	}
+	
+	#toggler {right: 28px}
+	#logo {margin-left: 8px}
+	#title {font-size: 30px}
+	#description {font-size: 15px}
+	
+	main {gap: 30px}
+	aside h2 {margin-top: 5px}
+	article > h3 {margin-top: 10px}
+	
+	nav a.button {font-size: 16px}
+	footer {padding: 0 30px}
+	
+	@media (orientation: portrait) { /* Tablet Vertical */ 
+	
+	main {padding: 100px 30px 0}
+	figure::before {top: 100px}
+	
+	aside {text-align: justify}
+	aside h2 {margin-top: 6px}
+	
+	footer {height: 70px}
+	#tumblrbtn {display: none}
+	
+	}
+	
+	@media (orientation: landscape) { /* Tablet Horizontal */ 
+	
+	main {padding: 100px 30px 80px}
+	a.door {height: calc(100% - 56px)}
+	footer {height: 80px}
+	
+	aside {
+	min-width: 300px;
+	width: calc(1111px - 100vh);
+	max-width: 660px;
+	}
+	
+	}
+	
+}
+
+@media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
+	
+	header {
+	height: 76px;
+	padding: 18px 20px;
+	}
+	
+	h1 {font-size: 30px}
+	h2 {font-size: 16px}
+	h3 {font-size: 26px}
+	h4 {font-size: 14px}
+	h5 {font-size: 20px}
+	p {font-size: 18px}
+	
+	main {gap: 20px}
+	
+	#icon, #avatar {
+	width: 40px;
+	height: 40px;
+	}
+	
+	#toggler {right: 20px}
+	#logo {margin-left: 6px}
+	
+	#title {
+	font-size: 26px;
+	letter-spacing: 0em;
+	}
+	
+	#description {
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	}
+	
+	article > h3 {margin-top: 10px}
+	nav a.button {font-size: 16px}
+	figcaption {display: none}
+	footer {padding: 0 20px}
+	
+	@media (orientation: portrait) { /* Phone Vertical */ 
+	
+	main {padding: 76px 20px 0}
+	figure::before {top: 76px}
+	
+	aside {text-align: left}
+	aside h2 {margin-top: 4px}
+	a.door {aspect-ratio: 3/2}
+	
+	footer {
+	float: none;
+	height: 70px;
+	}
+	
+	#credit {display: none}
+	#tumblrbtn {display: none}
+	
+	#socialbar {
+	width: 100%;
+	gap: initial;
+	justify-content: space-between;
+	}
+	
+	}
+	
+	@media (orientation: landscape) { /* Phone Horizontal */ 
+	
+	a.door {height: calc(100% - 50px)}
+	main {padding: 76px 20px 46px}
+	footer {height: 50px}
+	
+	aside {
+	width: calc(1010px - 100vh);
+	min-width: 300px;
+	}
+	
+	}
+	
+}
+
+@media (max-width: 1110px) { /* MOBILE MENU */ 
+	
+	nav {
+	background: var(--color-background);
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	transition: 0.5s;
+	position: fixed;
+	height: 100vh;
+	width: 0vw;
+	right: 0;
+	gap: 0.6vh;
+	z-index: -1;
+	flex: 0 0 auto;
+	overflow: hidden;
+	min-height: min-content;
+	}
+	
+	nav a.button {
+	width: min-content;
+	font-size: 16px;
+	}
+	
+	#hamburger {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+	
+	#hamburger hr {
+	width: 100%;
+	height: 3px;
+	border: none;
+	transition: 0.3s;
+	background: white;
+	}
+	
+	#hamburger #hr-up {margin-top: 2px}
+	#hamburger #hr-dn {margin-bottom: 2px}
+	
+	#toggler {
+	z-index: 3;
+	opacity: 0;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	position: absolute;
+	}
+	
+	#toggler:checked ~ #menu {width: 100vw}
+	
+	#toggler:checked ~ #hamburger #hr-up {
+	transform:
+	translateY(11.5px)
+	rotate(-45deg)
+	}
+	
+	#toggler:checked ~ #hamburger #hr-md {opacity: 0}
+	
+	#toggler:checked ~ #hamburger #hr-dn {
+	transform:
+	translateY(-11.5px)
+	rotate(45deg)
+	}
+	
+}
