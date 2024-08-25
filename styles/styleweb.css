@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-	--color-accent: #B49141;
+	--color-accent: #D2AA3C;
 	--color-outline: #555555;
 	--color-background: #0C0C0C;
 	--color-title: ghostwhite;
@@ -12,90 +12,90 @@
 @media all { /* GENERAL */ 
 	
 	html {
-	padding: 0;
-	margin: 0;
+		padding: 0;
+		margin: 0;
 	}
 	
 	body {
-	box-sizing: border-box;
-	font-family: 'Cavana';
-	min-width: 320px;
-	margin: 0;
+		box-sizing: border-box;
+		font-family: 'Cavana';
+		min-width: 320px;
+		margin: 0;
 	}
 	
 	body * {    
-	box-sizing: border-box;
-	line-height: 1;
-	padding: 0;
-	margin: 0;
+		box-sizing: border-box;
+		line-height: 1;
+		padding: 0;
+		margin: 0;
 	}
 	
 	header {width: 100%}
 	
 	header > * ,
 	footer > * {
-	vertical-align: middle;
-	position: relative;
-	float: left;
-	top: 50%;
-	transform: translateY(-50%);
+		vertical-align: middle;
+		position: relative;
+		float: left;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	
 	nav {
-	display: flex;
-	flex: 0 0 auto;
-	text-align: center;
-	letter-spacing: 0.06em;
+		display: flex;
+		flex: 0 0 auto;
+		text-align: center;
+		letter-spacing: 0.06em;
 	}
 	
 	main {
-	display: flex;
-	flex-wrap: nowrap;
-	align-items: flex-start;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: flex-start;
 	}
 	
 	footer {
-	width: 100%;
-	user-select: none;
-	letter-spacing: initial;
+		width: 100%;
+		user-select: none;
+		letter-spacing: initial;
 	}
 	
 	h1, h3 {font-weight: 700}
 	h5 {font-weight: 400}
 	
 	h2, h4 {
-	font-weight: 400;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
 	}
 	
 	p {
-	text-align: justify;
-	line-height: 1.2em;
-	font-weight: 360;
+		text-align: justify;
+		line-height: 1.2em;
+		font-weight: 360;
 	}
 	
 	img {	
-	display: block;
-	object-fit: cover;
+		display: block;
+		object-fit: cover;
 	}
 	
 	a, abbr {text-decoration: none}
 	nav a.button {text-transform: uppercase}
 	
 	a.button {
-	display: block;
-	font-weight: 650;
-	padding: 8px 10px;
-	text-align: center;
-	border: thin solid;
-	border-radius: 3px;
-	border-color: transparent;
+		display: block;
+		font-weight: 650;
+		padding: 8px 10px;
+		text-align: center;
+		border: thin solid;
+		border-radius: 3px;
+		border-color: transparent;
 	}
 	
 	a.door {
-	display: block;
-	border: thin solid;
+		display: block;
+		border: thin solid;
 	}
 	
 	figure {border: thin solid}
@@ -103,14 +103,14 @@
 	figure.video {aspect-ratio: 16/9}
 	
 	figcaption {
-	padding: 3px;
-	line-height: 1;
-	font-size: 14px;
-	font-weight: 300;
-	position: absolute;
-	max-width: 100%;
-	width: 100%;
-	bottom: 0;
+		padding: 3px;
+		line-height: 1;
+		font-size: 14px;
+		font-weight: 300;
+		position: absolute;
+		max-width: 100%;
+		width: 100%;
+		bottom: 0;
 	}
 	
 	figcaption:empty {padding: 0px}
@@ -120,34 +120,34 @@
 	#menu, #hamburger {float: right}
 	
 	#description {
-	margin-bottom: -6px;
-	letter-spacing: 0.1em;
+		margin-bottom: -6px;
+		letter-spacing: 0.1em;
 	}
 	
 	#loadbox {
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
 	}
 	
 	#credit {
-	font-family: Helvetica;
-	font-size: 9pt;
-	height: auto;
-	width: auto;
-	line-height: 1;
-	text-align: left;
+		font-family: Helvetica;
+		font-size: 9pt;
+		height: auto;
+		width: auto;
+		line-height: 1;
+		text-align: left;
 	}
 	
 	#socialbar {
-	display: flex;
-	float: right;
-	gap: 8px;
+		display: flex;
+		float: right;
+		gap: 8px;
 	}
 	
 	#socialbar a {
-	font-family: 'Social';
-	font-size: 30px;
+		font-family: 'Social';
+		font-size: 30px;
 	}
 	
 }
