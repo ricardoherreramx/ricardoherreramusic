@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+@media all { /* GENERAL */ 
+	
+	/* Gallery Display */
+	
+	a.albm {
+	background: center/contain no-repeat;
+	border: none;
+	}
+	
+	a.reel img {
+	width: 100%;
+	height: 100%;
+	border: none;
+	}
+	
+	a.albm .cover {
+	border: thin solid;
+	display: block;
+	float: left;
+	z-index: 1;
+	}
+	
+	a.albm .disc {
+	display: block;
+	float: left;
+	z-index: 0;
+	}
+	
+	/* Video Link Display */
+	
+	figure.vidt {
+	background: center/contain no-repeat;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	}
+	
+	figure.vidt::after {
+	position: absolute;
+	content: '\25BA';
+	top: 50%;
+	left: 50%;
+	font-family: serif;
+	transform: translate(-50%, -50%);
+	}
+	
+	/* Event Calendar */
+	
+	li.event {display: block}
+	li.event div {display: block}
+	li.event h1,h2,h3 {margin: 0}
+	li.event > a {display:contents}
+	
+	/* Contact Form */
+	
+	#contaictner {
+	width: 100%;
+	overflow: hidden;
+	}
+	
+	#contaictner iframe {
+	width: 100%;
+	margin-top: -60px;
+	height: calc(100% + 60px);
+	}
+	
+}
+
+@media screen { /* DIGITAL TRANSITION */ 
+	
+	a.button, ul.events a {transition: 0.3s}
+	a.reel {transition: 0.8s ease}
+	a.reel img {transition: 0.8s ease}
+	a.albm img {transition: 0.5s ease}
+	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
+	ul.events h4.unitour {font-weight: 800; color: dodgerblue}
+	ul.events a:hover, ul.events a:active {text-decoration: none}
+	a.reel, a.book, a.albm .cover {border-color: var(--color-outline)}
+	li.unitour {background-repeat: no-repeat}
+	
+	a.albm:focus-visible img {opacity: 0}
+	a.reel:focus-visible {border-color: gray}	
+	a.reel:focus-visible img {filter: brightness(36%)}	
+	a:focus-visible figure.vidt {border-color: gray}
+	figure.vidt::after {text-shadow: 0 0 6px black}
+	
+	@media (pointer: fine) { /* Cursor Hover */ 
+		
+		figure.vidt:hover {border-color: gray}
+		a.albm:hover img {opacity: 0}
+		a.reel:hover {border-color: gray}
+		a.reel:hover img {filter: brightness(36%)}
+		ul.events a:hover h3, ul.events a:active h3 {color: var(--color-accent)}
+		
+	}
+	
+	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
+		
+		a.albm:focus-visible img {opacity: 0}
+		a.reel:focus-visible img {transform: scale(1.15)}
+		a:focus-visible figure.vidt img {opacity: 0}
+		
+		@media (pointer: fine) { /* Cursor Hover */ 
+			
+			a.door {overflow: hidden}
+			a.reel::before {display: none}
+			figure.vidt:hover img {opacity: 0}
+			a.reel:hover img {transform: scale(1.15)}
+			
+		}
+	}
+}
+
+@media (orientation: portrait) { /* VERTICAL */ 
+	
+	a.film {aspect-ratio: 16/9}
+	li.unitour {background-size: 0}
+	
+	li.event {
+	width: 100%;
+	padding: 10px 0;
+	display: inline-block;
+	border-top: thin solid var(--color-outline);
+	}
+	
+	time.date {
+	display: block;
+	float: left;
+	}
+	
+	div.place {
+	text-align: right;
+	display: block;
+	float: right;
+	}
+	
+	a.reel::before {
+	width: 100%;
+	height: 1px;
+	content: '';
+	display: block;
+	position: sticky;
+	margin-bottom: -1px;
+	background: var(--color-outline);
+	}
+	
+}
+
+@media (orientation: landscape) { /* HORIZONTAL */ 
+	
+	/* Biographies */
+	
+	main .bio {
+	width: calc(1000px - 100vh);
+	text-align: left;
+	min-width: 300px;
+	overflow: auto;
+	height: 100%;
+	}
+	
+	figure.biophoto {
+	max-height: 400px;
+	max-width: 400px;
+	}
+	
+	/* Gallery Display */
+	a.door {aspect-ratio: 1/1}
+	a.film {aspect-ratio: 4/3}
+	a.book {aspect-ratio: initial}
+	
+	/* Event Calendar */
+	
+	ul.events {
+	display: flex;
+	flex-flow: row nowrap;
+	}
+	
+	li.event {
+	flex: 0 0 auto;
+	border-right: 2px solid;
+	border-image: linear-gradient(var(--color-outline), transparent) 1 100%;
+	}
+	
+	li.event:last-child {border: none}
+	li.unitour {background-position: bottom}
+	li.unitour div.place {max-height: calc(100vh - 400px)}
+	
+	time.date {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+	}
+	
+	time.date > * {float: left}
+	
+	div.place {
+	margin: 0 auto;
+	position: relative;
+	writing-mode: vertical-rl;
+	}
+	
+	#submit_form {
+	min-width: 420px;
+	width: 40%;
+	}
+	
+}
+
+@media (min-width: 1111px) { /* DESKTOP */ 
+	
+	/* Gallery Display */
+	a.reel {min-width: 465px}
+	
+	/* Contact Form */
+	#contaictner {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	left: 0;
+	top: 0;
+	}
+	
+	/* Link 2 SheetMusic */
+	#booksbutton {
+	position: fixed;
+	display: block;
+	bottom: 33px;
+	left: 50%;
+	height: 33px;
+	font-size: 13pt;
+	font-weight: bold;
+	transform: translateX(-50%);
+	}
+	
+	#booksbutton a {
+	border: 2px solid white;
+	border-radius: 15px;
+	padding: 5px 10px;
+	color: whitesmoke;
+	text-decoration: none;
+	}
+	
+	#booksbutton a:hover {
+	color: black;
+	background: white;
+	}
+	
+	figure.vidt::after {font-size: 120px}
+	
+	@media (orientation: portrait) { /* Desktop Vertical */ 
+	
+	/* Biographies */
+	main .bio {
+	margin-bottom: 20px;
+	text-align: justify;
+	}
+	
+	/* Galleries */
+	a.reel {aspect-ratio: 21/9}
+	a.reel::before {top: 120px}
+	
+	a.albm {
+	background-position: right;
+	aspect-ratio: 3/2;
+	}
+	
+	a.albm img {
+	width: 66.66%;
+	height: auto;
+	}
+	
+	}
+	
+	@media (orientation: landscape) { /* Desktop Horizontal */ 
+	
+	/* Biographies */
+	main .bio {
+	width: calc(1155px - 100vh);
+	min-width: 330px;
+	}
+	
+	.bio, .biophoto {margin-top: 3vh}
+	
+	/* Event Calendar */
+	li.event {padding: 0 30px}
+	div.place {padding-top: 20px}
+	li.unitour {background-size: 90px}
+	
+	time.date h3 {
+	font-size: 40px;
+	margin-right: 6px;
+	}
+	
+	}
+	
+}
+
+@media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
+	
+	figure.vidt::after {font-size: 100px}
+	time.date h3 {font-size: 27pt}
+	
+	/* Contact Form */
+	#contaictner {height: calc(100vh - 200px)}
+	
+	@media (orientation: portrait) { /* Tablet Vertical */ 
+	
+	/* Biographies */
+	main .bio {
+	margin-bottom: 15px;
+	text-align: justify;
+	}
+	
+	/* Gallery Display */
+	a.reel {aspect-ratio: 16/9}
+	a.reel::before {top: 100px}
+	
+	a.albm {
+	background-position: right;
+	aspect-ratio: 3/2;
+	}
+	
+	a.albm img {
+	width: 66.66%;
+	height: auto;
+	}
+	
+	}
+	
+	@media (orientation: landscape) { /* Tablet Horizontal */ 
+	
+	li.event {padding: 0 25px}
+	div.place {padding-top: 15px}
+	li.unitour {background-size: 80px}
+	time.date h3 {margin-right: 5px}
+	a.reel {min-width: 420px}
+	
+	}
+	
+}
+
+@media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
+	
+	figure.vidt::after {font-size: 75px}
+	li.unitour {background-size: 0}
+	
+	/* Contact Form */
+	#contaictner {height: calc(100vh - 170px)}
+	
+	/* Biographies */	
+	main .bio {
+	margin-bottom: 20px;
+	text-align: justify;
+	}
+	
+	/* Event Calendar */
+	
+	li.event {
+	display: flex;
+	flex-direction: column;
+	}
+	
+	time.date {align-self: center}
+	div.place {text-align: center}
+	
+	time.date h3 {
+	float: left;
+	font-size: 35px;
+	margin-top: -1px;
+	margin-right: 6px;
+	}
+	
+	time.date h4 {
+	font-size: 15px;
+	display: block;
+	float: left;
+	}
+	
+	@media (orientation: portrait) { /* Phone Vertical */ 
+	
+	/* Gallery Display */
+	a.albm {background-position: right}
+	a.reel::before {top: 76px}
+	
+	a.albm img {
+	width: 66.66%;
+	height: auto;
+	}
+	
+	/* Event Calendar */
+	li.event {
+	padding: 15px 0;
+	border-top: none;
+	justify-content: center;
+	}
+	
+	time.date {align-self: center}
+	div.place {text-align: center}
+	
+	}
+	
+	@media (orientation: landscape) { /* Phone Horizontal */ 
+	
+	/* Gallery Display */
+	a.reel {min-width: 380px}
+	
+	/* Event Calendar */
+	div.place {writing-mode: initial}
+	
+	li.event {
+	padding: 0 20px;
+	text-align: center;
+	align-items: center;
+	justify-content: space-evenly;
+	}
+	
+	}
+	
+}

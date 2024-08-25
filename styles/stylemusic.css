@@ -1,0 +1,120 @@
+@media all {
+	
+	.album .tracks {
+	position: relative;
+	overflow: hidden;
+	}
+	
+	.album .wix {
+	position: relative;
+	top: -60px;
+	width: 100%;
+	height: calc(100% + 60px);
+	}
+	
+	.album .front {
+	border: thin solid var(--color-outline);
+	height: 100%;
+	width: 100%;
+	}
+	
+	.album .tracks {
+	width: 100%;
+	overflow: hidden;
+	min-height: 300px;
+	}
+	
+}
+
+@media (min-width: 1111px) {
+	
+	.album {cursor: auto}
+	.album .name h1 {font-size: 36pt}
+	.album .details p {font-size: 18px}
+
+}
+
+@media (min-width: 1111px) and (orientation: landscape) {
+	
+	.album {
+	margin: 0;
+	width: 100vw;
+	height: 50vh;
+	display: grid;
+	background: var(--color-background);
+	border-top: thin solid var(--color-outline);
+	grid-template-columns: 50vh 1fr 1fr;
+	grid-template-rows: 50vh;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	}
+	
+	.album .name {
+	position: fixed;
+	bottom: 50vh;
+	margin: 30px;
+	}
+	
+	.album .front {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	border: none;
+	}
+	
+	.album .details {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	padding: 36px;
+	overflow-y: auto;
+	border-left: thin solid var(--color-outline);
+	border-right: thin solid var(--color-outline);
+	}
+	
+	.album .tracks {
+	height: calc(100% - 70px);
+	width: calc(100% - 70px);
+	justify-self: center;
+	align-self: center;
+	grid-column: 3/4;
+	grid-row: 1/2;
+	border: 0;
+	}
+	
+}
+
+@media (orientation: portrait) {
+	
+	.album .tracks {
+	width: 100%;
+	overflow: hidden;
+	min-height: 330px;
+	}
+	
+}
+
+@media (max-width: 1110px), (max-height: 670px) {
+
+	.album .name {margin-bottom: 30px}
+	.album .details {margin-bottom: 30px}
+	
+	.album .tracks {
+	margin-top: 30px;
+	margin-bottom: 0;
+	height: 360px;
+	}
+	
+}
+
+@media (max-width: 500px), (max-height: 480px) {
+	
+	.album .name {display: none}
+	.album .details {display: none}
+	
+	.album .tracks {
+	margin-top: 20px;
+	height: 320px;
+	}
+	
+}

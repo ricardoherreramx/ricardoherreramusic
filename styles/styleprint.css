@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+@media print, (monochrome) { /* Black&White */ 
+	
+	::selection {
+	  background: black;
+	  color: white;
+	}
+	
+	html, body {
+	  scrollbar-width: none;
+	  background: none;
+	  color: black;
+	}
+	
+	html {
+	  padding: 0;
+	  margin: 0;
+	}
+	
+	body {
+	  font-family: 'Coves';
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;    
+	  box-sizing: border-box;
+	}
+	
+	body * {
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;    
+	  box-sizing: border-box;
+	}
+	
+	a {
+	  color: black;
+	  text-decoration: none;
+	}
+	
+	figure {border: 1px solid black}
+	#avatar {display: none}
+	
+	#imago {display: flex}
+	#logo {white-space: nowrap}
+	
+	#icon {width: 50px}
+	#logo {margin-left: 10px}
+	#title {font-size: 24pt}
+	
+	#description {
+	  font-size: 12pt;
+	  margin-left: 1.5px;
+	  letter-spacing: 1.1pt;
+	}
+	
+}
+
+@media print { /* Paper Document */ 
+	
+	::-webkit-scrollbar {display: none}
+	header, footer {background: none}
+	figure:empty {display: none}
+	iframe, nav {display: none}
+	
+	#hamburger {display: none}
+	#toggler {display: none}
+	#loadbox {display: none}
+	
+	h1 {font-size: 30pt}
+	h2 {font-size: 15pt}
+	h3 {font-size: 26pt}
+	h4 {font-size: 14pt}
+	h5 {font-size: 20pt}
+	p {font-size: 16pt}
+	
+	figcaption {
+	  font-size: 12pt;
+	  padding: 2px;
+	}
+	
+	figcaption:empty {padding: 0px}
+	h1, h3 {font-weight: bold; margin: 0}
+	h2, h4 {font-weight: lighter; text-transform: uppercase}
+	
+	main img {
+	width: 100%;
+	height: auto;
+	}
+	
+	main hr {display: none}
+	
+	img {
+	  page-break-inside: avoid;
+	  page-break-before: auto;
+	  page-break-after: auto;
+	  break-inside: avoid;
+	}
+	
+	figure {
+	  width: 50%;
+	  float: left;
+	}
+	
+	li.event {
+	  width: 100%;
+	  padding: 10px 0;
+	  display: inline-block;
+	  border-top: thin solid gray;
+	}
+	
+	div.date {
+	  display: block;
+	  float: left;
+	}
+	
+	div.place {
+	  text-align: right;
+	  display: block;
+	  float: right;
+	}
+	
+}
