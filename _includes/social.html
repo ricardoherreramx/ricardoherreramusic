@@ -1,5 +1,5 @@
 <ul class="social-media-list">
-{%- for entry in site.minima.social_links -%}
-  {%- include social-item.html item = entry -%}
-{%- endfor -%}
+  {%- if site.facebook_username -%}<a id="fbook" title="Facebook" href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank">Facebook</a>
+  {%- if site.instagram_username -%}<a id="igram" title="Instagram" href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank">Instagram</a>
+  {%- if site.youtube_username -%}<a id="ytmsc" title="YouTube" href="https://www.youtube.com/@{{ site.youtube_username }}" target="_blank">YouTube OAC</a>
 </ul>

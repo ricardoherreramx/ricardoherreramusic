@@ -24,8 +24,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Sitio Web Oficial de Ricardo Herrera, músico compositor mexicano, pianista y percusionista lírico originario de Morelia, Michoacán (México).
 baseurl: "/ricardoherreramusic" # the subpath of your site, e.g. /blog
 url: "https://ricardoherreramx.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ricardoherreramx
-github_username:  ricardoherreramx
+facebook_username: RicardoHerreraMusica
+instagram_username: ricardoherreramx
+youtube_username: ricardoherreramx
 
 # Build settings
 # theme: minima
