@@ -28,7 +28,7 @@ twitter_username: ricardoherreramx
 github_username:  ricardoherreramx
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 
