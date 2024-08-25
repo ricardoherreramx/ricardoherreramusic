@@ -59,6 +59,137 @@
   <link rel="preload" as="image" href="https://64.media.tumblr.com/0fe452416531b97c12ff070fca233f6b/b7faee08b5b7ae40-0d/s128x128u_c1/443f99b1297f577aff22d784ea0944e2f8800887.png">
   <link rel="preload" as="font" href="https://static.tumblr.com/u7xl2pm/hjergg6qx/cavana-variable.ttf" crossorigin="anonymous">
   <link rel="preload" as="font" href="https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2" crossorigin="anonymous">
+
+  <!-- Linked Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/u7xl2pm/EK4s8zpof/styletumblr.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/u7xl2pm/UVprgje54/styleprint.css" media="print">
+  <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/u7xl2pm/Gwirx1iei/stylepages.css">
   
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Cavana';
+      font-weight: 100 900;
+        font-display: swap;
+      src:url('https://static.tumblr.com/u7xl2pm/hjergg6qx/cavana-variable.ttf') format('truetype');
+        src:url('https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2') format('woff2 supports variations'),
+            url('https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2') format('woff2-variations');
+    }
+    
+    @font-face {
+      font-family: 'Social';
+      font-weight: normal;
+        font-display: swap;
+      src:url('https://static.tumblr.com/u7xl2pm/Vqss6sc5w/socialicons.woff') format('woff');
+    }
+    
+    @media screen { /* DIGITAL */ 
+      
+      ::selection {
+        color: #0c0c0c;
+        background: lightgray;
+      }
+      
+      ::-webkit-scrollbar {
+        display: none;
+        height: 0px;
+        width: 0px;
+      }
+      
+      html {height: -webkit-fill-available}
+        
+      body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        font-feature-settings: 'cv03';
+      }
+        
+      html, body {background: #0c0c0c}
+      
+      body > iframe {
+        display: none;
+        height: 0;
+      }
+      
+      h1, h3 {color: #f8f8ff}
+      h2, h4 {color: darkgray;}
+      h5 {color: lightgray;}
+      a {color: inherit;}
+      footer p {font-weight: 300}
+      
+      aside p strong, aside p b,
+      aside p a, aside p a:hover
+      {color: #d2aa3c}
+      
+      a.button {
+        border-color: transparent;
+        color: #f8f8ff;
+        transition: 0.3s;
+      }
+      
+      a.button:hover {
+        border-color: #d2aa3c;
+        color: #d2aa3c;
+      }
+      
+      a.button:focus {
+        background: #0c0c0c;
+        border-color: #d2aa3c;
+        color: #d2aa3c;
+        utline: none;
+      }
+      
+      a.button:active {
+        border-color: #d2aa3c;
+        background: #d2aa3c;
+        color: #0c0c0c;
+      }
+      
+      a.current-page {
+        border-color: #d2aa3c;
+        background: #d2aa3c;
+        color: #0c0c0c;
+        pointer-events: none;
+      }
+      
+      ul.unitour23 {display: none} /* Not yet mate */
+      article > br {display: none} /* <-Patch */
+      aside#presskit p {font-size: 18px}
+      main span {color: #d2aa3c}
+      #booksbutton {display: none}
+      
+      div.mapsite a {color: #d2aa3c}
+      div.mapsite li {line-height: 1.2}
+      div.mapsite li {margin-left: 12pt}
+      div.tracks {border: none}
+      
+      li.event > a {transition: 0.3s}
+      li.event > a:hover,
+      li.event > a:active {color: #d2aa3c}
+      li.event.unitour.hidden {display: none}
+      #avatar {clip-path: circle()}
+      #loadbox {background-color: #0c0c0c}
+      .tmblr-iframe--follow-teaser.open {display: none}
+      
+      #credit {
+        margin-top: 2px;
+        font-family: 'Cavana';
+        font-size: 13px;
+      }
+      
+    }
+    
+    @media (orientation: portrait) {header {background: #0c0c0c}}
+    
+    @media (max-width: 1110px) {#menu {background: #0c0c0c}}
+    
+    @media (prefers-contrast: less) {body {filter: contrast(0.75)}}
+    @media (prefers-contrast: more) {body {filter: contrast(1.25)}}
+    @media (orientation: landscape) { /* Press Kit Resume */ 
+        aside#presskit {
+        min-width: 555px;
+        width: calc(1500px - 100vh);
+        max-width: none;
+        }
+    }
+    </style>
 </head>
