@@ -53,6 +53,16 @@
 	li.event h1,h2,h3 {margin: 0}
 	li.event > a {display:contents}
 	
+	aside#presskit p {font-size: 18px}
+	#booksbutton {display: none}
+	
+	/* Sitemap links list */
+	
+	div.mapsite a {color: #d2aa3c}
+	div.mapsite li {line-height: 1.2}
+	div.mapsite li {margin-left: 12pt}
+	div.tracks {border: none}
+	
 	/* Contact Form */
 	
 	#contaictner {
@@ -75,10 +85,15 @@
 	a.reel img {transition: 0.8s ease}
 	a.albm img {transition: 0.5s ease}
 	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
+
 	ul.events h4.unitour {font-weight: 800; color: dodgerblue}
 	ul.events a:hover, ul.events a:active {text-decoration: none}
+
+	li.event > a {transition: 0.3s}
+	li.event > a:hover,
+	li.event > a:active {color: #d2aa3c}
+
 	a.reel, a.book, a.albm .cover {border-color: var(--color-outline)}
-	li.unitour {background-repeat: no-repeat}
 	
 	a.albm:focus-visible img {opacity: 0}
 	a.reel:focus-visible {border-color: gray}	
@@ -199,6 +214,13 @@
 	margin: 0 auto;
 	position: relative;
 	writing-mode: vertical-rl;
+	}
+	
+	/* Press Kit Resume */ 
+	aside#presskit {
+		min-width: 555px;
+		width: calc(1500px - 100vh);
+		max-width: none;
 	}
 	
 	#submit_form {
