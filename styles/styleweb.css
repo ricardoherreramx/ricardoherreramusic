@@ -168,27 +168,40 @@
 }
 
 @media screen { /* DIGITAL */ 
-	
-	html, body {
-	background: var(--color-background);
-	color: var(--color-text);
+
+	::-webkit-scrollbar {
+		display: none;
+		height: 0px;
+		width: 0px;
 	}
 	
-	body > iframe {
-	display: none;
-	height: 0;
+  ::selection {
+    background: var(--color-text);
+    color: var(--color-background);
+  }
+  
+	html, body {
+		height: -webkit-fill-available;
+		background: var(--color-background);
+		color: var(--color-text);
+	}
+	
+	body {
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+		font-feature-settings: 'cv03';
 	}
 	
 	header {
-	z-index: 3;
-	position: fixed;
-	user-select: none;
+		z-index: 3;
+		position: fixed;
+		user-select: none;
 	}
 	
 	h1, h2, h3, h4, h5, h6, p, a, i {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
 	}
 	
 	h1, h3 {color: var(--color-title)}
@@ -197,53 +210,53 @@
 	a {color: inherit}
 	
 	main iframe {
-	height: 100%;
-	width: 100%;
+		height: 100%;
+		width: 100%;
 	}
 	
 	main a:hover, main a:active {
-	text-decoration: underline;
-	color: inherit;
+		text-decoration: underline;
+		color: inherit;
 	}
 	
 	nav > a {
-	border-color: transparent;
-	color: var(--color-title);
+		border-color: transparent;
+		color: var(--color-title);
 	}
 	
 	nav > a:hover {
-	border-color: var(--color-accent);
-	color: var(--color-accent);
+		border-color: var(--color-accent);
+		color: var(--color-accent);
 	}
 	
 	nav > a:focus {
-	background: var(--color-background);
-	border-color: var(--color-accent);
-	color: var(--color-accent);
-	outline: none;
+		background: var(--color-background);
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+		outline: none;
 	}
 	
 	nav > a:active {
-	border-color: var(--color-accent);
-	background: var(--color-accent);
-	color: var(--color-background);
+		border-color: var(--color-accent);
+		background: var(--color-accent);
+		color: var(--color-background);
 	}
 	
 	a.current-page {
-	border-color: var(--color-accent);
-	background: var(--color-accent);
-	color: var(--color-background);
-	pointer-events: none;
+		border-color: var(--color-accent);
+		background: var(--color-accent);
+		color: var(--color-background);
+		pointer-events: none;
 	}
 	
 	mark {
-	background-color: gray;
-	color: black;
+		background-color: gray;
+		color: black;
 	}
 	
 	figcaption {
-	color: lightgray;
-	background-color: rgba(0,0,0,0.7);
+		color: lightgray;
+		background-color: rgba(0,0,0,0.7);
 	}
 	
 	figure {border-color: var(--color-outline)}
@@ -286,7 +299,11 @@
 
 @media (monochrome) { /* BLACK&WHITE */ 
 	
-	::-webkit-scrollbar {display: none}
+	::-webkit-scrollbar {
+		display: none;
+		height: 0px;
+		width: 0px;
+	}
 	
 	::selection {
 	background: black;
