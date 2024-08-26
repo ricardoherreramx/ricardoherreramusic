@@ -64,7 +64,7 @@
   <link rel="stylesheet" type="text/css" href="{{ "/styles/styleweb.css" | relative_url }}" media="screen">
   <link rel="stylesheet" type="text/css" href="{{ "/styles/socialinks.css" | relative_url }}" media="screen">
   <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/u7xl2pm/UVprgje54/styleprint.css" media="print">
-  <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/u7xl2pm/Gwirx1iei/stylepages.css">
+  {% if page.layout == "page" %}<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/u7xl2pm/Gwirx1iei/stylepages.css">{% endif %}
   
   <style type="text/css">
     @font-face {

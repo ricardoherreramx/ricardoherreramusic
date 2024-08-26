@@ -17,10 +17,10 @@
   <nav id="menu" role="navigation">
     <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/">Inicio</a>
     <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/bio" | relative_url }}">Biografía</a>
-    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/musica">Música</a>
-    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/galeria">Galería</a>
-    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/video">Video</a>
-    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/eventos">Eventos</a>
-    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/contacto">Contacto</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/musica" | relative_url }}</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/galeria" | relative_url }}">Galería</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/video" | relative_url }}">Video</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/eventos" | relative_url }}">Eventos</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/contacto" | relative_url }}">Contacto</a>
   </nav>
 </header>
