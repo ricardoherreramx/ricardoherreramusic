@@ -65,13 +65,20 @@
   <link rel="stylesheet" type="text/css" href="{{ "/styles/socialinks.css" | relative_url }}" media="screen">
   <link rel="stylesheet" type="text/css" href="{{ "/styles/styleprint.css" | relative_url }}" media="print">
   {% if page.layout == "page" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
-  {% if page.url == post.url %}<!-- Inline Style -->
+  <!-- Inline Style -->
   <style type="text/css">
-	  nav > a {
+    /* Highlight current page in menu */
+	  header#bio a#bio,
+    header#home a#home,
+    header#music a#music,
+    header#photos a#photos,
+    header#videos a#videos,
+    header#dates a#dates,
+    header#mail a#mail {
 		  border-color: #D2AA3C;
 		  background: #D2AA3C;
 		  color: #0C0C0C;
 		  pointer-events: none;
 	  }
-  </style>{% endif %}
+  </style>
 </head>

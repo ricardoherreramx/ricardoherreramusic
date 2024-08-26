@@ -1,5 +1,5 @@
 <!-- Site Header -->
-<header role="banner">
+<header role="banner" id="{{ page.shortname }}">
   <!-- Imagotype -->
   <a href="/" aria-label="Regresar a Página Principal"><img id="avatar" src="https://64.media.tumblr.com/0fe452416531b97c12ff070fca233f6b/b7faee08b5b7ae40-0d/s128x128u_c1/443f99b1297f577aff22d784ea0944e2f8800887.pnj" alt="logotipo" draggable="false"></a>
   <div id="logo">
@@ -15,12 +15,12 @@
   </div>
   <!-- Main Menu -->
   <nav id="menu" role="navigation">
-    <a role="button" href="/">Inicio</a>
-    <a role="button" class="Biografía" href="{{ "/bio" | relative_url }}">Biografía</a>
-    <a role="button" href="{{ "/musica" | relative_url }}">Música</a>
-    <a role="button" href="{{ "/galeria" | relative_url }}">Galería</a>
-    <a role="button" href="{{ "/video" | relative_url }}">Video</a>
-    <a role="button" href="{{ "/eventos" | relative_url }}">Eventos</a>
-    <a role="button" href="{{ "/contacto" | relative_url }}">Contacto</a>
+    <a role="button" href="/" id="home">Inicio</a>
+    <a role="button" href="{{ "/bio" | relative_url }}" id="bio">Biografía</a>
+    <a role="button" href="{{ "/musica" | relative_url }}" id="music">Música</a>
+    <a role="button" href="{{ "/galeria" | relative_url }}" id="photos">Galería</a>
+    <a role="button" href="{{ "/video" | relative_url }}" id="videos">Video</a>
+    <a role="button" href="{{ "/eventos" | relative_url }}" id="dates">Eventos</a>
+    <a role="button" href="{{ "/contacto" | relative_url }}" id="mail">Contacto</a>
   </nav>
 </header>
