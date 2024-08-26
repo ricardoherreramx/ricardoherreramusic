@@ -80,9 +80,9 @@
 	}
 	
 	a, abbr {text-decoration: none}
-	nav a.button {text-transform: uppercase}
+	nav > a {text-transform: uppercase}
 	
-	a.button {
+	nav > a {
 		display: block;
 		font-weight: 650;
 		padding: 8px 10px;
@@ -190,24 +190,24 @@
 	color: inherit;
 	}
 	
-	a.button {
+	nav > a {
 	border-color: transparent;
 	color: var(--color-title);
 	}
 	
-	a.button:hover {
+	nav > a:hover {
 	border-color: var(--color-accent);
 	color: var(--color-accent);
 	}
 	
-	a.button:focus {
+	nav > a:focus {
 	background: var(--color-background);
 	border-color: var(--color-accent);
 	color: var(--color-accent);
 	outline: none;
 	}
 	
-	a.button:active {
+	nav > a:active {
 	border-color: var(--color-accent);
 	background: var(--color-accent);
 	color: var(--color-background);
@@ -433,7 +433,7 @@
 	justify-content: space-between;
 	}
 	
-	nav a.button {
+	nav > a {
 	height: 40px;
 	font-size: 16px;
 	padding: 12px 1vw;
@@ -502,7 +502,7 @@
 	aside h2 {margin-top: 5px}
 	article > h3 {margin-top: 10px}
 	
-	nav a.button {font-size: 16px}
+	nav > a {font-size: 16px}
 	footer {padding: 0 30px}
 	
 	@media (orientation: portrait) { /* Tablet Vertical */ 
@@ -569,7 +569,7 @@
 	}
 	
 	article > h3 {margin-top: 10px}
-	nav a.button {font-size: 16px}
+	nav > a {font-size: 16px}
 	figcaption {display: none}
 	footer {padding: 0 20px}
 	
@@ -632,7 +632,7 @@
 	min-height: min-content;
 	}
 	
-	nav a.button {
+	nav > a {
 	width: min-content;
 	font-size: 16px;
 	}
