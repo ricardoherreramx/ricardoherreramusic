@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0L64 0L64 64L0 64L0 0Z" id="background" fill="none" fill-rule="evenodd" stroke="none" />
+  <path d="M7 32C7 18.1996 18.1996 7 32 7C45.8004 7 57 18.1996 57 32C57 45.8004 45.8004 57 32 57C18.1996 57 7 45.8004 7 32L7 32Z" id="Circle" fill="#FF0000" fill-rule="evenodd" stroke="none" />
+  <path d="M32 14.9268C22.5707 14.9268 14.9268 22.5708 14.9268 32C14.9268 41.4293 22.5707 49.0732 32 49.0732C41.4292 49.0732 49.0732 41.4293 49.0732 32C49.0732 22.5708 41.4292 14.9268 32 14.9268L32 14.9268Z" id="Circle" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+  <path d="M18.5854 32C18.5854 24.5949 24.5949 18.5854 32 18.5854C39.4051 18.5854 45.4146 24.5949 45.4146 32C45.4146 39.4051 39.4051 45.4146 32 45.4146C24.5949 45.4146 18.5854 39.4051 18.5854 32L18.5854 32Z" id="Circle" fill="#FF0000" fill-rule="evenodd" stroke="none" />
+  <path d="M26.3903 40.4146L41.0244 32L26.3903 23.5854L26.3903 40.4146L26.3903 40.4146Z" id="Play" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+</svg>

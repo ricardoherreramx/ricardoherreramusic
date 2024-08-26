@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="75px" height="64px" viewBox="0 0 75 64" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0L75 0L75 64L0 64L0 0Z" id="background" fill="none" fill-rule="evenodd" stroke="none" />
+  <path d="M10 12L50 12C58.2843 12 65 18.7157 65 27C65 35.2843 58.2843 42 50 42L50 44C50 48.4189 46.4189 52 42 52L18 52C13.5811 52 10 48.4189 10 44L10 12L10 12ZM57.5 27C57.5 31.1421 54.1421 34.5 50 34.5L50 19.5C54.1421 19.5 57.5 22.8579 57.5 27L57.5 27Z" id="coffee" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+  <path d="M41.3137 21.3137C38.1895 18.1895 33.1242 18.1895 30 21.3137C26.8758 18.1895 21.8105 18.1895 18.6863 21.3137C15.5621 24.4379 15.5621 29.5032 18.6863 32.6274L30 43.9411L41.3137 32.6274C44.4379 29.5032 44.4379 24.4379 41.3137 21.3137L41.3137 21.3137Z" id="heart" fill="#FF5252" fill-rule="evenodd" stroke="none" />
+</svg>
