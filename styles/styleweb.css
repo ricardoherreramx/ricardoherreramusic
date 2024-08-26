@@ -135,7 +135,7 @@
 	#menu, #hamburger {float: right}
 	article > br {display: none} /* patch article linebreaks */
 	
-	#description {
+	#subtitle {
 		margin-bottom: -6px;
 		letter-spacing: 0.1em;
 	}
@@ -291,8 +291,8 @@
 	background-image: url('https://assets.tumblr.com/images/logo_page/1x/wordmark-white.png');
 	}
 	
-	#tumblrbtn:hover ,
-	#tumblrbtn:focus {
+	#gitbtn:hover ,
+	#gitbtn:focus {
 	background-color: white;
 	background-image: url('https://assets.tumblr.com/images/logo_page/1x/wordmark-black.png');
 	}
@@ -468,7 +468,7 @@
 	#icon {width: 50px}
 	#logo {margin-left: 10px}
 	#title {font-size: 32px}
-	#description {font-size: 16px}
+	#subtitle {font-size: 16px}
 	
 	nav {
 	gap: 0.7vw;
@@ -542,7 +542,7 @@
 	#toggler {right: 28px}
 	#logo {margin-left: 8px}
 	#title {font-size: 30px}
-	#description {font-size: 15px}
+	#subtitle {font-size: 15px}
 	
 	main {gap: 30px}
 	aside h2 {margin-top: 5px}
@@ -560,7 +560,7 @@
 	aside h2 {margin-top: 6px}
 	
 	footer {height: 70px}
-	#tumblrbtn {display: none}
+	#gitbtn {display: none}
 	
 	}
 	
@@ -609,7 +609,7 @@
 	letter-spacing: 0em;
 	}
 	
-	#description {
+	#subtitle {
 	font-size: 14px;
 	letter-spacing: 0.05em;
 	}
@@ -634,7 +634,7 @@
 	}
 	
 	#credit {display: none}
-	#tumblrbtn {display: none}
+	#gitbtn {display: none}
 	
 	#socialbar {
 	width: 100%;
