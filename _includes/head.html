@@ -31,7 +31,7 @@
   <meta property="og:title" content="Ricardo Herrera • Pianista y Compositor">
   <meta property="og:description" content="Músico Compositor Mexicano">
   <meta property="og:url" content="https://www.ricardoherrera.net/">
-  <meta property="og:image" content="https://64.media.tumblr.com/aae24d52b34a7e70e2325831291232a1/b7faee08b5b7ae40-f8/s2048x3072/6961ff1612a35acbd7183bcca956750ed3110a55.png">
+  <meta property="og:image" content="{{ site.preview | relative_url }}">
   <meta property="og:image:alt" content="pianista en escenario">
   <meta property="og:locale" content="es_MX">
   <meta name="twitter:card" content="summary_large_image">
@@ -50,15 +50,14 @@
   <!-- Shortcut Icon -->
   <meta name="application-name" content="Ricardo Herrera">
   <meta name="apple-mobile-web-app-title" content="Ricardo Herrera">
-  <link rel="icon" type="image/svg+xml" href="https://dl.dropbox.com/s/w46wk8oxxkggaz5/favicon.svg">
-  <link rel="manifest" href="https://dl.dropbox.com/s/dbkqlbqw62qcjv0/manifest.json">
-  <link rel="shortcut icon" type="image/x-icon" href="https://64.media.tumblr.com/f99db66dea31027a8ca214341e7b6c3a/b7faee08b5b7ae40-71/s2048x3072/1fae8951f97a0acd0148cae3adbd158786ab92f4.png">
-  <link rel="apple-touch-icon" sizes="128x128" href="https://64.media.tumblr.com/0fe452416531b97c12ff070fca233f6b/b7faee08b5b7ae40-0d/s128x128u_c1/443f99b1297f577aff22d784ea0944e2f8800887.pnj">
+  <link rel="icon" type="image/svg+xml" href="{{ site.favicon | relative_url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.png" | relative_url }}">
+  <link rel="apple-touch-icon" sizes="128x128" href="{{ site.avatar | relative_url }}">
   
   <!-- Prebrowsing -->
-  <link rel="preload" as="image" href="https://64.media.tumblr.com/0fe452416531b97c12ff070fca233f6b/b7faee08b5b7ae40-0d/s128x128u_c1/443f99b1297f577aff22d784ea0944e2f8800887.png">
-  <link rel="preload" as="font" href="https://static.tumblr.com/u7xl2pm/hjergg6qx/cavana-variable.ttf" crossorigin="anonymous">
-  <link rel="preload" as="font" href="https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2" crossorigin="anonymous">
+  <link rel="preload" as="image" href="{{ site.avatar | relative_url }}">
+  <link rel="preload" as="font" href="{{ "/fonts/cavana.ttf" | relative_url }}" crossorigin="anonymous">
+  <link rel="preload" as="font" href="{{ "/fonts/cavana.woff2" }}" crossorigin="anonymous">
 
   <!-- Linked Stylesheets -->
   <link rel="stylesheet" type="text/css" href="{{ "/styles/styleweb.css" | relative_url }}" media="screen">

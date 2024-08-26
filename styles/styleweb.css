@@ -4,16 +4,16 @@
 	font-family: 'Cavana';
 	font-weight: 100 900;
 	font-display: swap;
-	src:url('https://static.tumblr.com/u7xl2pm/hjergg6qx/cavana-variable.ttf') format('truetype');
-	src:url('https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2') format('woff2 supports variations'),
-			url('https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2') format('woff2-variations');
+	src:url('{{ "/fonts/cavana.ttf" | relative_url }}') format('truetype');
+	src:url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2 supports variations'),
+			url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2-variations');
 }
 
 @font-face {
 	font-family: 'Social';
 	font-weight: normal;
 	font-display: swap;
-	src:url('https://static.tumblr.com/u7xl2pm/Vqss6sc5w/socialicons.woff') format('woff');
+	src:url('{{ "fonts/socialicons.woff" | relative_url }}') format('woff');
 }
 
 :root {
