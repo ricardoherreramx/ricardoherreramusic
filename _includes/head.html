@@ -64,4 +64,20 @@
   <link rel="stylesheet" type="text/css" href="{{ "/styles/socialinks.css" | relative_url }}" media="screen">
   <link rel="stylesheet" type="text/css" href="{{ "/styles/styleprint.css" | relative_url }}" media="print">
   {% if page.layout == "page" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
+<style type="text/css">
+@font-face {
+	font-family: 'Cavana';
+	font-weight: 100 900;
+	font-display: swap;
+	src:url('{{ "/fonts/cavana.ttf" | relative_url }}') format('truetype');
+	src:url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2 supports variations'),
+			url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2-variations');
+}
+@font-face {
+	font-family: 'Social';
+	font-weight: normal;
+	font-display: swap;
+	src:url('{{ "fonts/socialicons.woff" | relative_url }}') format('woff');
+}
+</style>
 </head>
