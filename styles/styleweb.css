@@ -1,5 +1,21 @@
 @charset "utf-8";
 
+@font-face {
+	font-family: 'Cavana';
+	font-weight: 100 900;
+	font-display: swap;
+	src:url('https://static.tumblr.com/u7xl2pm/hjergg6qx/cavana-variable.ttf') format('truetype');
+	src:url('https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2') format('woff2 supports variations'),
+			url('https://static.tumblr.com/u7xl2pm/c57rghmu7/cavana-variable.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Social';
+	font-weight: normal;
+	font-display: swap;
+	src:url('https://static.tumblr.com/u7xl2pm/Vqss6sc5w/socialicons.woff') format('woff');
+}
+
 :root {
 	--color-accent: #D2AA3C;
 	--color-outline: #555555;
