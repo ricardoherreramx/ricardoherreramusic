@@ -63,7 +63,7 @@
 <link rel="stylesheet" type="text/css" href="{{ "/styles/styleweb.css" | relative_url }}" media="screen">
 <link rel="stylesheet" type="text/css" href="{{ "/styles/socialinks.css" | relative_url }}" media="screen">
 <link rel="stylesheet" type="text/css" href="{{ "/styles/styleprint.css" | relative_url }}" media="print">
-{% if page.layout == "page" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
+{% if page.layout == "page" or page.layout == "home" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
 <style type="text/css">
 @font-face {
 	font-family: 'Cavana';
