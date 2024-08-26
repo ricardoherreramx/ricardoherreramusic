@@ -254,7 +254,8 @@
 		color: var(--color-background);
 	}
 	
-	nav > a.current {
+	/* Highlight current page in menu */
+	body.current nav > a {
 		border-color: var(--color-accent);
 		background: var(--color-accent);
 		color: var(--color-background);

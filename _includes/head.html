@@ -65,4 +65,13 @@
   <link rel="stylesheet" type="text/css" href="{{ "/styles/socialinks.css" | relative_url }}" media="screen">
   <link rel="stylesheet" type="text/css" href="{{ "/styles/styleprint.css" | relative_url }}" media="print">
   {% if page.layout == "page" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
+  {% if page.url == post.url %}<!-- Inline Style -->
+  <style type="text/css">
+	  nav > a {
+		  border-color: #D2AA3C;
+		  background: #D2AA3C;
+		  color: #0C0C0C;
+		  pointer-events: none;
+	  }
+  </style>{% endif %}
 </head>
