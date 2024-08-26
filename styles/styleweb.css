@@ -133,6 +133,7 @@
 	#logo {white-space: nowrap}
 	#avatar {clip-path: circle()}
 	#menu, #hamburger {float: right}
+	article > br {display: none} /* patch article linebreaks */
 	
 	#description {
 		margin-bottom: -6px;
@@ -218,10 +219,18 @@
 		text-decoration: underline;
 		color: inherit;
 	}
+
+	/* yellow links & bold text in paragraphs */
+	aside p strong,
+	aside p b,
+	aside p a,
+	aside p a:hover
+	{color: var(--color-accent)}
 	
 	nav > a {
 		border-color: transparent;
 		color: var(--color-title);
+		transition: 0.3s;
 	}
 	
 	nav > a:hover {
@@ -242,7 +251,7 @@
 		color: var(--color-background);
 	}
 	
-	a.current-page {
+	nav > a.current {
 		border-color: var(--color-accent);
 		background: var(--color-accent);
 		color: var(--color-background);
