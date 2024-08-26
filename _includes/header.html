@@ -1,7 +1,8 @@
 <!-- Site Header -->
 <header role="banner" {%- if page.shortname -%}id="{{ page.shortname }}"{%- endif -%}>
   <!-- Imagotype -->
-  <a href="{{ "/" | relative_url }}" aria-label="Regresar a Página Principal"><img id="avatar" src="https://64.media.tumblr.com/0fe452416531b97c12ff070fca233f6b/b7faee08b5b7ae40-0d/s128x128u_c1/443f99b1297f577aff22d784ea0944e2f8800887.pnj" alt="logotipo" draggable="false"></a>
+  <a href="{{ "/" | relative_url }}" aria-label="Regresar a Página Principal">
+    <img id="avatar" src="{{ site.avatar | relative_url }}" alt="logotipo" draggable="false"></a>
   <div id="logo">
     <h1 id="title">Ricardo Herrera</h1>
     <h2 id="description">Pianista y Compositor</h2>
