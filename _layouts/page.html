@@ -1,6 +1,22 @@
 ---
 layout: base
 ---
+<style type="text/css">
+  /* Highlight current page in menu */
+  header#bio a#bio,
+  header#home a#home,
+  header#music a#music,
+  header#photos a#photos,
+  header#videos a#videos,
+  header#dates a#dates,
+  header#mail a#mail {
+  border-color: #D2AA3C;
+  background: #D2AA3C;
+  color: #0C0C0C;
+  pointer-events: none;
+  }
+</style>
+
 <main role="main" class="posts" itemscope itemtype="http://schema.org/WebPage">
   <script type="text/javascript" src="https://static.tumblr.com/u7xl2pm/T7Xr0jptq/sideways.js"></script>
   {{ content }}
