@@ -14,8 +14,8 @@ a[title="Spotify"] {background-image: url('https://dl.dropbox.com/s/oyr2992wgv2e
 a[title="YouTube"] {background-image: url('https://dl.dropbox.com/s/0f16w1c2o471k8z/ytmusic_white.svg')}
 a[title="BandCamp"] {background-image: url('https://dl.dropbox.com/s/u0sw87vnzudkdnk/bandcamp_white.svg')}
 a[title="SoundCloud"] {background-image: url('https://dl.dropbox.com/s/tj778895mrm4nw1/soundcloud_white.svg')}
-a[title="Threads"] {background-image: url('https://www.dropbox.com/scl/fi/bacpeocltcwzr86u7egvy/threads_white.svg?rlkey=rdwc6vd0xidlwrq02hqygt1dj&raw=1')}
-a[title="Donaciones"] {background-image: url('https://www.dropbox.com/scl/fi/lfhkk4ltnk2dl0dxlx5yo/kofi_white.svg?rlkey=92i2gjl10jyxwjgw0xouvp4vy&raw=1')}
+a[title="Threads"] {background-image: url('/icons/threads_white.svg')}
+a[title="Donaciones"] {background-image: url('/icons/kofi_white.svg')}
 
 /* Color icons */
 a[title="Facebook"]:focus,
