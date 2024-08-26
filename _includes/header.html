@@ -15,12 +15,12 @@
   </div>
   <!-- Main Menu -->
   <nav id="menu" role="navigation">
-    <a role="button" class="button " href="/">Inicio</a>
-    <a role="button" class="button " href="{{ "/bio.html" | relative_url }}">Biografía</a>
-    <a role="button" class="button " href="/musica">Música</a>
-    <a role="button" class="button " href="/galeria">Galería</a>
-    <a role="button" class="button " href="/video">Video</a>
-    <a role="button" class="button " href="/eventos">Eventos</a>
-    <a role="button" class="button " href="/contacto">Contacto</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/">Inicio</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="{{ "/bio.html" | relative_url }}">Biografía</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/musica">Música</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/galeria">Galería</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/video">Video</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/eventos">Eventos</a>
+    <a role="button" {% if page.url == post.url %}class="active" {% endif %}href="/contacto">Contacto</a>
   </nav>
 </header>
