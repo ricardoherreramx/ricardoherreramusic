@@ -170,7 +170,7 @@
 }
 
 @media screen { /* DIGITAL */ 
-
+	
 	::-webkit-scrollbar {
 		display: none;
 		height: 0px;
@@ -728,3 +728,7 @@
 	}
 	
 }
+
+/* Contrast options */
+@media (prefers-contrast: less) {body {filter: contrast(0.75)}}
+@media (prefers-contrast: more) {body {filter: contrast(1.25)}}
