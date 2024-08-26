@@ -1,14 +1,7 @@
 ---
 layout: base
 ---
-<article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+<main role="main" class="posts" itemscope itemtype="http://schema.org/WebPage">
+  <script type="text/javascript" src="https://static.tumblr.com/u7xl2pm/T7Xr0jptq/sideways.js"></script>
+  {{ content }}
+</main>
