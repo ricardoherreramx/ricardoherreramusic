@@ -3,11 +3,8 @@
   {%- include head.html -%}
   
   <body onload="loading()">
-    <!-- Animated loader -->
-    <div id="loadbox" style="background-image:url('https://64.media.tumblr.com/dd18df7c70187b23a706510346edf677/b7faee08b5b7ae40-b6/s2048x3072/006e8e444a2c699ea7cfae4dee6a883d230964ff.gif')" aria-hidden="true"></div>
-    <script type="text/javascript" src="https://static.tumblr.com/u7xl2pm/y8Mrca674/pageload.js"></script>
-    
-    {%- include header.html -%} 
+    {%- include loader.html -%}
+    {%- include header.html -%}
     {{ content }}
     {%- include footer.html -%}
   </body>
