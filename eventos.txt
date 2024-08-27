@@ -5,6 +5,18 @@ permalink: /eventos
 shortname: dates
 ---
 <ul class="events">
+  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+  {% for post in site.posts %}
+    <li class="event"><a href="{{ post.url | relative_url }}">
+      <time class="date">{{ post.date | date: date_format }}</time>
+      <div class="place">
+        <h3>{{ post.title }}</h3>
+      </div>
+    </a></li>
+  {% endfor %}
+</ul>
+
+<ul class="events">
 <li class="event">
 <time class="date"><h3>11</h3>
 <h4>Oct<br/>2024</h4>
