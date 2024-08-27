@@ -31,7 +31,7 @@
 <meta property="og:title" content="Ricardo Herrera • Pianista y Compositor">
 <meta property="og:description" content="Músico Compositor Mexicano">
 <meta property="og:url" content="https://www.ricardoherrera.net/">
-<meta property="og:image" content="{{ site.preview | relative_url }}">
+<meta property="og:image" content="{% link {{ site.preview }} %}">
 <meta property="og:image:alt" content="pianista en escenario">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
@@ -50,34 +50,34 @@
 <!-- Shortcut Icon -->
 <meta name="application-name" content="Ricardo Herrera">
 <meta name="apple-mobile-web-app-title" content="Ricardo Herrera">
-<link rel="icon" type="image/svg+xml" href="{{ site.favicon | relative_url }}">
-<link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.png" | relative_url }}">
-<link rel="apple-touch-icon" sizes="128x128" href="{{ site.avatar | relative_url }}">
+<link rel="icon" type="image/svg+xml" href="{% link {{ site.favicon }} %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% link /assets/favicon.png %}">
+<link rel="apple-touch-icon" sizes="128x128" href="{% link {{ site.avatar }} %}">
 
 <!-- Prebrowsing -->
-<link rel="preload" as="image" href="{{ site.avatar | relative_url }}">
-<link rel="preload" as="font" href="{{ "/fonts/cavana.ttf" | relative_url }}" crossorigin="anonymous">
-<link rel="preload" as="font" href="{{ "/fonts/cavana.woff2" }}" crossorigin="anonymous">
+<link rel="preload" as="image" href="{% link {{ site.avatar }} %}">
+<link rel="preload" as="font" href="{% link /fonts/cavana.ttf %}" crossorigin="anonymous">
+<link rel="preload" as="font" href="{% link /fonts/cavana.woff2 %}" crossorigin="anonymous">
 
 <!-- Linked Stylesheets -->
-<link rel="stylesheet" type="text/css" href="{{ "/styles/styleweb.css" | relative_url }}" media="screen">
-<link rel="stylesheet" type="text/css" href="{{ "/styles/socialinks.css" | relative_url }}" media="screen">
-<link rel="stylesheet" type="text/css" href="{{ "/styles/styleprint.css" | relative_url }}" media="print">
-{% if page.layout == "page" or page.layout == "home" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
+<link rel="stylesheet" type="text/css" href="{% link /styles/styleweb.css %}" media="screen">
+<link rel="stylesheet" type="text/css" href="{% link /styles/socialinks.css %}" media="screen">
+<link rel="stylesheet" type="text/css" href="{% link /styles/styleprint.css %}" media="print">
+{% if page.layout == "page" or page.layout == "home" %}<link rel="stylesheet" type="text/css" href="{% link /styles/stylepages.css %}">{% endif %}
 <style type="text/css">
 @font-face {
 	font-family: 'Cavana';
 	font-weight: 100 900;
 	font-display: swap;
-	src:url('{{ "/fonts/cavana.ttf" | relative_url }}') format('truetype');
-	src:url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2 supports variations'),
-			url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2-variations');
+	src:url('{% link /fonts/cavana.ttf %}') format('truetype');
+	src:url('{% link /fonts/cavana.woff2 %}') format('woff2 supports variations'),
+			url('{% link /fonts/cavana.woff2 %}') format('woff2-variations');
 }
 @font-face {
 	font-family: 'Social';
 	font-weight: normal;
 	font-display: swap;
-	src:url('{{ "fonts/socialicons.woff" | relative_url }}') format('woff');
+	src:url('{% link /fonts/socialicons.woff %}') format('woff');
 }
 </style>
 </head>

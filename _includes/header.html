@@ -2,7 +2,7 @@
 <header role="banner" {%- if page.shortname -%}id="{{ page.shortname }}"{%- endif -%}>
   <!-- Imagotype -->
   <a href="{{ "/" | relative_url }}" aria-label="Regresar a Página Principal">
-    <img id="avatar" src="{{ site.avatar | relative_url }}" alt="logotipo" draggable="false"></a>
+    <img id="avatar" src="{% link {{ site.avatar }} %}" alt="logotipo" draggable="false"></a>
   <div id="logo">
     <h1 id="title">{{ site.title }}</h1>
     <h2 id="subtitle">{{ site.subtitle }}</h2>
