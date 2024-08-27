@@ -7,49 +7,32 @@
 }
 
 /* White icons */
-a[title="Facebook"] {background-image: url('https://dl.dropbox.com/s/hljacyuxqrjd5fi/facebook_white.svg')}
-a[title="Instagram"] {background-image: url('https://dl.dropbox.com/s/zuu1lf5jh3h6x8j/instagram_white.svg')}
-a[title="TikTok"] {background-image: url('https://dl.dropbox.com/s/2xyonlen7auhz7k/tiktok_white.svg')}
-a[title="Spotify"] {background-image: url('https://dl.dropbox.com/s/oyr2992wgv2e6th/spotify_white.svg')}
-a[title="YouTube"] {background-image: url('https://dl.dropbox.com/s/0f16w1c2o471k8z/ytmusic_white.svg')}
-a[title="BandCamp"] {background-image: url('https://dl.dropbox.com/s/u0sw87vnzudkdnk/bandcamp_white.svg')}
-a[title="SoundCloud"] {background-image: url('https://dl.dropbox.com/s/tj778895mrm4nw1/soundcloud_white.svg')}
+a[title="Facebook"] {background-image: url('/icons/facebook_white.svg')}
+a[title="Instagram"] {background-image: url('/icons/instagram_white.svg')}
+a[title="TikTok"] {background-image: url('/icons/tiktok_white.svg')}
+a[title="Spotify"] {background-image: url('/icons/spotify_white.svg')}
+a[title="YouTube"] {background-image: url('/icons/ytmusic_white.svg')}
+a[title="BandCamp"] {background-image: url('/icons/bandcamp_white.svg')}
+a[title="SoundCloud"] {background-image: url('/icons/soundcloud_white.svg')}
 a[title="Threads"] {background-image: url('/icons/threads_white.svg')}
 a[title="Donaciones"] {background-image: url('/icons/kofi_white.svg')}
 
 /* Color icons */
-a[title="Facebook"]:focus,
-a[title="Facebook"]:hover
-{background-image: url('https://dl.dropbox.com/s/3ca30s1h2bfg04x/facebook_color.svg')}
-
-a[title="Instagram"]:focus,
-a[title="Instagram"]:hover
-{background-image: url('https://dl.dropbox.com/s/fkunj8iyunwm67g/instagram_color.svg')}
-
-a[title="TikTok"]:focus,
-a[title="TikTok"]:hover
-{background-image: url('https://dl.dropbox.com/s/oqj4i4nb010dafx/tiktok_color.svg')}
-
-a[title="Spotify"]:focus,
-a[title="Spotify"]:hover
-{background-image: url('https://dl.dropbox.com/s/v5cfh9sjxrk53y5/spotify_color.svg')}
-
-a[title="YouTube"]:focus,
-a[title="YouTube"]:hover
-{background-image: url('https://dl.dropbox.com/s/hpgk01u03wsb5nv/ytmusic_color.svg')}
-
-a[title="BandCamp"]:focus,
-a[title="BandCamp"]:hover
-{background-image: url('https://dl.dropbox.com/s/ch87tdjn4zs1env/bandcamp_color.svg')}
-
-a[title="SoundCloud"]:focus,
-a[title="SoundCloud"]:hover
-{background-image: url('https://dl.dropbox.com/s/nhfeu5h7l96oy1i/soundcloud_color.svg')}
-
-a[title="Threads"]:focus,
-a[title="Threads"]:hover
-{background-image: url('https://www.dropbox.com/scl/fi/8qbwobqz516r0iqq0aqer/threads_color.svg?rlkey=c4lasbgtjl0v8wcuyotr9elp1&raw=1')}
-
-a[title="Donaciones"]:focus,
-a[title="Donaciones"]:hover
-{background-image: url('https://www.dropbox.com/scl/fi/0b7p6w2ojm4oqviaksqi1/kofi_color.svg?rlkey=a6242lbh6to1g0pjju9pjexfj&raw=1')}
+a[title="Facebook"]:focus, a[title="Facebook"]:hover
+{background-image: url('icons/facebook_color.svg')}
+a[title="Instagram"]:focus, a[title="Instagram"]:hover
+{background-image: url('icons/instagram_color.svg')}
+a[title="TikTok"]:focus, a[title="TikTok"]:hover
+{background-image: url('icons/tiktok_color.svg')}
+a[title="Spotify"]:focus, a[title="Spotify"]:hover
+{background-image: url('icons/spotify_color.svg')}
+a[title="YouTube"]:focus, a[title="YouTube"]:hover
+{background-image: url('icons/ytmusic_color.svg')}
+a[title="BandCamp"]:focus, a[title="BandCamp"]:hover
+{background-image: url('icons/bandcamp_color.svg')}
+a[title="SoundCloud"]:focus, a[title="SoundCloud"]:hover
+{background-image: url('icons/soundcloud_color.svg')}
+a[title="Threads"]:focus, a[title="Threads"]:hover
+{background-image: url('icons/threads_color.svg')}
+a[title="Donaciones"]:focus, a[title="Donaciones"]:hover
+{background-image: url('icons/kofi_color.svg')}
