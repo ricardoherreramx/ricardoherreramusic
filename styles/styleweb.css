@@ -490,7 +490,8 @@
 	
 	main {padding: 120px 40px 100px}
 	a.door {height: calc(100% - 65px)}
-	
+	@-moz-document url-prefix() {a.door {width: calc(100vh - 285px)}}
+
 	aside {
 	min-width: 320px;
 	width: calc(1234px - 100vh);
@@ -550,6 +551,7 @@
 	
 	main {padding: 100px 30px 80px}
 	a.door {height: calc(100% - 56px)}
+	@-moz-document url-prefix() {a.door {width: calc(100vh - 236px)}}
 	footer {height: 80px}
 	
 	aside {
@@ -629,6 +631,7 @@
 	@media (orientation: landscape) { /* Phone Horizontal */ 
 	
 	a.door {height: calc(100% - 50px)}
+	@-moz-document url-prefix() {a.door {width: calc(100vh - 176px)}}
 	main {padding: 76px 20px 46px}
 	footer {height: 50px}
 	
