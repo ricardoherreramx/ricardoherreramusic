@@ -260,25 +260,23 @@
 	#credit {color: lightgray}
 	
 	#gitbtn {
-	width: 72px;
-	height: 24px;
-	opacity: 0.85;
+	width: 80px;
+	height: 26px;
 	display: block;
 	transition: 0.25s;
 	margin-right: 8px;
-	border-radius: 3px;
-	border: 2px solid white;
-	background-size: 175%;
-	background-position: center;
+	border-radius: 13px;
+	border: thin solid lightgray;
+	background-size: 72px;
 	background-repeat: no-repeat;
 	background-color: transparent;
-	background-image: url('https://assets.tumblr.com/images/logo_page/1x/wordmark-white.png');
+	background-position: 2px center;
 	}
 	
 	#gitbtn:hover ,
 	#gitbtn:focus {
-	background-color: white;
-	background-image: url('https://assets.tumblr.com/images/logo_page/1x/wordmark-black.png');
+	background-color: #105823;
+	border-color: #105823;
 	}
 	
 	#loadbox {
