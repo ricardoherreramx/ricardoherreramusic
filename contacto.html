@@ -4,6 +4,32 @@ title: Contacto
 permalink: /contacto
 shortname: mail
 ---
+<style>
+#contaictner {
+	width: 100%;
+	overflow: hidden;
+}
+
+#contaictner iframe {
+  width: 100%;
+  margin-top: -60px;
+  height: calc(100% + 60px);
+}
+
+@media (min-width: 1111px) {
+	#contaictner {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	left: 0;
+	top: 0;
+	}
+}
+
+@media (max-width: 1110px), (max-height: 670px) {#contaictner {height: calc(100vh - 200px)}}
+@media (max-width: 500px), (max-height: 480px) {#contaictner {height: calc(100vh - 170px)}}
+</style>
 <div id="contaictner">
   <iframe frameborder="0" scrolling="no" src="https://ricardoherrera.editorx.io/albums"></iframe>
 </div>
