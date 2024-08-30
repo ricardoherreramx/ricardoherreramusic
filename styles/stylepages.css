@@ -128,21 +128,6 @@
 
 @media (orientation: landscape) { /* HORIZONTAL */ 
 	
-	/* Biographies */
-	
-	main .bio {
-	width: calc(1000px - 100vh);
-	text-align: left;
-	min-width: 300px;
-	overflow: auto;
-	height: 100%;
-	}
-	
-	figure.biophoto {
-	max-height: 400px;
-	max-width: 400px;
-	}
-	
 	/* Gallery Display */
 	a.door {aspect-ratio: 1/1}
 	a.film {aspect-ratio: 4/3}
@@ -206,12 +191,6 @@
 	
 	@media (orientation: portrait) { /* Desktop Vertical */ 
 	
-	/* Biographies */
-	main .bio {
-	margin-bottom: 20px;
-	text-align: justify;
-	}
-	
 	/* Galleries */
 	a.reel {aspect-ratio: 21/9}
 	a.reel::before {top: 120px}
@@ -228,16 +207,6 @@
 	
 	}
 	
-	@media (orientation: landscape) { /* Desktop Horizontal */ 
-	
-	/* Biographies */
-	main .bio {
-	width: calc(1155px - 100vh);
-	min-width: 330px;
-	}
-	.bio, .biophoto {margin-top: 3vh}
-	}
-	
 }
 
 @media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
@@ -248,12 +217,6 @@
 	#contaictner {height: calc(100vh - 200px)}
 	
 	@media (orientation: portrait) { /* Tablet Vertical */ 
-	
-	/* Biographies */
-	main .bio {
-	margin-bottom: 15px;
-	text-align: justify;
-	}
 	
 	/* Gallery Display */
 	a.reel {aspect-ratio: 16/9}
@@ -283,12 +246,6 @@
 	
 	/* Contact Form */
 	#contaictner {height: calc(100vh - 170px)}
-	
-	/* Biographies */	
-	main .bio {
-	margin-bottom: 20px;
-	text-align: justify;
-	}
 	
 	@media (orientation: portrait) { /* Phone Vertical */ 
 	
