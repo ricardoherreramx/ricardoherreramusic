@@ -123,7 +123,156 @@ shortname: home
   </article>
   
   <!-- Events Reel -->
-   
+  <style type="text/css">
+    li.event {display: block}
+    li.event div {display: block}
+    li.event h1,h2,h3 {margin: 0}
+    li.event > a {display:contents}
+    
+    aside#presskit p {font-size: 18px}
+    #booksbutton {display: none}
+    
+    @media screen { /* Digital transitions */ 
+    
+      ul.events a {transition: 0.3s}
+        ul.events a:hover, ul.events a:active {text-decoration: none}
+      
+        li.event > a {transition: 0.3s}
+        li.event > a:hover,
+        li.event > a:active {color: #d2aa3c}
+      
+        @media (pointer: fine) { /* Cursor Hover */ 
+            ul.events a:hover h3, 
+        ul.events a:active h3 {color: var(--color-accent)}
+        }
+        
+    }
+    
+    @media (orientation: portrait) { /* Vertical */ 
+        
+        li.event {
+        width: 100%;
+        padding: 10px 0;
+        display: inline-block;
+        border-top: thin solid var(--color-outline);
+        }
+        
+        time.date {
+        display: block;
+        float: left;
+        }
+        
+        div.place {
+        text-align: right;
+        display: block;
+        float: right;
+        }
+        
+    }
+    
+    @media (orientation: landscape) { /* Horizontal */ 
+      
+        ul.events {
+        display: flex;
+        flex-flow: row nowrap;
+        }
+        
+        li.event {
+        flex: 0 0 auto;
+        border-right: 2px solid;
+        border-image: linear-gradient(var(--color-outline), transparent) 1 100%;
+        }
+        
+        li.event:last-child {border: none}
+        
+        time.date {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        }
+        
+        time.date > * {float: left}
+        
+        div.place {
+        margin: 0 auto;
+        position: relative;
+        writing-mode: vertical-rl;
+        }
+      
+        @media (min-width: 1111px) { /* Desktop Horizontal */ 
+        
+          li.event {padding: 0 30px}
+          div.place {padding-top: 20px}
+        
+          time.date h3 {
+          font-size: 40px;
+          margin-right: 6px;
+          }
+        
+      }
+      
+      @media (max-width: 1110px), (max-height: 670px) { /* Tablet Horizontal */ 
+          li.event {padding: 0 25px}
+          div.place {padding-top: 15px}
+          time.date h3 {margin-right: 5px}
+          a.reel {min-width: 420px}
+      }
+    }
+    
+    @media (max-width: 1110px), (max-height: 670px) { /* Tablet */
+        time.date h3 {font-size: 27pt}
+    }
+    
+    @media (max-width: 500px), (max-height: 480px) { /* Smartphone */
+      
+        li.event {
+        display: flex;
+        flex-direction: column;
+        }
+        
+        time.date {align-self: center}
+        div.place {text-align: center}
+        
+        time.date h3 {
+        float: left;
+        font-size: 35px;
+        margin-top: -1px;
+        margin-right: 6px;
+        }
+        
+        time.date h4 {
+        font-size: 15px;
+        display: block;
+        float: left;
+        }
+        
+      @media (orientation: portrait) { /* Phone vertical */ 
+        
+          li.event {
+          padding: 15px 0;
+          border-top: none;
+          justify-content: center;
+          }
+        
+          time.date {align-self: center}
+          div.place {text-align: center}
+        
+      }
+    
+      @media (orientation: landscape) { /* Phone horizontal */
+        
+          div.place {writing-mode: initial}
+        
+          li.event {
+          padding: 0 20px;
+          text-align: center;
+          align-items: center;
+          justify-content: space-evenly;
+          }
+        
+      }
+    }
+    </style>
   <article><ul class="events">
   <li class="event"><a href="https://festivalquimera.com" target="_blank">
   <time class="date" datetime="2024-10-11">
