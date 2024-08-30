@@ -243,7 +243,6 @@
 @media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
 	
 	figure.vidt::after {font-size: 100px}
-	time.date h3 {font-size: 27pt}
 	
 	/* Contact Form */
 	#contaictner {height: calc(100vh - 200px)}
