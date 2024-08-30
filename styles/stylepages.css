@@ -46,11 +46,6 @@
 	transform: translate(-50%, -50%);
 	}
 	
-	/* Sitemap links list */
-	
-	div.mapsite a {color: #d2aa3c}
-	div.mapsite li {line-height: 1.2}
-	div.mapsite li {margin-left: 12pt}
 	div.tracks {border: none}
 	
 	/* Contact Form */
