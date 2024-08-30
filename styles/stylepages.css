@@ -46,16 +46,6 @@
 	transform: translate(-50%, -50%);
 	}
 	
-	/* Event Calendar */
-	
-	li.event {display: block}
-	li.event div {display: block}
-	li.event h1,h2,h3 {margin: 0}
-	li.event > a {display:contents}
-	
-	aside#presskit p {font-size: 18px}
-	#booksbutton {display: none}
-	
 	/* Sitemap links list */
 	
 	div.mapsite a {color: #d2aa3c}
@@ -80,18 +70,11 @@
 
 @media screen { /* DIGITAL TRANSITION */ 
 	
-	a.button, ul.events a {transition: 0.3s}
+	a.button {transition: 0.3s}
 	a.reel {transition: 0.8s ease}
 	a.reel img {transition: 0.8s ease}
 	a.albm img {transition: 0.5s ease}
 	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
-
-	ul.events h4.unitour {font-weight: 800; color: dodgerblue}
-	ul.events a:hover, ul.events a:active {text-decoration: none}
-
-	li.event > a {transition: 0.3s}
-	li.event > a:hover,
-	li.event > a:active {color: #d2aa3c}
 
 	a.reel, a.book, a.albm .cover {border-color: var(--color-outline)}
 	
@@ -103,11 +86,10 @@
 	
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
-		figure.vidt:hover {border-color: gray}
 		a.albm:hover img {opacity: 0}
 		a.reel:hover {border-color: gray}
 		a.reel:hover img {filter: brightness(36%)}
-		ul.events a:hover h3, ul.events a:active h3 {color: var(--color-accent)}
+		figure.vidt:hover {border-color: gray}
 		
 	}
 	
@@ -131,25 +113,6 @@
 @media (orientation: portrait) { /* VERTICAL */ 
 	
 	a.film {aspect-ratio: 16/9}
-	li.unitour {background-size: 0}
-	
-	li.event {
-	width: 100%;
-	padding: 10px 0;
-	display: inline-block;
-	border-top: thin solid var(--color-outline);
-	}
-	
-	time.date {
-	display: block;
-	float: left;
-	}
-	
-	div.place {
-	text-align: right;
-	display: block;
-	float: right;
-	}
 	
 	a.reel::before {
 	width: 100%;
@@ -184,37 +147,6 @@
 	a.door {aspect-ratio: 1/1}
 	a.film {aspect-ratio: 4/3}
 	a.book {aspect-ratio: initial}
-	
-	/* Event Calendar */
-	
-	ul.events {
-	display: flex;
-	flex-flow: row nowrap;
-	}
-	
-	li.event {
-	flex: 0 0 auto;
-	border-right: 2px solid;
-	border-image: linear-gradient(var(--color-outline), transparent) 1 100%;
-	}
-	
-	li.event:last-child {border: none}
-	li.unitour {background-position: bottom}
-	li.unitour div.place {max-height: calc(100vh - 400px)}
-	
-	time.date {
-	display: block;
-	width: fit-content;
-	margin: 0 auto;
-	}
-	
-	time.date > * {float: left}
-	
-	div.place {
-	margin: 0 auto;
-	position: relative;
-	writing-mode: vertical-rl;
-	}
 	
 	/* Press Kit Resume */ 
 	aside#presskit {
@@ -303,19 +235,7 @@
 	width: calc(1155px - 100vh);
 	min-width: 330px;
 	}
-	
 	.bio, .biophoto {margin-top: 3vh}
-	
-	/* Event Calendar */
-	li.event {padding: 0 30px}
-	div.place {padding-top: 20px}
-	li.unitour {background-size: 90px}
-	
-	time.date h3 {
-	font-size: 40px;
-	margin-right: 6px;
-	}
-	
 	}
 	
 }
@@ -353,13 +273,7 @@
 	}
 	
 	@media (orientation: landscape) { /* Tablet Horizontal */ 
-	
-	li.event {padding: 0 25px}
-	div.place {padding-top: 15px}
-	li.unitour {background-size: 80px}
-	time.date h3 {margin-right: 5px}
 	a.reel {min-width: 420px}
-	
 	}
 	
 }
@@ -367,7 +281,6 @@
 @media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
 	
 	figure.vidt::after {font-size: 75px}
-	li.unitour {background-size: 0}
 	
 	/* Contact Form */
 	#contaictner {height: calc(100vh - 170px)}
@@ -376,29 +289,6 @@
 	main .bio {
 	margin-bottom: 20px;
 	text-align: justify;
-	}
-	
-	/* Event Calendar */
-	
-	li.event {
-	display: flex;
-	flex-direction: column;
-	}
-	
-	time.date {align-self: center}
-	div.place {text-align: center}
-	
-	time.date h3 {
-	float: left;
-	font-size: 35px;
-	margin-top: -1px;
-	margin-right: 6px;
-	}
-	
-	time.date h4 {
-	font-size: 15px;
-	display: block;
-	float: left;
 	}
 	
 	@media (orientation: portrait) { /* Phone Vertical */ 
@@ -412,33 +302,10 @@
 	height: auto;
 	}
 	
-	/* Event Calendar */
-	li.event {
-	padding: 15px 0;
-	border-top: none;
-	justify-content: center;
-	}
-	
-	time.date {align-self: center}
-	div.place {text-align: center}
-	
 	}
 	
 	@media (orientation: landscape) { /* Phone Horizontal */ 
-	
-	/* Gallery Display */
 	a.reel {min-width: 380px}
-	
-	/* Event Calendar */
-	div.place {writing-mode: initial}
-	
-	li.event {
-	padding: 0 20px;
-	text-align: center;
-	align-items: center;
-	justify-content: space-evenly;
-	}
-	
 	}
 	
 }
