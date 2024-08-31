@@ -33,7 +33,6 @@ url: "https://ricardoherreramx.github.io" # the base hostname & protocol for you
 email: ricardoherrer@outlook.com
 
 # Build settings
-# theme: minima
 plugins:
   - jekyll-feed
 
