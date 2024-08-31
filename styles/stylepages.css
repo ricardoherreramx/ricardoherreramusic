@@ -119,50 +119,24 @@
 	
 	/* Gallery Display */
 	a.reel {min-width: 465px}
-	
-	/* Link 2 SheetMusic */
-	#booksbutton {
-	position: fixed;
-	display: block;
-	bottom: 33px;
-	left: 50%;
-	height: 33px;
-	font-size: 13pt;
-	font-weight: bold;
-	transform: translateX(-50%);
-	}
-	
-	#booksbutton a {
-	border: 2px solid white;
-	border-radius: 15px;
-	padding: 5px 10px;
-	color: whitesmoke;
-	text-decoration: none;
-	}
-	
-	#booksbutton a:hover {
-	color: black;
-	background: white;
-	}
-	
 	figure.vidt::after {font-size: 120px}
 	
 	@media (orientation: portrait) { /* Desktop Vertical */ 
-	
-	/* Galleries */
-	a.reel {aspect-ratio: 21/9}
-	a.reel::before {top: 120px}
-	
-	a.albm {
-	background-position: right;
-	aspect-ratio: 3/2;
-	}
-	
-	a.albm img {
-	width: 66.66%;
-	height: auto;
-	}
-	
+		
+		/* Galleries */
+		a.reel {aspect-ratio: 21/9}
+		a.reel::before {top: 120px}
+		
+		a.albm {
+		background-position: right;
+		aspect-ratio: 3/2;
+		}
+		
+		a.albm img {
+		width: 66.66%;
+		height: auto;
+		}
+		
 	}
 	
 }
