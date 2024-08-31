@@ -16,12 +16,8 @@
   </div>
   <!-- Main Menu -->
   <nav id="menu" role="navigation">
-    <a role="button" href="{{ "/" | relative_url }}" id="home">Inicio</a>
-    <a role="button" href="{{ "/bio" | relative_url }}" id="bio">Biografía</a>
-    <a role="button" href="{{ "/musica" | relative_url }}" id="music">Música</a>
-    <a role="button" href="{{ "/galeria" | relative_url }}" id="photos">Galería</a>
-    <a role="button" href="{{ "/video" | relative_url }}" id="videos">Video</a>
-    <a role="button" href="{{ "/eventos" | relative_url }}" id="dates">Eventos</a>
-    <a role="button" href="{{ "/contacto" | relative_url }}" id="mail">Contacto</a>
+    {%- for btn in site.data.nav %}
+    <a role="button" href="{{ btn.link | relative_url }}" id="{{ btn.short }}">{{ btn.title }}</a>
+    {%- endfor %}
   </nav>
 </header>
