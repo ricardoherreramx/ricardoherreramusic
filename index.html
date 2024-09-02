@@ -3,6 +3,19 @@ layout: home
 title: Pianista y Compositor
 shortname: home
 ---
+<!--Color Header-->
+<script type="text/javascript">
+var header = document.querySelector("header")
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+        header.style.backgroundColor = "transparent";
+    } else {
+        header.style.backgroundColor = "#0c0c0c";
+    }
+});
+</script>
+
 <style type="text/css">
   @media screen { /* HomePage Digital */
   
