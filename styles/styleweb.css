@@ -92,11 +92,6 @@
 		border-color: transparent;
 	}
 	
-	a.door {
-		display: block;
-		border: thin solid;
-	}
-	
 	figure {border: thin solid}
 	figure.photo {position: relative}
 	figure.video {aspect-ratio: 16/9}
@@ -117,7 +112,6 @@
 	#logo {white-space: nowrap}
 	#avatar {clip-path: circle()}
 	#menu, #hamburger {float: right}
-	article > br {display: none} /* patch article linebreaks */
 	
 	#subtitle {
 		margin-bottom: -6px;
@@ -341,11 +335,6 @@
 	height: auto;
 	}
 	
-	a.door {
-	width: 100%;
-	height: auto;
-	}
-	
 	hr {
 	width: 100%;
 	height: 1px;
@@ -469,7 +458,6 @@
 	
 	main {gap: 40px}
 	aside h2 {margin-top: 10px}
-	article > h3 {margin-top: 15px}
 	
 	footer {
 	height: 100px;
@@ -487,17 +475,15 @@
 	}
 	
 	@media (orientation: landscape) { /* Desktop Horizontal */ 
-	
-	main {padding: 120px 40px 100px}
-	a.door {height: calc(100% - 65px)}
-	@-moz-document url-prefix() {a.door {width: calc(100vh - 285px)}}
-
-	aside {
-	min-width: 320px;
-	width: calc(1234px - 100vh);
-	max-width: 650px;
-	}
-	
+		
+		main {padding: 120px 40px 100px}
+		
+		aside {
+		min-width: 320px;
+		width: calc(1234px - 100vh);
+		max-width: 650px;
+		}
+		
 	}
 	
 }
@@ -529,7 +515,6 @@
 	
 	main {gap: 30px}
 	aside h2 {margin-top: 5px}
-	article > h3 {margin-top: 10px}
 	
 	nav > a {font-size: 16px}
 	footer {padding: 0 30px}
@@ -550,8 +535,6 @@
 	@media (orientation: landscape) { /* Tablet Horizontal */ 
 	
 	main {padding: 100px 30px 80px}
-	a.door {height: calc(100% - 56px)}
-	@-moz-document url-prefix() {a.door {width: calc(100vh - 236px)}}
 	footer {height: 80px}
 	
 	aside {
@@ -598,7 +581,6 @@
 	letter-spacing: 0.05em;
 	}
 	
-	article > h3 {margin-top: 10px}
 	nav > a {font-size: 16px}
 	figcaption {display: none}
 	footer {padding: 0 20px}
@@ -610,7 +592,6 @@
 	
 	aside {text-align: left}
 	aside h2 {margin-top: 4px}
-	a.door {aspect-ratio: 3/2}
 	
 	footer {
 	float: none;
@@ -630,8 +611,6 @@
 	
 	@media (orientation: landscape) { /* Phone Horizontal */ 
 	
-	a.door {height: calc(100% - 50px)}
-	@-moz-document url-prefix() {a.door {width: calc(100vh - 176px)}}
 	main {padding: 76px 20px 46px}
 	footer {height: 50px}
 	

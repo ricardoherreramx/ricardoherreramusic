@@ -4,14 +4,14 @@
 	
 	/* Gallery Display */
 	
-	a.albm {
-	background: center/contain no-repeat;
-	border: none;
+	figure.door {
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
 	}
 	
-	a.reel img {
-	width: 100%;
-	height: 100%;
+	a.albm {
+	background: center/contain no-repeat;
 	border: none;
 	}
 	
@@ -53,24 +53,25 @@
 @media screen { /* DIGITAL TRANSITION */ 
 	
 	a.button {transition: 0.3s}
-	a.reel {transition: 0.8s ease}
-	a.reel img {transition: 0.8s ease}
-	a.albm img {transition: 0.5s ease}
+	figure.reel {transition: 0.8s ease}
 	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
-
-	a.reel, a.book, a.albm .cover {border-color: var(--color-outline)}
 	
 	a.albm:focus-visible img {opacity: 0}
-	a.reel:focus-visible {border-color: gray}	
-	a.reel:focus-visible img {filter: brightness(36%)}	
+	a:focus-visible > figure.reel {
+		border-color: white;
+		opacity: 0.4;
+	}
 	a:focus-visible figure.vidt {border-color: gray}
 	figure.vidt::after {text-shadow: 0 0 6px black}
 	
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
-		a.albm:hover img {opacity: 0}
-		a.reel:hover {border-color: gray}
-		a.reel:hover img {filter: brightness(36%)}
+		main a:hover {text-decoration: none}
+		a:hover * {color: var(--color-accent)}
+		a:hover > figure.reel {
+			border-color: white;
+			opacity: 0.4;
+		}
 		figure.vidt:hover {border-color: gray}
 		
 	}
@@ -78,15 +79,15 @@
 	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
 		
 		a.albm:focus-visible img {opacity: 0}
-		a.reel:focus-visible img {transform: scale(1.15)}
+		figure.reel:focus-visible img {transform: scale(1.15)}
 		a:focus-visible figure.vidt img {opacity: 0}
 		
 		@media (pointer: fine) { /* Cursor Hover */ 
 			
-			a.door {overflow: hidden}
-			a.reel::before {display: none}
+			figure.reel::before {display: none}
 			figure.vidt:hover img {opacity: 0}
-			a.reel:hover img {transform: scale(1.15)}
+			@media (orientation: portrait) {a:hover > figure.door {background-size: 115% auto}}
+			@media (orientation: landscape) {a:hover > figure.door {background-size: auto 115%}}
 			
 		}
 	}
@@ -94,9 +95,15 @@
 
 @media (orientation: portrait) { /* VERTICAL */ 
 	
+	figure.door {
+	width: 100%;
+	height: auto;
+	background-size: 100% auto;
+	}
+	
 	a.film {aspect-ratio: 16/9}
 	
-	a.reel::before {
+	figure.reel::before {
 	width: 100%;
 	height: 1px;
 	content: '';
@@ -109,23 +116,34 @@
 }
 
 @media (orientation: landscape) { /* HORIZONTAL */ 
-	/* Gallery Display */
-	a.door {aspect-ratio: 1/1}
+	
+	figure.door {
+		aspect-ratio: 1/1;
+		background-size: auto 100%;
+	}
+
 	a.film {aspect-ratio: 4/3}
 	a.book {aspect-ratio: initial}
+
 }
 
 @media (min-width: 1111px) { /* DESKTOP */ 
 	
 	/* Gallery Display */
-	a.reel {min-width: 465px}
+	figure.reel {min-width: 465px}
 	figure.vidt::after {font-size: 120px}
+	figure.door {margin-bottom: 15px}
 	
-	@media (orientation: portrait) { /* Desktop Vertical */ 
+	@media (orientation: landscape) { /* Horizontal Desktop */
+	figure.door {height: calc(100% - 65px)}
+	@-moz-document url-prefix() {figure.door {width: calc(100vh - 285px)}}
+	}
+	
+	@media (orientation: portrait) { /* Vertical Desktop */ 
 		
 		/* Galleries */
-		a.reel {aspect-ratio: 21/9}
-		a.reel::before {top: 120px}
+		figure.reel {aspect-ratio: 21/9}
+		figure.reel::before {top: 120px}
 		
 		a.albm {
 		background-position: right;
@@ -143,13 +161,19 @@
 
 @media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
 	
+	figure.door {margin-bottom: 10px}
 	figure.vidt::after {font-size: 100px}
 	
-	@media (orientation: portrait) { /* Tablet Vertical */ 
+	@media (orientation: landscape) { /* Horizontal Tablet */ 
+	figure.door {height: calc(100% - 56px)}
+	@-moz-document url-prefix() {figure.door {width: calc(100vh - 236px)}}
+	}
+	
+	@media (orientation: portrait) { /* Vertical Tablet */ 
 	
 	/* Gallery Display */
-	a.reel {aspect-ratio: 16/9}
-	a.reel::before {top: 100px}
+	figure.reel {aspect-ratio: 16/9}
+	figure.reel::before {top: 100px}
 	
 	a.albm {
 	background-position: right;
@@ -164,20 +188,22 @@
 	}
 	
 	@media (orientation: landscape) { /* Tablet Horizontal */ 
-	a.reel {min-width: 420px}
+	figure.reel {min-width: 420px}
 	}
 	
 }
 
 @media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
 	
+	figure.door {margin-bottom: 10px}
 	figure.vidt::after {font-size: 75px}
 	
 	@media (orientation: portrait) { /* Phone Vertical */ 
 	
 	/* Gallery Display */
+	figure.door {aspect-ratio: 3/2}
 	a.albm {background-position: right}
-	a.reel::before {top: 76px}
+	figure.reel::before {top: 76px}
 	
 	a.albm img {
 	width: 66.66%;
@@ -187,7 +213,9 @@
 	}
 	
 	@media (orientation: landscape) { /* Phone Horizontal */ 
-	a.reel {min-width: 380px}
+		figure.door {height: calc(100% - 50px)}
+		@-moz-document url-prefix() {figure.door {width: calc(100vh - 176px)}}
+		figure.reel {min-width: 380px}
 	}
 	
 }
