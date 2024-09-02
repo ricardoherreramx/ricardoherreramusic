@@ -156,40 +156,40 @@ aside#presskit p {font-size: 18px}
 </style>
 
 <ul class="events">
-  <li class="event">
-    <time class="date">
-      <h3>11</h3>
-      <h4>Oct<br/>2024</h4>
-    </time>
-    <div class="place">
-      <h3>Museo del Barro</h3>
-      <h5>34° Festival QUIMERA</h5>
-      <h4>Metepec, <abbr title="Estado de México">EdoMex</abbr></h4>
-    </div>
-  </li>
-  <li class="event">
-    <time class="date">
-      <h3>??</h3>
-      <h4>Sep<br/>2024</h4>
-    </time>
-    <div class="place">
-      <h3>Jardín de los Eméritos<br>«<i>Ius Semper Loquitur</i>»</h3>
-      <h5>Facultad de Derecho<br>UNAM Ciudad Universitaria</h5>
-      <h4>Ciudad de México (CDMX)</h4>
-    </div>
-  </li>
-  <!-- Automatic Post List -->
-  {% for post in site.posts %}
-  <li class="event"><a href="{{ post.url | relative_url }}">
-    <time class="date">
-      <h3>{{ post.date | date: "%d" }}</h3>
-      <h4>{% include months.html %}<br>{{ post.date | date: "%Y" }}</h4>
-    </time>
-    <div class="place">
-      <h3>{{ post.theatre }}</h3>
-      <h5>{{ post.centre }}</h5>
-      <h4>{{ post.city }}</h4>
-    </div>
-  </a></li>
-  {%- endfor -%}
+<li class="event">
+  <time class="date">
+    <h3>11</h3>
+    <h4>Oct<br/>2024</h4>
+  </time>
+  <div class="place">
+    <h3>Museo del Barro</h3>
+    <h5>34° Festival QUIMERA</h5>
+    <h4>Metepec, <abbr title="Estado de México">EdoMex</abbr></h4>
+  </div>
+</li>
+<li class="event">
+  <time class="date">
+    <h3>??</h3>
+    <h4>Sep<br/>2024</h4>
+  </time>
+  <div class="place">
+    <h3>Jardín de los Eméritos<br>«<i>Ius Semper Loquitur</i>»</h3>
+    <h5>Facultad de Derecho<br>UNAM Ciudad Universitaria</h5>
+    <h4>Ciudad de México (CDMX)</h4>
+  </div>
+</li>
+<!-- Automatic Post List -->
+{%- for post in site.posts %}{%- if post.centre %}
+<li class="event"><a href="{{ post.url | relative_url }}">
+  <time class="date">
+    <h3>{{ post.date | date: "%d" }}</h3>
+    <h4>{% include months.html %}<br>{{ post.date | date: "%Y" }}</h4>
+  </time>
+  <div class="place">
+    <h3>{{ post.theatre }}</h3>
+    <h5>{{ post.centre }}</h5>
+    <h4>{{ post.city }}</h4>
+  </div>
+</a></li>
+{%- endif %}{%- endfor %}
 </ul>
