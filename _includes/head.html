@@ -13,7 +13,7 @@
     "name": "Ricardo Herrera",
     "email": "ricardoherrer@outlook.com",
     "url": "https://www.ricardoherrera.net",
-    "logo": "{{ site.avatar | absolute_url }}"
+    "logo": "{% link /assets/HR.png %}"
   }
 </script>
 
@@ -31,7 +31,7 @@
 <meta property="og:title" content="Ricardo Herrera • Pianista y Compositor">
 <meta property="og:description" content="Músico Compositor Mexicano">
 <meta property="og:url" content="https://www.ricardoherrera.net/">
-<meta property="og:image" content="{% link {{ site.preview }} %}">
+<meta property="og:image" content="{% link /assets/og_preview.jpg %}">
 <meta property="og:image:alt" content="pianista en escenario">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
@@ -50,12 +50,12 @@
 <!-- Shortcut Icon -->
 <meta name="application-name" content="Ricardo Herrera">
 <meta name="apple-mobile-web-app-title" content="Ricardo Herrera">
-<link rel="icon" type="image/svg+xml" href="{% link {{ site.favicon }} %}">
+<link rel="icon" type="image/svg+xml" href="{% link /assets/favicon.svg %}">
 <link rel="shortcut icon" type="image/x-icon" href="{% link /assets/favicon.png %}">
-<link rel="apple-touch-icon" sizes="128x128" href="{% link {{ site.avatar }} %}">
+<link rel="apple-touch-icon" sizes="128x128" href="{% link /assets/HR.png %}">
 
 <!-- Prebrowsing -->
-<link rel="preload" as="image" href="{% link {{ site.avatar }} %}">
+<link rel="preload" as="image" href="{% link /assets/HR.png %}">
 <link rel="preload" as="font" href="{% link /fonts/cavana.ttf %}" crossorigin="anonymous">
 <link rel="preload" as="font" href="{% link /fonts/cavana.woff2 %}" crossorigin="anonymous">
 
