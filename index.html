@@ -7,53 +7,53 @@ shortname: home
 <script type="text/javascript">
 var header = document.querySelector("header")
 window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-        header.style.backgroundColor = "transparent";
-    } else {
-        header.style.backgroundColor = "#0c0c0c";
-    }
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    header.style.backgroundColor = "transparent";
+  } else {
+    header.style.backgroundColor = "#0c0c0c";
+  }
 });
 </script>
 
 <style type="text/css">
-  @media screen { /* HomePage Digital */
-  
-  section.explore {background-color: #0C0C0C}
-	section.explore span {color: #D2AA3B}
-	header {transition: 0.5s}
-    
-    #homediv {
-    animation-duration: 1.2s;
-    text-shadow: 0 2px 5px #0C0C0C;
-    }
-    
-    #call2action > * {
-    text-shadow: initial;
-    box-shadow: 0 2px 5px #0C0C0C;
-    }
-    
-    #call2disc {
-    color: #0C0C0C;
-    border-image: linear-gradient(to right, #825a25 , #D2AA3B) 1;
-    background-image: linear-gradient(to right, #825a25 , #D2AA3B);
-    }
-    
-    #call2disc:hover, #call2disc:focus {
-    color: #D2AA3B;
-    background-image: none;
-    background-color: rgba(0,0,0,0.1);
-    }
-    
-    #call2play {
-    background-color: rgba(0,0,0,0.1);
-    border-color: darkgray;
-    }
-    
-    .js-loading {animation-play-state: paused !important}
-    #call2play:hover {border-color: lightgray}
-    #call2play:hover * {stroke: lightgray}
-    
+@media screen { /* HomePage Digital */
+
+section.explore {background-color: #0C0C0C}
+section.explore span {color: #D2AA3B}
+header {transition: 0.5s}
+
+#homediv {
+  animation-duration: 1.2s;
+  text-shadow: 0 2px 5px #0C0C0C;
+}
+
+#call2action > * {
+  text-shadow: initial;
+  box-shadow: 0 2px 5px #0C0C0C;
+}
+
+#call2disc {
+  color: #0C0C0C;
+  border-image: linear-gradient(to right, #825a25 , #D2AA3B) 1;
+  background-image: linear-gradient(to right, #825a25 , #D2AA3B);
+}
+
+#call2disc:hover, #call2disc:focus {
+  color: #D2AA3B;
+  background-image: none;
+  background-color: rgba(0,0,0,0.1);
+}
+
+#call2play {
+  background-color: rgba(0,0,0,0.1);
+  border-color: darkgray;
+}
+
+.js-loading {animation-play-state: paused !important}
+#call2play:hover {border-color: lightgray}
+#call2play:hover * {stroke: lightgray}
+
 }
 
 @media (orientation: portrait) {#homediv {animation-name: fadeIn, slideDown}}
@@ -61,23 +61,23 @@ window.addEventListener("scroll", () => {
 @media (prefers-reduced-motion: no-preference) {#horzdiv::after {animation: sideWay 3s infinite}}
 
 @keyframes fadeIn {
-    from {opacity: 0}
-    to {opacity: 1}
+  from {opacity: 0}
+  to {opacity: 1}
 }
 
 @keyframes slideDown {
-    from {top: -5%}
-    to {top: 0%}
+  from {top: -5%}
+  to {top: 0%}
 }
 
 @keyframes slideLeft {
-    from {right: 0%}
-    to {right: 5%}
+  from {right: 0%}
+  to {right: 5%}
 }
 
 @keyframes sideWay {
-    from {right: 0%}
-    to {right: 96.5%}
+  from {right: 0%}
+  to {right: 96.5%}
 }
 </style>
 
@@ -85,242 +85,257 @@ window.addEventListener("scroll", () => {
 <main role="main" class="home" style="">
 <script type="text/javascript" src="{{ site.baseurl }}{% link /script/sideways.js %}"></script>
 
-  <section class="welcome" style="background-image:url('{{ site.baseurl }}{% link /assets/hero_ocampo.jpg %}')">
-  <div id="homediv">
-    <h1>Ricardo<br>Herrera</h1>
-    <h2>Pianista, Percusionista y<br>Compositor Mexicano</h2>
-    <div id="call2action">
-        <a id="call2disc" href="{{ "/musica" | relative_url }}">Discografía</a>
-          <a id="call2play" href="https://www.youtube.com/@ricardoherreramx" target="_blank" aria-label="Abrir canal de YouTube" title="Ver vídeo"><svg><polygon points="0,0 18,10 0,20" /></svg></a>
-    </div>
+<section class="welcome" style="background-image:url('{{ site.baseurl }}{% link /assets/hero_ocampo.jpg %}')">
+<div id="homediv">
+  <h1>Ricardo<br>Herrera</h1>
+  <h2>Pianista, Percusionista y<br>Compositor Mexicano</h2>
+  <div id="call2action">
+    <a id="call2disc" href="{{ "/musica" | relative_url }}">Discografía</a>
+    <a id="call2play" href="https://www.youtube.com/@ricardoherreramx" target="_blank" aria-label="Abrir canal de YouTube" title="Ver vídeo"><svg><polygon points="0,0 18,10 0,20" /></svg></a>
   </div>
-  <div id="horzdiv"><span>↔</span>Navega Horizontalmente
-      <div> usando</div><ul>
-      <li><span>*</span>Cursor</li>
-      <li><span>•</span>Ratón</li>
-      <li><span>±</span>Flechas</li></ul>
-  </div>
-  <script type="text/javascript">
-  var homediv = document.getElementById('homediv')
-  homediv.classList.add('js-loading');
-  window.addEventListener("load", slideIn);
-  function slideIn() {homediv.classList.remove('js-loading')}
-  </script>
-  </section>
+</div>
+<div id="horzdiv"><span>↔</span>Navega Horizontalmente<div> usando</div><ul>
+  <li><span>*</span>Cursor</li>
+  <li><span>•</span>Ratón</li>
+  <li><span>±</span>Flechas</li></ul>
+</div>
+
+<script type="text/javascript">
+var homediv = document.getElementById('homediv')
+homediv.classList.add('js-loading');
+window.addEventListener("load", slideIn);
+function slideIn() {homediv.classList.remove('js-loading')}
+</script>
+</section>
+
+<!-- HomePage Reels -->
+<section class="explore">
+<article>
+  <a class="door reel" aria-label="Biografía" href="{{ "/bio" | relative_url }}">
+    <img src="https://64.media.tumblr.com/e15d9b0d12eb7755c418bddbb64ffa40/50999b483aeb5cf0-c9/s2048x3072/76f147d42a7b193c7d6125f465d3336339a8d6af.jpg" draggable="false"/></a>
+  <h3>Bio<span>g</span>rafía</h3>
+  <h4>1994 - </h4>
+</article>
+<article>
+  <a class="door reel" aria-label="Discografía" href="{{ "/musica" | relative_url }}">
+    <img src="https://64.media.tumblr.com/c848c35b974e7c37b5303cd122718058/f54ce706ff53dd75-a9/s1280x1920/3cec2fb7a2d998cc9cba28a4ce355fcfb99a1272.jpg" draggable="false"/></a>
+  <h3>M<span>ú</span>sica</h3>
+  <h4>2017 - 2019</h4>
+</article>
+<article>
+  <a class="door reel" aria-label="Fototeca" href="{{ "/galeria" | relative_url }}">
+    <img src="https://64.media.tumblr.com/b80a9c638b9dcce4b062ad0d10526d39/a95f1b07acdce92a-ec/s1280x1920/5c9d7af6b323cdfc0d5d885adb9781a8466d19f8.jpg" draggable="false"/></a>
+  <h3>Gal<span>e</span>ría</h3>
+  <h4>2016 - 2023</h4>
+</article>
+<article>
+  <a class="door reel" aria-label="Videoteca" href="{{ "/video" | relative_url }}">
+    <img src="https://64.media.tumblr.com/10dbee2474448f5f0f2fac6c7e34e095/b026b4e4ee6d8e50-3a/s1280x1920/02bc3a20ca989f869486f3abc22c963d655e132d.png" draggable="false"/></a>
+  <h3>Vi<span>d</span>eo</h3>
+  <h4>2017 - 2022</h4>
+</article>
+
+<!-- Events Reel -->
+<style type="text/css">
+li.event {display: block}
+li.event div {display: block}
+li.event h1,h2,h3 {margin: 0}
+li.event > a {display:contents}
+
+aside#presskit p {font-size: 18px}
+#booksbutton {display: none}
+
+@media screen { /* Digital transitions */ 
   
-  <!-- HomePage Reels -->
-  <section class="explore">
-  <article>
-      <a class="door reel" aria-label="Biografía" href="{{ "/bio" | relative_url }}">
-      <img src="https://64.media.tumblr.com/e15d9b0d12eb7755c418bddbb64ffa40/50999b483aeb5cf0-c9/s2048x3072/76f147d42a7b193c7d6125f465d3336339a8d6af.jpg" draggable="false"/></a>
-      <h3>Bio<span>g</span>rafía</h3>
-      <h4>1994 - </h4>
-  </article>
-  <article>
-      <a class="door reel" aria-label="Discografía" href="{{ "/musica" | relative_url }}">
-      <img src="https://64.media.tumblr.com/c848c35b974e7c37b5303cd122718058/f54ce706ff53dd75-a9/s1280x1920/3cec2fb7a2d998cc9cba28a4ce355fcfb99a1272.jpg" draggable="false"/></a>
-      <h3>M<span>ú</span>sica</h3>
-      <h4>2017 - 2019</h4>
-  </article>
-  <article>
-      <a class="door reel" aria-label="Fototeca" href="{{ "/galeria" | relative_url }}">
-      <img src="https://64.media.tumblr.com/b80a9c638b9dcce4b062ad0d10526d39/a95f1b07acdce92a-ec/s1280x1920/5c9d7af6b323cdfc0d5d885adb9781a8466d19f8.jpg" draggable="false"/></a>
-      <h3>Gal<span>e</span>ría</h3>
-      <h4>2016 - 2023</h4>
-  </article>
-  <article>
-      <a class="door reel" aria-label="Videoteca" href="{{ "/video" | relative_url }}">
-      <img src="https://64.media.tumblr.com/10dbee2474448f5f0f2fac6c7e34e095/b026b4e4ee6d8e50-3a/s1280x1920/02bc3a20ca989f869486f3abc22c963d655e132d.png" draggable="false"/></a>
-      <h3>Vi<span>d</span>eo</h3>
-      <h4>2017 - 2022</h4>
-  </article>
+  ul.events a {transition: 0.3s}
+  ul.events a:hover, ul.events a:active {text-decoration: none}
   
-  <!-- Events Reel -->
-  <style type="text/css">
-    li.event {display: block}
-    li.event div {display: block}
-    li.event h1,h2,h3 {margin: 0}
-    li.event > a {display:contents}
+  li.event > a {transition: 0.3s}
+  li.event > a:hover,
+  li.event > a:active {color: #d2aa3c}
+  
+  @media (pointer: fine) { /* Cursor Hover */ 
+    ul.events a:hover h3, 
+    ul.events a:active h3 {color: var(--color-accent)}
+  }
+  
+}
+
+@media (orientation: portrait) { /* Vertical */ 
+  
+  li.event {
+    width: 100%;
+    padding: 10px 0;
+    display: inline-block;
+    border-top: thin solid var(--color-outline);
+  }
+  
+  time.date {
+    display: block;
+    float: left;
+  }
+  
+  div.place {
+    text-align: right;
+    display: block;
+    float: right;
+  }
+  
+}
+
+@media (orientation: landscape) { /* Horizontal */ 
+  
+  ul.events {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  li.event {
+    flex: 0 0 auto;
+    border-right: 2px solid;
+    border-image: linear-gradient(var(--color-outline), transparent) 1 100%;
+  }
+  
+  li.event:last-child {border: none}
+  
+  time.date {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  time.date > * {float: left}
+  
+  div.place {
+    margin: 0 auto;
+    position: relative;
+    writing-mode: vertical-rl;
+  }
+  
+  @media (min-width: 1111px) { /* Desktop Horizontal */ 
     
-    aside#presskit p {font-size: 18px}
-    #booksbutton {display: none}
+    li.event {padding: 0 30px}
+    div.place {padding-top: 20px}
     
-    @media screen { /* Digital transitions */ 
-    
-      ul.events a {transition: 0.3s}
-        ul.events a:hover, ul.events a:active {text-decoration: none}
-      
-        li.event > a {transition: 0.3s}
-        li.event > a:hover,
-        li.event > a:active {color: #d2aa3c}
-      
-        @media (pointer: fine) { /* Cursor Hover */ 
-            ul.events a:hover h3, 
-        ul.events a:active h3 {color: var(--color-accent)}
-        }
-        
+    time.date h3 {
+      font-size: 40px;
+      margin-right: 6px;
     }
     
-    @media (orientation: portrait) { /* Vertical */ 
-        
-        li.event {
-        width: 100%;
-        padding: 10px 0;
-        display: inline-block;
-        border-top: thin solid var(--color-outline);
-        }
-        
-        time.date {
-        display: block;
-        float: left;
-        }
-        
-        div.place {
-        text-align: right;
-        display: block;
-        float: right;
-        }
-        
+  }
+  
+  @media (max-width: 1110px), (max-height: 670px) { /* Tablet Horizontal */ 
+    li.event {padding: 0 25px}
+    div.place {padding-top: 15px}
+    time.date h3 {margin-right: 5px}
+    a.reel {min-width: 420px}
+  }
+}
+
+@media (max-width: 1110px), (max-height: 670px) { /* Tablet */
+  time.date h3 {font-size: 27pt}
+}
+
+@media (max-width: 500px), (max-height: 480px) { /* Smartphone */
+  
+  li.event {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  time.date {align-self: center}
+  div.place {text-align: center}
+  
+  time.date h3 {
+    float: left;
+    font-size: 35px;
+    margin-top: -1px;
+    margin-right: 6px;
+  }
+  
+  time.date h4 {
+    font-size: 15px;
+    display: block;
+    float: left;
+  }
+  
+  @media (orientation: portrait) { /* Phone vertical */ 
+    
+    li.event {
+      padding: 15px 0;
+      border-top: none;
+      justify-content: center;
     }
     
-    @media (orientation: landscape) { /* Horizontal */ 
-      
-        ul.events {
-        display: flex;
-        flex-flow: row nowrap;
-        }
-        
-        li.event {
-        flex: 0 0 auto;
-        border-right: 2px solid;
-        border-image: linear-gradient(var(--color-outline), transparent) 1 100%;
-        }
-        
-        li.event:last-child {border: none}
-        
-        time.date {
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-        }
-        
-        time.date > * {float: left}
-        
-        div.place {
-        margin: 0 auto;
-        position: relative;
-        writing-mode: vertical-rl;
-        }
-      
-        @media (min-width: 1111px) { /* Desktop Horizontal */ 
-        
-          li.event {padding: 0 30px}
-          div.place {padding-top: 20px}
-        
-          time.date h3 {
-          font-size: 40px;
-          margin-right: 6px;
-          }
-        
-      }
-      
-      @media (max-width: 1110px), (max-height: 670px) { /* Tablet Horizontal */ 
-          li.event {padding: 0 25px}
-          div.place {padding-top: 15px}
-          time.date h3 {margin-right: 5px}
-          a.reel {min-width: 420px}
-      }
+    time.date {align-self: center}
+    div.place {text-align: center}
+    
+  }
+
+  @media (orientation: landscape) { /* Phone horizontal */
+    
+    div.place {writing-mode: initial}
+    
+    li.event {
+      padding: 0 20px;
+      text-align: center;
+      align-items: center;
+      justify-content: space-evenly;
     }
     
-    @media (max-width: 1110px), (max-height: 670px) { /* Tablet */
-        time.date h3 {font-size: 27pt}
-    }
-    
-    @media (max-width: 500px), (max-height: 480px) { /* Smartphone */
-      
-        li.event {
-        display: flex;
-        flex-direction: column;
-        }
-        
-        time.date {align-self: center}
-        div.place {text-align: center}
-        
-        time.date h3 {
-        float: left;
-        font-size: 35px;
-        margin-top: -1px;
-        margin-right: 6px;
-        }
-        
-        time.date h4 {
-        font-size: 15px;
-        display: block;
-        float: left;
-        }
-        
-      @media (orientation: portrait) { /* Phone vertical */ 
-        
-          li.event {
-          padding: 15px 0;
-          border-top: none;
-          justify-content: center;
-          }
-        
-          time.date {align-self: center}
-          div.place {text-align: center}
-        
-      }
-    
-      @media (orientation: landscape) { /* Phone horizontal */
-        
-          div.place {writing-mode: initial}
-        
-          li.event {
-          padding: 0 20px;
-          text-align: center;
-          align-items: center;
-          justify-content: space-evenly;
-          }
-        
-      }
-    }
-    </style>
-  <article><ul class="events">
+  }
+}
+</style>
+
+<article>
+<ul class="events">
   <li class="event"><a href="https://festivalquimera.com" target="_blank">
-  <time class="date" datetime="2024-10-11">
-  <h3>11</h3><h4>Oct<br/>2024</h4></time>
-  <div class="place">
-  <h3>Museo del Barro</h3>
-  <h5>34° Festival QUIMERA</h5>
-  <h4>Metepec, EdoMex</h4>
-  </div></a></li>
+    <time class="date" datetime="2024-10-11">
+      <h3>11</h3>
+      <h4>Oct<br/>2024</h4>
+    </time>
+    <div class="place">
+      <h3>Museo del Barro</h3>
+      <h5>34° Festival QUIMERA</h5>
+      <h4>Metepec, EdoMex</h4>
+    </div></a>
+  </li>
   <li class="event"><a href="https://ricardoherrera-ocampo2024.eventbrite.com.mx" target="_blank">
-  <time class="date" datetime="2024-04-12">
-  <h3>12</h3><h4>Abr<br/>2024</h4></time>
-  <div class="place">
-  <h3>Teatro Ocampo</h3>
-  <h5>Centro Histórico</h5>
-  <h4>Morelia, Michoacán</h4>
-  </div></a></li>
+    <time class="date" datetime="2024-04-12">
+      <h3>12</h3>
+      <h4>Abr<br/>2024</h4>
+    </time>
+    <div class="place">
+      <h3>Teatro Ocampo</h3>
+      <h5>Centro Histórico</h5>
+      <h4>Morelia, Michoacán</h4>
+    </div></a>
+  </li>
   <li class="event"><a href="https://www.colmich.edu.mx">
-  <time class="date" datetime="2024-03-22">
-  <h3>22</h3><h4>Mar<br/>2024</h4></time>
-  <div class="place">
-  <h3>Auditorio ColMich</h3>
-  <h5>El Colegio de Michoacán, A.C.</h5>
-  <h4>Zamora, Michoacán</h4>
-  </div></a></li>
+    <time class="date" datetime="2024-03-22">
+      <h3>22</h3>
+      <h4>Mar<br/>2024</h4>
+    </time>
+    <div class="place">
+      <h3>Auditorio ColMich</h3>
+      <h5>El Colegio de Michoacán, A.C.</h5>
+      <h4>Zamora, Michoacán</h4>
+    </div></a>
+  </li>
   <li class="event"><a href="https://teatrosantaana.org" target="_blank">
-  <time class="date" datetime="2023-11-24">
-  <h3>24</h3><h4>Nov<br/>2023</h4></time>
-  <div class="place">
-  <h3>Teatro Santa Ana</h3>
-  <h5>Biblioteca Pública <abbr title="San Miguel de Allende">SMA</abbr></h5>
-  <h4>San Miguel de Allende,<br>Guanajuato</h4>
-  </div></a></li></ul>
-  <h3>Eve<span>n</span>tos</h3>
-  <h4>2015 - 2022</h4>
-  </article>
-  </section>
-  </main>
+    <time class="date" datetime="2023-11-24">
+      <h3>24</h3>
+      <h4>Nov<br/>2023</h4>
+    </time>
+    <div class="place">
+      <h3>Teatro Santa Ana</h3>
+      <h5>Biblioteca Pública <abbr title="San Miguel de Allende">SMA</abbr></h5>
+      <h4>San Miguel de Allende,<br>Guanajuato</h4>
+    </div></a>
+  </li>
+</ul>
+<h3>Eve<span>n</span>tos</h3>
+<h4>2015 - 2022</h4>
+</article>
+</section>
+</main>
