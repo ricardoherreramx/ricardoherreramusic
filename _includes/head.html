@@ -31,7 +31,7 @@
 <meta property="og:title" content="Ricardo Herrera • Pianista y Compositor">
 <meta property="og:description" content="Músico Compositor Mexicano">
 <meta property="og:url" content="https://www.ricardoherrera.net/">
-<meta property="og:image" content="{{" /assets/og_preview.jpg" | relative_url }}">
+<meta property="og:image" content="{{ site.baseurl }}{% link /assets/og_preview.jpg %}">
 <meta property="og:image:alt" content="pianista en escenario">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
@@ -50,19 +50,19 @@
 <!-- Shortcut Icon -->
 <meta name="application-name" content="Ricardo Herrera">
 <meta name="apple-mobile-web-app-title" content="Ricardo Herrera">
-<link rel="icon" type="image/svg+xml" href="{{ "/assets/favicon.svg" | relative_url }}">
-<link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.png" | relative_url }}">
-<link rel="apple-touch-icon" sizes="128x128" href="{{ "/assets/HR.png" | relative_url }}">
+<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}{% link /assets/favicon.svg %}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}{% link /assets/favicon.png %}">
+<link rel="apple-touch-icon" sizes="128x128" href="{{ site.baseurl }}{% link /assets/HR.png %}">
 
 <!-- Prebrowsing -->
-<link rel="preload" as="image" href="{{ "/assets/HR.png" | relative_url }}">
-<link rel="preload" as="font" href="{{ "/fonts/cavana.ttf" | relative_url }}" crossorigin="anonymous">
-<link rel="preload" as="font" href="{{ "/fonts/cavana.woff2" | relative_url }}" crossorigin="anonymous">
+<link rel="preload" as="image" href="{{ site.baseurl }}{% link /assets/HR.png %}">
+<link rel="preload" as="font" href="{{ site.baseurl }}{% link /fonts/cavana.ttf %}" crossorigin="anonymous">
+<link rel="preload" as="font" href="{{ site.baseurl }}{% link /fonts/cavana.woff2 %}" crossorigin="anonymous">
 
 <!-- Linked Stylesheets -->
-<link rel="stylesheet" type="text/css" href="{{ "/styles/styleweb.css" | relative_url }}" media="screen">
-<link rel="stylesheet" type="text/css" href="{{ "/styles/styleprint.css" | relative_url }}" media="print">
-{% if page.layout == "page" or page.layout == "home" %}<link rel="stylesheet" type="text/css" href="{{ "/styles/stylepages.css" | relative_url }}">{% endif %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/styleweb.css %}" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/styleprint.css %}" media="print">
+{% if page.layout == "page" or page.layout == "home" %}<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/stylepages.css %}">{% endif %}
 <style type="text/css">
 @font-face {
 	font-family: 'Cavana';
