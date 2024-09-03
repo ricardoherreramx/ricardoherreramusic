@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <path d="M16 0L16 0L16 16L0 16L0 0L16 0Z" id="path_1" />
-    <clipPath id="clip_1">
-      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    <path id="path_1" d="M16 0L16 0L16 16L0 16L0 0L16 0Z" />
+    <rect id="rect_2" x="0" y="0" width="16" height="16" />
+    <clipPath id="clip_path_3">
+      <use xlink:href="#rect_2" />
     </clipPath>
   </defs>
-  <g id="favicon">
-    <path d="M16 0L16 0L16 16L0 16L0 0L16 0Z" id="favicon" fill="none" stroke="none" />
-    <path d="M0 0L16 0L16 16L0 16L0 0L0 0L0 0Z" id="whiteContour" fill="#FFFFFF" fill-opacity="0.49803922" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
-    <path d="M1 1L15 1L15 15L1 15L1 1L1 1L1 1Z" id="blackContour" fill="#000000" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
-    <path d="M14 14L11 14L11 9L12 9L12 2L14 2L14 14L14 14L14 14Z" id="keyE" fill="#FFFFFF" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
-    <path d="M7 2L7 9L6 9L6 14L10 14L10 9L9 9L9 2L7 2L7 2L7 2Z" id="keyD" fill="#FFFFFF" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
-    <path d="M2 2L2 14L5 14L5 9L4 9L4 2L2 2L2 2L2 2Z" id="keyC" fill="#FFFFFF" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+  <g id="favicon" opacity="1" clip-path="url(#clip_path_3)">
+    <g>
+      <use xlink:href="#path_1" style="mix-blend-mode:normal;" />
+      <g>
+        <rect id="contour" width="16" height="16" style="fill:#FFFFFF;fill-rule:evenodd;fill-opacity:0.6;mix-blend-mode:normal;" />
+        <rect id="black" width="14" height="14" style="fill:#000000;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(1 1)" />
+        <path id="keyD" d="M1 0L3 0L3 7L4 7L4 12L0 12L0 7L1 7L1 0L1 0Z" style="fill:#FFFFFF;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(6 2)" />
+        <path id="keyE" d="M1 0L3 0L3 12L0 12L0 7L1 7L1 0L1 0Z" style="fill:#FFFFFF;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(11 2)" />
+        <path id="keyC" d="M0 0L2 0L2 7L3 7L3 12L0 12L0 0L0 0Z" style="fill:#FFFFFF;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(2 2)" />
+      </g>
+    </g>
   </g>
 </svg>
