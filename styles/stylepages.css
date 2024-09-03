@@ -201,7 +201,7 @@
 	@media (orientation: portrait) { /* Phone Vertical */ 
 	
 	/* Gallery Display */
-	figure.door {aspect-ratio: 3/2}
+	figure.door {aspect-ratio: 16/9}
 	a.albm {background-position: right}
 	figure.reel::before {top: 76px}
 	
