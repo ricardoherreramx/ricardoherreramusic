@@ -10,24 +10,6 @@
 	background-repeat: no-repeat;
 	}
 	
-	a.albm {
-	background: center/contain no-repeat;
-	border: none;
-	}
-	
-	a.albm .cover {
-	border: thin solid;
-	display: block;
-	float: left;
-	z-index: 1;
-	}
-	
-	a.albm .disc {
-	display: block;
-	float: left;
-	z-index: 0;
-	}
-	
 	/* Video Link Display */
 	
 	figure.vidt {
@@ -56,7 +38,6 @@
 	figure.reel {transition: 0.8s ease}
 	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
 	
-	a.albm:focus-visible img {opacity: 0}
 	a:focus-visible > figure.reel {
 		border-color: white;
 		opacity: 0.4;
@@ -78,16 +59,14 @@
 	
 	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
 		
-		a.albm:focus-visible img {opacity: 0}
-		figure.reel:focus-visible img {transform: scale(1.15)}
 		a:focus-visible figure.vidt img {opacity: 0}
 		
 		@media (pointer: fine) { /* Cursor Hover */ 
 			
 			figure.reel::before {display: none}
 			figure.vidt:hover img {opacity: 0}
-			@media (orientation: portrait) {a:hover > figure.door {background-size: 115% auto}}
-			@media (orientation: landscape) {a:hover > figure.door {background-size: auto 115%}}
+			@media (orientation: portrait) {a:hover > figure.reel {background-size: 115% auto}}
+			@media (orientation: landscape) {a:hover > figure.reel {background-size: auto 115%}}
 			
 		}
 	}
@@ -145,16 +124,6 @@
 		figure.reel {aspect-ratio: 21/9}
 		figure.reel::before {top: 120px}
 		
-		a.albm {
-		background-position: right;
-		aspect-ratio: 3/2;
-		}
-		
-		a.albm img {
-		width: 66.66%;
-		height: auto;
-		}
-		
 	}
 	
 }
@@ -170,25 +139,15 @@
 	}
 	
 	@media (orientation: portrait) { /* Vertical Tablet */ 
-	
-	/* Gallery Display */
-	figure.reel {aspect-ratio: 16/9}
-	figure.reel::before {top: 100px}
-	
-	a.albm {
-	background-position: right;
-	aspect-ratio: 3/2;
-	}
-	
-	a.albm img {
-	width: 66.66%;
-	height: auto;
-	}
-	
+    
+	  /* Gallery Display */
+	  figure.reel {aspect-ratio: 16/9}
+	  figure.reel::before {top: 100px}
+    
 	}
 	
 	@media (orientation: landscape) { /* Tablet Horizontal */ 
-	figure.reel {min-width: 420px}
+	  figure.reel {min-width: 420px}
 	}
 	
 }
@@ -202,14 +161,7 @@
 	
 	/* Gallery Display */
 	figure.door {aspect-ratio: 16/9}
-	a.albm {background-position: right}
 	figure.reel::before {top: 76px}
-	
-	a.albm img {
-	width: 66.66%;
-	height: auto;
-	}
-	
 	}
 	
 	@media (orientation: landscape) { /* Phone Horizontal */ 

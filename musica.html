@@ -5,48 +5,163 @@ permalink: /musica
 shortname: music
 ---
 <style type="text/css">
-@media (min-width: 1111px) { /* Desktop only */ 
-  
-	/* Link 2 SheetMusic */
-	#booksbutton {
-	  position: fixed;
-	  display: block;
-	  bottom: 33px;
-	  left: 50%;
-	  height: 33px;
-	  font-size: 13pt;
-	  font-weight: bold;
-	  transform: translateX(-50%);
+@charset "utf-8";
+
+@media all { /* GENERAL */ 
+	
+	/* Gallery Display */
+	
+	figure.door {
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
 	}
 	
-	#booksbutton a {
-	  border: 2px solid white;
-	  border-radius: 15px;
-	  padding: 5px 10px;
-	  color: whitesmoke;
-	  text-decoration: none;
+	figure.albm {
+	background: center/contain no-repeat;
+	border: none;
 	}
 	
-	#booksbutton a:hover {
-	  color: black;
-	  background: white;
+	figure.albm > img {
+	border: thin solid var(--color-outline);
+	display: block;
+	float: left;
 	}
-  
+	
+}
+
+@media screen { /* Digital Transition */ 
+	figure.albm, figure.albm > img {transition: 0.5s ease}
+	@media (prefers-reduced-motion: no-preference) { /* Motions */ 
+	a:focus-visible figure.albm > img {opacity: 0}
+	  @media (pointer: fine) { /* Cursor Hover */ 
+		  figure.albm:hover > img {opacity: 0}
+	  }
+  }
+}
+
+@media (orientation: portrait) { /* VERTICAL */ 
+	
+	figure.door {
+	background-size: auto 100%;
+  background-position: right;
+	}
+	
+	a.film {aspect-ratio: 3/2}
+	
+	figure.reel::before {
+	width: 100%;
+	height: 1px;
+	content: '';
+	display: block;
+	position: sticky;
+	margin-bottom: -1px;
+	background: var(--color-outline);
+	}
+	
+}
+
+@media (orientation: landscape) { /* HORIZONTAL */ 
+	
+	figure.door {
+		aspect-ratio: 1/1;
+		background-size: auto 100%;
+	}
+
+	a.film {aspect-ratio: 4/3}
+	a.book {aspect-ratio: initial}
+
+}
+
+@media (min-width: 1111px) { /* DESKTOP */ 
+	
+	/* Gallery Display */
+	figure.reel {min-width: 465px}
+	figure.vidt::after {font-size: 120px}
+	figure.door {margin-bottom: 15px}
+	
+	@media (orientation: landscape) { /* Horizontal Desktop */
+	figure.door {height: calc(100% - 65px)}
+	@-moz-document url-prefix() {figure.door {width: calc(100vh - 285px)}}
+	}
+	
+	@media (orientation: portrait) { /* Vertical Desktop */ 
+		
+		figure {
+		background-position: right;
+		aspect-ratio: 3/2;
+		}
+		
+		figure > img {
+		width: 66.66%;
+		height: auto;
+		}
+		
+	}
+	
+}
+
+@media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
+	
+	figure.door {margin-bottom: 10px}
+	figure.vidt::after {font-size: 100px}
+	
+	@media (orientation: landscape) { /* Horizontal Tablet */ 
+	figure.door {height: calc(100% - 56px)}
+	@-moz-document url-prefix() {figure.door {width: calc(100vh - 236px)}}
+	}
+	
+	@media (orientation: portrait) { /* Vertical Tablet */ 
+	
+	figure.albm > img {
+	width: 66.66%;
+	height: auto;
+	}
+	
+	}
+	
+}
+
+@media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
+	
+	figure.door {margin-bottom: 10px}
+	
+	@media (orientation: portrait) { /* Vertical Phone */ 
+	
+	figure.albm > img {
+	width: 66.66%;
+	height: auto;
+	}
+	
+	}
+	
+	@media (orientation: landscape) { /* Horizontal Phone */ 
+		figure.door {height: calc(100% - 50px)}
+		@-moz-document url-prefix() {figure.door {width: calc(100vh - 176px)}}
+	}
+	
 }
 </style>
 <a href="https://ricardoherreramusica.tumblr.com/albatroz">
-<figure class="door albm" style="background-image: url('https://64.media.tumblr.com/5da8e42f71b701073f03ad6a6e692d44/5f5fea351a54f44c-35/s1280x1920/09c38ca0e2d9760ad7461f460a2c758e5b2263ec.png'), url('https://64.media.tumblr.com/3b499a9db767ecec673eb8522731a714/5f5fea351a54f44c-c7/s1280x1920/a4246028cec0de3d17eabcb60845347e5effb044.jpg')"></figure>
-<h3>Albatroz</h3><h4>2019</h4>
+  <figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /assets/albums/albatroz_disco.png %}')">
+    <img src="{{ site.baseurl }}{% link /assets/albums/albatroz_frontal.jpg %}" alt="Una Carta (2017)">
+  </figure>
+  <h3>Albatroz</h3>
+  <h4>2019</h4>
 </a>
 
 <a href="https://ricardoherreramusica.tumblr.com/domino">
-<figure class="door albm" style="background-image: url('https://64.media.tumblr.com/b3bab1cc7caeca8ee2e7a40332b865ed/fe48ad2e6ed652bc-20/s1280x1920/8c15e7f8442260bcdb67bdc684b6767559b0c926.png'), url('https://64.media.tumblr.com/676e612f6febecc8a6030d83555f0632/fe48ad2e6ed652bc-e4/s1280x1920/503563737e59f6feeee27e17fc0a0b7f7b914afb.jpg')"></figure>
-<h3>Dominó</h3><h4>2018</h4>
+  <figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /assets/albums/domino_disco.png %}')">
+    <img src="{{ site.baseurl }}{% link /assets/albums/domino_frontal.jpg %}" alt="Dominó (2018)">
+  </figure>
+  <h3>Dominó</h3>
+  <h4>2018</h4>
 </a>
 
 <a href="https://ricardoherreramusica.tumblr.com/unacarta">
-<figure class="door albm" style="background-image: url('https://64.media.tumblr.com/86cad94aae4b099cf2b0db600325a699/6d741372c53e8df6-5a/s1280x1920/14704d928f29302c76ca50282ff1df9f0ea4f175.png'), url('https://64.media.tumblr.com/04a5bbca5d4da92b04f7e46480f7270c/6d741372c53e8df6-7c/s1280x1920/d5926b6410970999f058866c4815134aafb4aacf.jpg')"></figure>
-<h3>Una Carta</h3><h4>2017</h4>
+  <figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /assets/albums/unacarta_disco.png %}')">
+    <img src="{{ site.baseurl }}{% link /assets/albums/unacarta_frontal.jpg %}" alt="Albatroz (2019)">
+  </figure>
+  <h3>Una Carta</h3>
+  <h4>2017</h4>
 </a>
-
-<p id="booksbutton"><a href="{{ "/partituras" | relative_url }}">Libros de Partituras</a></p>
