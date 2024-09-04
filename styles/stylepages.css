@@ -10,24 +10,6 @@
 	background-repeat: no-repeat;
 	}
 	
-	/* Video Link Display */
-	
-	figure.vidt {
-	background: center/contain no-repeat;
-	position: relative;
-	height: inherit;
-	width: inherit;
-	}
-	
-	figure.vidt::after {
-	position: absolute;
-	content: '\25BA';
-	top: 50%;
-	left: 50%;
-	font-family: serif;
-	transform: translate(-50%, -50%);
-	}
-	
 	div.tracks {border: none}
 	
 }
@@ -36,15 +18,10 @@
 	
 	a.button {transition: 0.3s}
 	figure.reel {transition: 0.8s ease}
-	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
-	
 	a:focus-visible > figure.reel {
 		border-color: white;
 		opacity: 0.4;
 	}
-	a:focus-visible figure.vidt {border-color: gray}
-	figure.vidt::after {text-shadow: 0 0 6px black}
-	
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
 		main a:hover {text-decoration: none}
@@ -53,18 +30,14 @@
 			border-color: white;
 			opacity: 0.4;
 		}
-		figure.vidt:hover {border-color: gray}
 		
 	}
 	
 	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
 		
-		a:focus-visible figure.vidt img {opacity: 0}
-		
 		@media (pointer: fine) { /* Cursor Hover */ 
 			
 			figure.reel::before {display: none}
-			figure.vidt:hover img {opacity: 0}
 			@media (orientation: portrait) {a:hover > figure.reel {background-size: 115% auto}}
 			@media (orientation: landscape) {a:hover > figure.reel {background-size: auto 115%}}
 			
@@ -110,7 +83,6 @@
 	
 	/* Gallery Display */
 	figure.reel {min-width: 465px}
-	figure.vidt::after {font-size: 120px}
 	figure.door {margin-bottom: 15px}
 	
 	@media (orientation: landscape) { /* Horizontal Desktop */
@@ -131,7 +103,6 @@
 @media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
 	
 	figure.door {margin-bottom: 10px}
-	figure.vidt::after {font-size: 100px}
 	
 	@media (orientation: landscape) { /* Horizontal Tablet */ 
 	figure.door {height: calc(100% - 56px)}
@@ -155,7 +126,6 @@
 @media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
 	
 	figure.door {margin-bottom: 10px}
-	figure.vidt::after {font-size: 75px}
 	
 	@media (orientation: portrait) { /* Phone Vertical */ 
 	

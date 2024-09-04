@@ -18,21 +18,12 @@ a[title="Threads"] {background-image: url('/icons/threads_white.svg')}
 a[title="Donaciones"] {background-image: url('/icons/kofi_white.svg')}
 
 /* Color icons */
-a[title="Facebook"]:focus, a[title="Facebook"]:hover
-{background-image: url('/icons/facebook_color.svg')}
-a[title="Instagram"]:focus, a[title="Instagram"]:hover
-{background-image: url('/icons/instagram_color.svg')}
-a[title="TikTok"]:focus, a[title="TikTok"]:hover
-{background-image: url('/icons/tiktok_color.svg')}
-a[title="Spotify"]:focus, a[title="Spotify"]:hover
-{background-image: url('/icons/spotify_color.svg')}
-a[title="YouTube"]:focus, a[title="YouTube"]:hover
-{background-image: url('/icons/ytmusic_color.svg')}
-a[title="BandCamp"]:focus, a[title="BandCamp"]:hover
-{background-image: url('/icons/bandcamp_color.svg')}
-a[title="SoundCloud"]:focus, a[title="SoundCloud"]:hover
-{background-image: url('/icons/soundcloud_color.svg')}
-a[title="Threads"]:focus, a[title="Threads"]:hover
-{background-image: url('/icons/threads_color.svg')}
-a[title="Donaciones"]:focus, a[title="Donaciones"]:hover
-{background-image: url('/icons/kofi_color.svg')}
+a[title="Facebook"]:focus, a[title="Facebook"]:hover {background-image: url('/icons/facebook_color.svg')}
+a[title="Instagram"]:focus, a[title="Instagram"]:hover {background-image: url('/icons/instagram_color.svg')}
+a[title="TikTok"]:focus, a[title="TikTok"]:hover {background-image: url('/icons/tiktok_color.svg')}
+a[title="Spotify"]:focus, a[title="Spotify"]:hover {background-image: url('/icons/spotify_color.svg')}
+a[title="YouTube"]:focus, a[title="YouTube"]:hover {background-image: url('/icons/ytmusic_color.svg')}
+a[title="BandCamp"]:focus, a[title="BandCamp"]:hover {background-image: url('/icons/bandcamp_color.svg')}
+a[title="SoundCloud"]:focus, a[title="SoundCloud"]:hover {background-image: url('/icons/soundcloud_color.svg')}
+a[title="Threads"]:focus, a[title="Threads"]:hover {background-image: url('/icons/threads_color.svg')}
+a[title="Donaciones"]:focus, a[title="Donaciones"]:hover {background-image: url('/icons/kofi_color.svg')}

@@ -1,0 +1,31 @@
+@media all { /* General */ 
+	figure.vidt {
+	background: center/contain no-repeat;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	}
+	figure.vidt::after {
+	position: absolute;
+	content: '\25BA';
+	top: 50%;
+	left: 50%;
+	font-family: serif;
+	transform: translate(-50%, -50%);
+	}
+}
+@media screen { /* Digital Transitions */ 
+	a figure.vidt, a figure.vidt img {transition: 0.5s ease}
+	figure.vidt::after {text-shadow: 0 0 6px black}
+	a:focus-visible figure.vidt {border-color: gray}
+	@media (pointer: fine) {figure.vidt:hover {border-color: gray}}
+	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
+		a:focus-visible figure.vidt img {opacity: 0}
+		@media (pointer: fine) { /* Cursor Hover */ 
+			figure.vidt:hover img {opacity: 0}
+		}
+	}
+}
+@media (min-width: 1111px) {figure.vidt::after {font-size: 120px}}
+@media (max-width: 1110px), (max-height: 670px) {figure.vidt::after {font-size: 100px}}
+@media (max-width: 500px), (max-height: 480px) {figure.vidt::after {font-size: 75px}}
