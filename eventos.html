@@ -158,13 +158,13 @@ aside#presskit p {font-size: 18px}
 
 <ul class="events">
 <li class="event">
-  <time class="date">
+  <time class="date" datetime="2024-10-11">
     <h3>11</h3>
     <h4>Oct<br/>2024</h4>
   </time>
   <div class="place">
-    <h3>Museo del Barro</h3>
-    <h5>34° Festival QUIMERA</h5>
+    <h3>Auditorio Sor Juana Inés de la Cruz</h3>
+    <h5>Museo del Barro</h5>
     <h4>Metepec, <abbr title="Estado de México">EdoMex</abbr></h4>
   </div>
 </li>
@@ -182,9 +182,9 @@ aside#presskit p {font-size: 18px}
 <!-- Automatic Post List -->
 {%- for post in site.posts %}{%- if post.centre %}
 <li class="event"><a href="{{ post.url | relative_url }}">
-  <time class="date">
+  <time class="date" datetime="{{ post.date | date: '%F' }}">
     <h3>{{ post.date | date: "%d" }}</h3>
-    <h4>{% include months.html %}<br>{{ post.date | date: "%Y" }}</h4>
+    <h4>{% include months.html %}<br>{{ post.date | date: '%Y' }}</h4>
   </time>
   <div class="place">
     <h3>{{ post.theatre }}</h3>
