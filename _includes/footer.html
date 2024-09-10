@@ -4,7 +4,7 @@
 <p id="credit">Diseñado por <a href="/trayectoria" aria-label="Reconocimientos y Constancias"><b style="font-weight:800">Ricardo Herrera</b></a><br>Con tecnologías <abbr title="HyperText Markup Language">HTML</abbr> y <abbr title="Cascading StyleSheets">CSS</abbr></p>
 
 <!-- Social Network -->
-{% include socialstyle.html %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/socialinks.css %}" media="screen">
 <div id="socialbar" aria-label="redes sociales">
   {%- for link in site.data.social %}
   <a title="{{ link.network }}" href="https://{{ link.url }}" target="_blank">{{ link.x }}</a>

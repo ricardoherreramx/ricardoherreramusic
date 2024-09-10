@@ -1,3 +1,4 @@
+@media (pointer: fine) { /* Cursor Hover */ 
 #socialbar a {
 	cursor: pointer;
 	color: rgba(0,0,0,0);
@@ -27,3 +28,4 @@ a[title="BandCamp"]:focus, a[title="BandCamp"]:hover {background-image: url('/ic
 a[title="SoundCloud"]:focus, a[title="SoundCloud"]:hover {background-image: url('/icons/soundcloud_color.svg')}
 a[title="Threads"]:focus, a[title="Threads"]:hover {background-image: url('/icons/threads_color.svg')}
 a[title="Donaciones"]:focus, a[title="Donaciones"]:hover {background-image: url('/icons/kofi_color.svg')}
+}
