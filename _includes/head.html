@@ -68,15 +68,15 @@
 	font-family: 'Cavana';
 	font-weight: 100 900;
 	font-display: swap;
-	src:url('{{ "/fonts/cavana.ttf" | relative_url }}') format('truetype');
-	src:url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2 supports variations'),
-			url('{{ "/fonts/cavana.woff2" | relative_url }}') format('woff2-variations');
+	src:url('{{ site.baseurl }}{% link /fonts/cavana.ttf %}') format('truetype');
+	src:url('{{ site.baseurl }}{% link /fonts/cavana.woff2 %}') format('woff2 supports variations'),
+			url('{{ site.baseurl }}{% link /fonts/cavana.woff2 %}') format('woff2-variations');
 }
 @font-face {
 	font-family: 'Social';
 	font-weight: normal;
 	font-display: swap;
-	src:url('{{ "/fonts/socialicons.woff" | relative_url }}') format('woff');
+	src:url('{{ site.baseurl }}{% link /fonts/socialicons.woff %}') format('woff');
 }
 </style>
 </head>
