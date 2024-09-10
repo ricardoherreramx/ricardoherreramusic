@@ -18,13 +18,13 @@
 	
 	a.button {transition: 0.3s}
 	figure.reel {transition: 0.8s ease}
-	a:focus-visible > figure.reel {
+	a:focus > figure.reel {
 		border-color: white;
 		opacity: 0.4;
 	}
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
-		main a:hover {text-decoration: none}
+		main > a:hover {text-decoration: none}
 		a:hover * {color: var(--color-accent)}
 		a:hover > figure.reel {
 			border-color: white;
@@ -35,6 +35,9 @@
 	
 	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
 		
+    @media (orientation: portrait) {a:focus > figure.reel {background-size: 115% auto}}
+    @media (orientation: landscape) {a:focus > figure.reel {background-size: auto 115%}}
+
 		@media (pointer: fine) { /* Cursor Hover */ 
 			
 			figure.reel::before {display: none}
