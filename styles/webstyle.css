@@ -194,7 +194,7 @@
 		width: 100%;
 	}
 	
-	main a:hover, main a:active {
+	main p > a:hover, main p > a:active {
 		text-decoration: underline;
 		color: inherit;
 	}
