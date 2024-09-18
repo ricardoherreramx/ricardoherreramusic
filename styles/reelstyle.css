@@ -18,18 +18,27 @@
 	
 	a.button {transition: 0.3s}
 	figure.reel {transition: 0.8s ease}
-	a:focus > figure.reel {
-		border-color: white;
-		opacity: 0.4;
-	}
+  figure.reel::after {
+	  content: '';
+	  position: absolute;
+    display: block;
+    opacity: 0;
+	  top: 0;
+	  left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+	a:focus > figure.reel {border-color: grey}
+  a:focus > figure.reel::after {opacity: 1}
+  
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
 		main > a:hover {text-decoration: none}
 		main a:hover * {color: var(--color-accent)}
-		a:hover > figure.reel {
-			border-color: white;
-			opacity: 0.4;
-		}
+		a:hover > figure.reel {border-color: grey}
+    a:hover > figure.reel::after {opacity: 1}
 		
 	}
 	
@@ -37,7 +46,7 @@
 		
     @media (orientation: portrait) {a:focus > figure.reel {background-size: 115% auto}}
     @media (orientation: landscape) {a:focus > figure.reel {background-size: auto 115%}}
-
+    
 		@media (pointer: fine) { /* Cursor Hover */ 
 			
 			figure.reel::before {display: none}
