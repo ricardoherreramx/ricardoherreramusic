@@ -267,11 +267,7 @@
 	background-position: 2px center;
 	}
 	
-	#gitbtn:hover ,
-	#gitbtn:focus {
-	background-color: #105823;
-	border-color: #105823;
-	}
+	#gitbtn:hover, #gitbtn:focus {background-color: #105823}
 	
 	#loadbox {
 	z-index: 2;
