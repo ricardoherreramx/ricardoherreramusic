@@ -19,10 +19,11 @@
 	a.button {transition: 0.3s}
 	figure.reel {
     position: relative;
-    transition: 0.8s ease
+    transition: 0.8s ease;
   }
   figure.reel::after {
 	  content: '';
+    transition: 0.8s ease;
 	  position: absolute;
     display: block;
     opacity: 0;
@@ -39,7 +40,6 @@
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
 		main > a:hover {text-decoration: none}
-		main a:hover * {color: var(--color-accent)}
 		a:hover > figure.reel {border-color: grey}
     a:hover > figure.reel::after {opacity: 1}
 		
