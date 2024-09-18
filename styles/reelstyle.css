@@ -25,7 +25,7 @@
 	@media (pointer: fine) { /* Cursor Hover */ 
 		
 		main > a:hover {text-decoration: none}
-		a:hover * {color: var(--color-accent)}
+		main a:hover * {color: var(--color-accent)}
 		a:hover > figure.reel {
 			border-color: white;
 			opacity: 0.4;
