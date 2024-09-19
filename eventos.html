@@ -10,23 +10,10 @@ li.event div {display: block}
 li.event h1,h2,h3 {margin: 0}
 
 @media screen { /* Digital transitions */ 
-  
   li span {color: crimson}
-	li.event a:focus h3 {color: var(--color-accent)}
-	ul.events a:hover, ul.events a:active {text-decoration: none}
-  
-	@media (pointer: fine) { /* Cursor Hover */ 
-    li.event a:hover * {color: var(--color-accent)}
-    @media (orientation: portrait) { /* hover horz separators */ 
-      li.event:has(a:hover), li.event:has(a:hover) + li.event
-      {border-color: var(--color-accent)}
-    }
-    @media (orientation: landscape) { /* hover vert gradientss */ 
-      li.event:has(a:hover), li.event:has(a:hover) + li.event
-      {border-image: linear-gradient(var(--color-accent), transparent) 1 100%}
-    }
-	}
-	
+	ul.events a:is(:hover, :focus, :active) {text-decoration: none}
+  li.event a:is(:hover, :focus) * {color: var(--color-accent)}
+  li.event a:focus {outline: none}
 }
 
 @media (orientation: portrait) { /* Vertical */ 
@@ -37,7 +24,10 @@ li.event h1,h2,h3 {margin: 0}
 	display: inline-block;
 	border-top: thin solid var(--color-outline);
 	}
-	
+  
+	li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
+  {border-color: var(--color-accent)}
+  
 	time.date {
 	display: block;
 	float: left;
@@ -65,7 +55,9 @@ li.event h1,h2,h3 {margin: 0}
 	}
 	
 	li.event:first-child {border: none}
-	
+	li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
+  {border-image: linear-gradient(var(--color-accent), transparent) 1 100%}
+
 	time.date {
 	display: block;
 	width: fit-content;
@@ -143,6 +135,7 @@ li.event h1,h2,h3 {margin: 0}
   @media (orientation: landscape) { /* Horizontal Phone */
     
 	  div.place {writing-mode: initial}
+    a div.place {margin-top: 10vh}
     
 	  li.event {
 	  padding: 0 20px;
@@ -152,10 +145,8 @@ li.event h1,h2,h3 {margin: 0}
 	  border-image: linear-gradient(transparent, var(--color-outline), transparent) 1 100%;
 	  }
     
-    @media (pointer: fine) { /* horz phone cursor hover */ 
-      li.event:has(a:hover), li.event:has(a:hover) + li.event
-      {border-image: linear-gradient(transparent, var(--color-accent), transparent) 1 100%}
-    }
+    li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
+    {border-image: linear-gradient(transparent, var(--color-accent), transparent) 1 100%}
     
   }
 }
