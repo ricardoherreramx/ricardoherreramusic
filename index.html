@@ -14,8 +14,8 @@ shortname: home
 @media all { /* General */ 
 	
   header#home a#home {
-  border-color: #D2AA3C;
-  background: #D2AA3C;
+  border-color: var(--color-accent);
+  background: var(--color-accent);
   color: #0C0C0C;
   pointer-events: none;
   }
@@ -100,7 +100,7 @@ shortname: home
 @media screen { /* Digital */ 
 	
   section.explore {background-color: #0C0C0C}
-  section.explore span {color: #D2AA3B}
+  section.explore span {color: var(--color-accent)}
   header {transition: 0.5s}
   
   #homediv {
@@ -115,12 +115,12 @@ shortname: home
 
   #call2disc {
   color: #0C0C0C;
-  border-image: linear-gradient(to right, #825a25 , #D2AA3B) 1;
-  background-image: linear-gradient(to right, #825a25 , #D2AA3B);
+  border-image: linear-gradient(to right, #825A25 , var(--color-accent)) 1;
+  background-image: linear-gradient(to right, #825A25 , var(--color-accent));
   }
   
   #call2disc:hover, #call2disc:focus {
-  color: #D2AA3B;
+  color: var(--color-accent);
   background-image: none;
   background-color: rgba(0,0,0,0.1);
   }
@@ -434,7 +434,7 @@ aside#presskit p {font-size: 18px}
   
   li.event > a {transition: 0.3s}
   li.event > a:hover,
-  li.event > a:active {color: #d2aa3c}
+  li.event > a:active {color: var(--color-accent)}
   
   @media (pointer: fine) { /* Cursor Hover */ 
     ul.events a:hover h3, 
