@@ -31,17 +31,20 @@
 <meta itemprop="abstract" content="Sitio Web Oficial de Ricardo Herrera, músico compositor mexicano, pianista y percusionista lírico originario de Morelia, Michoacán.">
 <meta itemprop="accessibilitySummary" content="Navegación con teclado o ratón en escritorio. Navegación táctil en dispositivos móviles. Diseño gráfico responsivo y de alto contraste. Imágenes descritas en texto alternativo y Roles ARIA asignados.">
 
-<!-- Linked Resources -->
-<link rel="author" href="https://www.ricardoherrera.net/">
-<link rel="me" href="mailto:ricardoherrer@outlook.com">
-<link rel="canonical" href="https://www.ricardoherrera.net/">
-
 <!-- Shortcut Icon -->
-<meta name="application-name" content="Ricardo Herrera">
-<meta name="apple-mobile-web-app-title" content="Ricardo Herrera">
-<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}{% link /assets/favicon.svg %}">
-<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}{% link /assets/favicon.png %}">
-<link rel="apple-touch-icon" sizes="128x128" href="{{ site.baseurl }}{% link /assets/HR.png %}">
+<meta name="msapplication-TileColor" content="#0C0C0C">
+<meta name="application-name" content="{{ site.title }}">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<link rel="manifest" type="application/manifest+json" href="{{ site.baseurl }}{% link /assets/site.webmanifest %}">
+<link rel="icon" type="image/svg+xml" sizes="16x16" href="{{ site.baseurl }}{% link /assets/favicon.svg %}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}{% link /assets/favicon.ico %}">
+<link rel="mask-icon" href="{{ site.baseurl }}{% link /assets/favicon_trans.svg %}" color="#444444">
+<link rel="apple-touch-icon" sizes="64x64" href="{{ site.baseurl }}{% link /assets/HR.png %}">
+
+<!-- Linked Resources -->
+<link rel="author" href="{{ site.url }}">
+<link rel="me" href="mailto:{{ site.email }}">
+<link rel="canonical" href="{{ site.url }}">
 
 <!-- Prebrowsing -->
 <link rel="preload" as="image" href="{{ site.baseurl }}{% link /assets/HR.png %}">

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="16px" height="16px"><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <rect width="16" height="16" id="SvgjsRect1003"></rect>
+    <clipPath id="SvgjsClipPath1002">
+      <use xlink:href="#artboard_1" clip-rule="evenodd"></use>
+    </clipPath>
+  </defs>
+  <g id="SvgjsG1001" clip-path="url(#clip_1)">
+    <use xlink:href="#artboard_1" stroke="none" fill="#FFFFFF"></use>
+    <path d="M1 1L15 1L15 15L1 15L1 1L1 1ZM2 2L2 14L5 14L5 9L4 9L4 2L2 2L2 2ZM7 2L7 9L6 9L6 14L10 14L10 9L9 9L9 2L7 2L7 2ZM14 14L11 14L11 9L12 9L12 2L14 2L14 14L14 14Z" id="SvgjsPath1000" fill="#000000" fill-rule="evenodd" stroke="none"></path>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: invert(100%); } }
+</style></svg>
