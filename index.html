@@ -16,7 +16,7 @@ shortname: home
   header#home a#home {
   border-color: var(--color-accent);
   background: var(--color-accent);
-  color: #0C0C0C;
+  color: var(--color-background);
   pointer-events: none;
   }
 	
@@ -92,29 +92,29 @@ shortname: home
 	#call2play polygon {
 	fill: transparent;
 	stroke-width: 1.5;
-	stroke: darkgray;
+	stroke: var(--color-sub);
 	}
 	
 }
 
 @media screen { /* Digital */ 
 	
-  section.explore {background-color: #0C0C0C}
+  section.explore {background-color: var(--color-background)}
   section.explore span {color: var(--color-accent)}
   header {transition: 0.5s}
   
   #homediv {
   animation-duration: 1.2s;
-  text-shadow: 0 2px 5px #0C0C0C;
+  text-shadow: 0 2px 5px var(--color-background);
   }
   
   #call2action > * {
   text-shadow: initial;
-  box-shadow: 0 2px 5px #0C0C0C;
+  box-shadow: 0 2px 5px var(--color-background);
   }
 
   #call2disc {
-  color: #0C0C0C;
+  color: var(--color-background);
   border-image: linear-gradient(to right, #825A25 , var(--color-accent)) 1;
   background-image: linear-gradient(to right, #825A25 , var(--color-accent));
   }
@@ -127,7 +127,7 @@ shortname: home
   
   #call2play {
   background-color: rgba(0,0,0,0.1);
-  border-color: darkgray;
+  border-color: var(--color-sub);
   }
   
   .js-loading {animation-play-state: paused !important}

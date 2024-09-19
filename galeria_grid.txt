@@ -32,7 +32,7 @@ main > a {
 
 @media screen {
 	main > a, main > a::after {transition: 0.6s ease}
-  main > a:focus-visible {border-color: darkgray}
+  main > a:focus-visible {border-color: var(--color-sub)}
   main > a::after {
 	  content: '';
 	  position: absolute;
