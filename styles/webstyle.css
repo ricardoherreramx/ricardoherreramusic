@@ -12,84 +12,84 @@
 @media all { /* GENERAL */ 
 	
 	html {
-		padding: 0;
-		margin: 0;
+	padding: 0;
+	margin: 0;
 	}
 	
 	body {
-		box-sizing: border-box;
-		font-family: 'Cavana';
-		min-width: 320px;
-		margin: 0;
+	box-sizing: border-box;
+	font-family: 'Cavana';
+	min-width: 320px;
+	margin: 0;
 	}
 	
 	body * {    
-		box-sizing: border-box;
-		line-height: 1;
-		padding: 0;
-		margin: 0;
+	box-sizing: border-box;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
 	}
 	
 	header {width: 100%}
 	
 	header > * ,
 	footer > * {
-		vertical-align: middle;
-		position: relative;
-		float: left;
-		top: 50%;
-		transform: translateY(-50%);
+	vertical-align: middle;
+	position: relative;
+	float: left;
+	top: 50%;
+	transform: translateY(-50%);
 	}
 	
 	nav {
-		display: flex;
-		flex: 0 0 auto;
-		text-align: center;
-		letter-spacing: 0.06em;
+	display: flex;
+	flex: 0 0 auto;
+	text-align: center;
+	letter-spacing: 0.06em;
 	}
 	
 	main {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: flex-start;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
 	}
 	
 	footer {
-		width: 100%;
-		user-select: none;
-		letter-spacing: initial;
+	width: 100%;
+	user-select: none;
+	letter-spacing: initial;
 	}
 	
 	h1, h3 {font-weight: 700}
 	h5 {font-weight: 400}
 	
 	h2, h4 {
-		font-weight: 400;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
 	}
 	
 	p {
-		line-height: 1.2em;
-		font-weight: 360;
+	line-height: 1.2em;
+	font-weight: 360;
 	}
 	
 	img {	
-		display: block;
-		object-fit: cover;
+	display: block;
+	object-fit: cover;
 	}
 	
 	a, abbr {text-decoration: none}
 	nav > a {text-transform: uppercase}
 	
 	nav > a {
-		display: block;
-		font-weight: 650;
-		padding: 8px 10px;
-		text-align: center;
-		border: thin solid;
-		border-radius: 3px;
-		border-color: transparent;
+	display: block;
+	font-weight: 650;
+	padding: 8px 10px;
+	text-align: center;
+	border: thin solid;
+	border-radius: 3px;
+	border-color: transparent;
 	}
 	
 	figure {border: thin solid}
@@ -97,52 +97,50 @@
 	figure.video {aspect-ratio: 16/9}
 	
 	figcaption {
-		padding: 3px;
-		line-height: 1;
-		font-size: 14px;
-		font-weight: 300;
-		position: absolute;
-		max-width: 100%;
-		width: 100%;
-		bottom: 0;
+	padding: 3px;
+	line-height: 1;
+	font-size: 14px;
+	font-weight: 300;
+	position: absolute;
+	max-width: 100%;
+	width: 100%;
+	bottom: 0;
 	}
-	
-	figcaption:empty {padding: 0px}
 	
 	#logo {white-space: nowrap}
 	#avatar {clip-path: circle()}
 	#menu, #hamburger {float: right}
 	
 	#subtitle {
-		margin-bottom: -6px;
-		letter-spacing: 0.1em;
+	margin-bottom: -6px;
+	letter-spacing: 0.1em;
 	}
 	
 	#loadbox {
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 	}
 	
 	#credit {
-		font-family: Cavana;
-		font-size: 13px;
-		height: auto;
-		width: auto;
-		line-height: 1;
-		margin-top: 2px;
-		text-align: left;
+	font-family: Cavana;
+	font-size: 13px;
+	height: auto;
+	width: auto;
+	line-height: 1;
+	margin-top: 2px;
+	text-align: left;
 	}
 	
 	#socialbar {
-		display: flex;
-		float: right;
-		gap: 8px;
+	display: flex;
+	float: right;
+	gap: 8px;
 	}
 	
 	#socialbar a {
-		font-family: 'Social';
-		font-size: 30px;
+	font-family: 'Social';
+	font-size: 30px;
 	}
 	
 }
@@ -150,38 +148,38 @@
 @media screen { /* DIGITAL */ 
 	
 	::-webkit-scrollbar {
-		display: none;
-		height: 0px;
-		width: 0px;
+	display: none;
+	height: 0px;
+	width: 0px;
 	}
 	
-  ::selection {
-    background: var(--color-text);
-    color: var(--color-background);
-  }
+	::selection {
+	background: var(--color-text);
+	color: var(--color-background);
+	}
   
 	html, body {
-		height: -webkit-fill-available;
-		background: var(--color-background);
-		color: var(--color-text);
+	height: -webkit-fill-available;
+	background: var(--color-background);
+	color: var(--color-text);
 	}
 	
 	body {
-		min-height: 100vh;
-		min-height: -webkit-fill-available;
-		font-feature-settings: 'cv03';
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	font-feature-settings: 'cv03';
 	}
 	
 	header {
-		z-index: 3;
-		position: fixed;
-		user-select: none;
+	z-index: 3;
+	position: fixed;
+	user-select: none;
 	}
 	
 	h1, h2, h3, h4, h5, h6, p, a, i {
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 	}
 	
 	h1, h3 {color: var(--color-title)}
@@ -190,13 +188,13 @@
 	a {color: inherit}
 	
 	main iframe {
-		height: 100%;
-		width: 100%;
+	height: 100%;
+	width: 100%;
 	}
 	
 	main p > a:hover, main p > a:active {
-		text-decoration: underline;
-		color: inherit;
+	text-decoration: underline;
+	color: inherit;
 	}
 	
 	main span {color: var(--color-accent)}
@@ -209,45 +207,45 @@
 	{color: var(--color-accent)}
 	
 	nav > a {
-		border-color: transparent;
-		color: var(--color-title);
-		transition: 0.3s;
+	border-color: transparent;
+	color: var(--color-title);
+	transition: 0.3s;
 	}
 	
 	nav > a:hover {
-		border-color: var(--color-accent);
-		color: var(--color-accent);
+	border-color: var(--color-accent);
+	color: var(--color-accent);
 	}
 	
 	nav > a:focus {
-		background: var(--color-background);
-		border-color: var(--color-accent);
-		color: var(--color-accent);
-		outline: none;
+	background: var(--color-background);
+	border-color: var(--color-accent);
+	color: var(--color-accent);
+	outline: none;
 	}
 	
 	nav > a:active {
-		border-color: var(--color-accent);
-		background: var(--color-accent);
-		color: var(--color-background);
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+	color: var(--color-background);
 	}
 	
 	/* Highlight current page in menu */
 	body.current nav > a {
-		border-color: var(--color-accent);
-		background: var(--color-accent);
-		color: var(--color-background);
-		pointer-events: none;
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+	color: var(--color-background);
+	pointer-events: none;
 	}
 	
 	mark {
-		background-color: gray;
-		color: black;
+	background-color: gray;
+	color: black;
 	}
 	
 	figcaption {
-		color: lightgray;
-		background-color: rgba(0,0,0,0.7);
+	color: lightgray;
+	background-color: rgba(0,0,0,0.7);
 	}
 	
 	figure {border-color: var(--color-outline)}
@@ -285,9 +283,9 @@
 @media (monochrome) { /* BLACK&WHITE */ 
 	
 	::-webkit-scrollbar {
-		display: none;
-		height: 0px;
-		width: 0px;
+	display: none;
+	height: 0px;
+	width: 0px;
 	}
 	
 	::selection {
@@ -393,19 +391,19 @@
 	footer * {pointer-events: all}
 	
 	@media (pointer: fine) { /* Draggable Cursor */ 
-	
-	main {
-	cursor: -webkit-grab;
-	cursor: -moz-grab;
-	cursor: grab;
-	}
-	
-	main:active {
-	cursor: -webkit-grabbing;
-	cursor: -moz-grabing;
-	cursor: grabbing;
-	}
-	
+
+		main {
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+		cursor: grab;
+		}
+
+		main:active {
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabing;
+		cursor: grabbing;
+		}
+
 	}
 	
 }
@@ -417,7 +415,7 @@
 	h3 {font-size: 34px}
 	h4 {font-size: 17px}
 	h5 {font-size: 24px}
-	p {font-size: 20px}
+	p  {font-size: 20px}
 	
 	header {
 	height: 120px;
@@ -460,28 +458,22 @@
 	padding: 0 40px;
 	}
 	
-	@media (orientation: portrait) { /* Desktop Vertical */ 
-	
-	main {padding: 120px 40px 0}
-	aside {text-align: justify}
-	figure::before {top: 120px}
-	aside h2 {margin-top: 7px}
-	footer {height: 100px}
-	
+	@media (orientation: portrait) { /* Vertical Desktop */ 
+		main {padding: 120px 40px 0}
+		aside {text-align: justify}
+		figure::before {top: 120px}
+		aside h2 {margin-top: 7px}
+		footer {height: 100px}
 	}
 	
-	@media (orientation: landscape) { /* Desktop Horizontal */ 
-		
+	@media (orientation: landscape) { /* Horizontal Desktop */ 
 		main {padding: 120px 40px 100px}
-		
 		aside {
 		min-width: 320px;
 		width: calc(1234px - 100vh);
-		max-width: 650px;
+		max-width: 675px;
 		}
-		
 	}
-	
 }
 
 @media (max-width: 1110px), (max-height: 650px) { /* TABLET */ 
@@ -496,7 +488,7 @@
 	h3 {font-size: 30px}
 	h4 {font-size: 16px}
 	h5 {font-size: 22px}
-	p {font-size: 19px}
+	p  {font-size: 19px}
 	
 	#icon,
 	#avatar {
@@ -515,32 +507,24 @@
 	nav > a {font-size: 16px}
 	footer {padding: 0 30px}
 	
-	@media (orientation: portrait) { /* Tablet Vertical */ 
-	
-	main {padding: 100px 30px 0}
-	figure::before {top: 100px}
-	
-	aside {text-align: justify}
-	aside h2 {margin-top: 6px}
-	
-	footer {height: 70px}
-	#gitbtn {display: none}
-	
+	@media (orientation: portrait) { /* Vertical Tablet */ 
+		main {padding: 100px 30px 0}
+		figure::before {top: 100px}
+		aside {text-align: justify}
+		aside h2 {margin-top: 6px}
+		footer {height: 70px}
+		#gitbtn {display: none}
 	}
 	
-	@media (orientation: landscape) { /* Tablet Horizontal */ 
-	
-	main {padding: 100px 30px 80px}
-	footer {height: 80px}
-	
-	aside {
-	min-width: 300px;
-	width: calc(1111px - 100vh);
-	max-width: 660px;
+	@media (orientation: landscape) { /* Horizontal Tablet */ 
+		main {padding: 100px 30px 80px}
+		footer {height: 80px}
+		aside {
+		min-width: 300px;
+		width: calc(1111px - 100vh);
+		max-width: 660px;
+		}
 	}
-	
-	}
-	
 }
 
 @media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
@@ -555,7 +539,7 @@
 	h3 {font-size: 26px}
 	h4 {font-size: 14px}
 	h5 {font-size: 20px}
-	p {font-size: 18px}
+	p  {font-size: 18px}
 	
 	main {gap: 20px}
 	
@@ -581,42 +565,38 @@
 	figcaption {display: none}
 	footer {padding: 0 20px}
 	
-	@media (orientation: portrait) { /* Phone Vertical */ 
-	
-	main {padding: 76px 20px 0}
-	figure::before {top: 76px}
-	
-	aside {text-align: left}
-	aside h2 {margin-top: 4px}
-	
-	footer {
-	float: none;
-	height: 70px;
+	@media (orientation: portrait) { /* Vertical Phone */ 
+		
+		main {padding: 76px 20px 0}
+		figure::before {top: 76px}
+		
+		aside {text-align: left}
+		aside h2 {margin-top: 4px}
+		
+		footer {
+		float: none;
+		height: 70px;
+		}
+		
+		#credit {display: none}
+		#gitbtn {display: none}
+		
+		#socialbar {
+		width: 100%;
+		gap: initial;
+		justify-content: space-between;
+		}
+		
 	}
 	
-	#credit {display: none}
-	#gitbtn {display: none}
-	
-	#socialbar {
-	width: 100%;
-	gap: initial;
-	justify-content: space-between;
+	@media (orientation: landscape) { /* Horizontal Phone */ 
+		main {padding: 76px 20px 46px}
+		footer {height: 50px}
+		aside {
+		width: calc(1010px - 100vh);
+		min-width: 300px;
+		}
 	}
-	
-	}
-	
-	@media (orientation: landscape) { /* Phone Horizontal */ 
-	
-	main {padding: 76px 20px 46px}
-	footer {height: 50px}
-	
-	aside {
-	width: calc(1010px - 100vh);
-	min-width: 300px;
-	}
-	
-	}
-	
 }
 
 @media (max-width: 1110px) { /* MOBILE MENU */ 

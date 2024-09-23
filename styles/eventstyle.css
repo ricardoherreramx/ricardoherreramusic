@@ -1,14 +1,14 @@
-@media all {
-  li.event {display: block}
-  li.event div {display: block}
-  li.event h1,h2,h3 {margin: 0}
+@media all { /* General */
+	li.event {display: block}
+	li.event div {display: block}
+	li.event h1,h2,h3 {margin: 0}
 }
 
 @media screen { /* Digital transitions */ 
-  li span {color: crimson}
+	li span {color: crimson}
 	ul.events a:is(:hover, :focus, :active) {text-decoration: none}
-  li.event a:is(:hover, :focus) * {color: var(--color-accent)}
-  li.event a:focus {outline: none}
+	li.event a:is(:hover, :focus) * {color: var(--color-accent)}
+	li.event a:focus {outline: none}
 }
 
 @media (orientation: portrait) { /* Vertical */ 
@@ -19,10 +19,10 @@
 	display: inline-block;
 	border-top: thin solid var(--color-outline);
 	}
-  
+	
 	li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
-  {border-color: var(--color-accent)}
-  
+	{border-color: var(--color-accent)}
+	
 	time.date {
 	display: block;
 	float: left;
@@ -37,7 +37,7 @@
 }
 
 @media (orientation: landscape) { /* Horizontal */ 
-  
+	
 	ul.events {
 	display: flex;
 	flex-flow: row nowrap;
@@ -51,8 +51,8 @@
 	
 	li.event:first-child {border: none}
 	li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
-  {border-image: linear-gradient(var(--color-accent), transparent) 1 100%}
-
+	{border-image: linear-gradient(var(--color-accent), transparent) 1 100%}
+	
 	time.date {
 	display: block;
 	width: fit-content;
@@ -66,24 +66,21 @@
 	position: relative;
 	writing-mode: vertical-rl;
 	}
-  
+
 	@media (min-width: 1111px) { /* Horizontal Desktop */ 
-    
-	  li.event {padding: 0 30px}
-	  div.place {padding-top: 20px}
-    
-	  time.date h3 {
-	  font-size: 40px;
-	  margin-right: 6px;
-	  }
-    
-  }
-  
-  @media (max-width: 1110px), (max-height: 670px) { /* Horizontal Tablet */ 
-	  li.event {padding: 0 25px}
-	  div.place {padding-top: 15px}
-	  time.date h3 {margin-right: 5px}
-  }
+		li.event {padding: 0 30px}
+		div.place {padding-top: 20px}
+		time.date h3 {
+		font-size: 40px;
+		margin-right: 6px;
+		}
+	}
+	
+	@media (max-width: 1110px), (max-height: 670px) { /* Horizontal Tablet */
+		li.event {padding: 0 25px}
+		div.place {padding-top: 15px}
+		time.date h3 {margin-right: 5px}
+	}
 }
 
 @media (max-width: 1110px), (max-height: 670px) { /* Tablet */
@@ -91,7 +88,7 @@
 }
 
 @media (max-width: 500px), (max-height: 480px) { /* Smartphone */
-  
+	
 	li.event {
 	display: flex;
 	flex-direction: column;
@@ -113,34 +110,34 @@
 	float: left;
 	}
 	
-  @media (orientation: portrait) { /* Vertical Phone */ 
-    
-	  li.event {
-	  padding: 15px 0;
-	  border-top: none;
-	  justify-content: center;
-	  }
-    
-	  time.date {align-self: center}
-	  div.place {text-align: center}
-    
-  }
+	@media (orientation: portrait) { /* Vertical Phone */
+		
+		li.event {
+		padding: 15px 0;
+		border-top: none;
+		justify-content: center;
+		}
+		
+		time.date {align-self: center}
+		div.place {text-align: center}
+		
+	}
 
-  @media (orientation: landscape) { /* Horizontal Phone */
-    
-	  div.place {writing-mode: initial}
-    a div.place {margin-top: 10vh}
-    
-	  li.event {
-	  padding: 0 20px;
-	  text-align: center;
-	  align-items: center;
-	  justify-content: center;
-	  border-image: linear-gradient(transparent, var(--color-outline), transparent) 1 100%;
-	  }
-    
-    li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
-    {border-image: linear-gradient(transparent, var(--color-accent), transparent) 1 100%}
-    
-  }
+	@media (orientation: landscape) { /* Horizontal Phone */
+		
+		div.place {writing-mode: initial}
+		a div.place {margin-top: 10vh}
+		
+		li.event {
+		padding: 0 20px;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		border-image: linear-gradient(transparent, var(--color-outline), transparent) 1 100%;
+		}
+		
+		li.event:has(a:is(:hover, :focus)), li.event:has(a:is(:hover, :focus)) + li.event
+		{border-image: linear-gradient(transparent, var(--color-accent), transparent) 1 100%}
+		
+	}
 }

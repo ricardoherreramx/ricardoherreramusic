@@ -1,66 +1,57 @@
 @charset "utf-8";
 
 @media all { /* GENERAL */ 
-	
-	/* Gallery Display */
-	
 	figure.door {
 	display: block;
 	background-position: center;
 	background-repeat: no-repeat;
 	}
-	
 	div.tracks {border: none}
-	
 }
 
-@media screen { /* DIGITAL TRANSITION */ 
+@media screen { /* Digital Transitions */
 	
 	a.button {transition: 0.3s}
 	figure.reel {
     position: relative;
     transition: 0.8s ease;
-  }
-  figure.reel::after {
-	  content: '';
-    transition: 0.8s ease;
-	  position: absolute;
-    display: block;
-    opacity: 0;
-	  top: 0;
-	  left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
+	}
+
+	figure.reel::after {
+	content: '';
+	transition: 0.8s ease;
+	position: absolute;
+	display: block;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
+	}
+
 	a:focus > figure.reel {border-color: grey}
-  a:focus > figure.reel::after {opacity: 1}
-  
+	a:focus > figure.reel::after {opacity: 1}
+
 	@media (pointer: fine) { /* Cursor Hover */ 
-		
 		main > a:hover {text-decoration: none}
 		a:hover > figure.reel {border-color: grey}
-    a:hover > figure.reel::after {opacity: 1}
-		
+		a:hover > figure.reel::after {opacity: 1}
 	}
 	
 	@media (prefers-reduced-motion: no-preference) { /* Animations */ 
-		
-    @media (orientation: portrait) {a:focus > figure.reel {background-size: 115% auto}}
-    @media (orientation: landscape) {a:focus > figure.reel {background-size: auto 115%}}
-    
-		@media (pointer: fine) { /* Cursor Hover */ 
-			
+		@media (orientation: portrait) {a:focus > figure.reel {background-size: 115% auto}}
+		@media (orientation: landscape) {a:focus > figure.reel {background-size: auto 115%}}
+		@media (pointer: fine) { /* Cursor Hover Animations */
 			figure.reel::before {display: none}
 			@media (orientation: portrait) {a:hover > figure.reel {background-size: 115% auto}}
 			@media (orientation: landscape) {a:hover > figure.reel {background-size: auto 115%}}
-			
 		}
 	}
 }
 
-@media (orientation: portrait) { /* VERTICAL */ 
+@media (orientation: portrait) { /* Vertical Mode */
 	
 	figure.door {
 	width: 100%;
@@ -82,77 +73,52 @@
 	
 }
 
-@media (orientation: landscape) { /* HORIZONTAL */ 
-	
-	figure.door {
-		aspect-ratio: 1/1;
-		background-size: auto 100%;
-	}
-
+@media (orientation: landscape) { /* Horizontal Mode */
 	a.film {aspect-ratio: 4/3}
 	a.book {aspect-ratio: initial}
-
+	figure.door {
+	aspect-ratio: 1/1;
+	background-size: auto 100%;
+	}
 }
 
-@media (min-width: 1111px) { /* DESKTOP */ 
-	
-	/* Gallery Display */
+@media (min-width: 1111px) { /* Desktop */
 	figure.reel {min-width: 465px}
 	figure.door {margin-bottom: 15px}
-	
 	@media (orientation: landscape) { /* Horizontal Desktop */
-	figure.door {height: calc(100% - 65px)}
-	@-moz-document url-prefix() {figure.door {width: calc(100vh - 285px)}}
+		figure.door {height: calc(100% - 65px)}
+		@-moz-document url-prefix() {figure.door {width: calc(100vh - 285px)}}
 	}
-	
 	@media (orientation: portrait) { /* Vertical Desktop */ 
-		
-		/* Galleries */
 		figure.reel {aspect-ratio: 21/9}
 		figure.reel::before {top: 120px}
-		
 	}
-	
 }
 
-@media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
-	
+@media (max-width: 1110px), (max-height: 670px) { /* Tablet */
 	figure.door {margin-bottom: 10px}
-	
 	@media (orientation: landscape) { /* Horizontal Tablet */ 
-	figure.door {height: calc(100% - 56px)}
-	@-moz-document url-prefix() {figure.door {width: calc(100vh - 236px)}}
+		figure.door {height: calc(100% - 56px)}
+		@-moz-document url-prefix() {figure.door {width: calc(100vh - 236px)}}
 	}
-	
 	@media (orientation: portrait) { /* Vertical Tablet */ 
-    
-	  /* Gallery Display */
-	  figure.reel {aspect-ratio: 16/9}
-	  figure.reel::before {top: 100px}
-    
+		figure.reel {aspect-ratio: 16/9}
+		figure.reel::before {top: 100px}
 	}
-	
-	@media (orientation: landscape) { /* Tablet Horizontal */ 
-	  figure.reel {min-width: 420px}
+	@media (orientation: landscape) { /* Horizontal Tablet */
+		figure.reel {min-width: 420px}
 	}
-	
 }
 
-@media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
-	
+@media (max-width: 500px), (max-height: 480px) { /* Smartphone */
 	figure.door {margin-bottom: 10px}
-	
-	@media (orientation: portrait) { /* Phone Vertical */ 
-	
-	/* Gallery Display */
-	figure.door {aspect-ratio: 16/9}
-	figure.reel::before {top: 76px}
+	@media (orientation: portrait) { /* Vertical Phone */
+		figure.door {aspect-ratio: 16/9}
+		figure.reel::before {top: 76px}
 	}
-	
-	@media (orientation: landscape) { /* Phone Horizontal */ 
+	@media (orientation: landscape) { /* Horizontal Phone */
 		figure.door {height: calc(100% - 50px)}
 		@-moz-document url-prefix() {figure.door {width: calc(100vh - 176px)}}
 		figure.reel {min-width: 380px}
 	}
-	
 }
