@@ -6,8 +6,8 @@
 <!-- Social Network -->
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/socialinks.css %}" media="screen">
 <div id="socialbar" aria-label="redes sociales">
-  {%- for link in site.data.social %}
-  <a title="{{ link.network }}" href="https://{{ link.url }}" target="_blank">{{ link.x }}</a>
-  {%- endfor %}
+	{%- for link in site.data.social %}
+	<a title="{{ link.network }}" href="https://{{ link.url }}" target="_blank">{{ link.x }}</a>
+	{%- endfor %}
 </div>
 </footer>
