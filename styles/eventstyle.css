@@ -5,10 +5,10 @@
 }
 
 @media screen { /* Digital transitions */ 
-	li span {color: crimson}
-	ul.events a:is(:hover, :focus, :active) {text-decoration: none}
+	ol.events a:is(:hover, :focus, :active) {text-decoration: none}
 	li.event a:is(:hover, :focus) * {color: var(--color-accent)}
 	li.event a:focus {outline: none}
+	li span {color: crimson}
 }
 
 @media (orientation: portrait) { /* Vertical */ 
@@ -38,7 +38,7 @@
 
 @media (orientation: landscape) { /* Horizontal */ 
 	
-	ul.events {
+	ol.events {
 	display: flex;
 	flex-flow: row nowrap;
 	}
@@ -89,7 +89,8 @@
 
 @media (max-width: 500px), (max-height: 480px) { /* Smartphone */
 	
-	li.event {
+	li.event,
+	li.event > a {
 	display: flex;
 	flex-direction: column;
 	}
