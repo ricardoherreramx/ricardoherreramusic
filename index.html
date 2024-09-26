@@ -414,8 +414,8 @@ function slideIn() {homediv.classList.remove('js-loading')}
 
 <!-- Events Reel -->
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/eventstyle.css %}">
-<ul class="events">
-<li class="event"><a href="https://festivalquimera.com" target="_blank">
+<ol class="events">
+<li class="event"><a href="https://www.facebook.com/FestivalInternacionalQuimera" target="_blank">
 	<time class="date" datetime="2024-10-11">
 		<h3>11</h3>
 		<h4>Oct<br/>2024</h4>
@@ -423,41 +423,22 @@ function slideIn() {homediv.classList.remove('js-loading')}
 	<div class="place">
 		<h3>Museo del Barro</h3>
 		<h5>34° Festival QUIMERA</h5>
-		<h4>Metepec, EdoMex</h4>
-	</div></a>
-</li>
-<li class="event"><a href="{{ site.baseurl }}{% post_url 2024-06-28-CCACJP-2 %}">
-	<time class="date" datetime="2024-06-28">
-		<h3>28</h3>
-		<h4>Jun<br>2024</h4>
+		<h4>Metepec, <abbr title="Estado de México">EdoMex</abbr></h4>
+	</div>
+</a></li>
+<!-- Automatic Latest Posts -->
+{%- for post in site.posts limit:3 %}{%- if post.centre %}
+<li class="event"><a href="{{ post.url | relative_url }}">
+	<time class="date" datetime="{{ post.date | date: '%F' }}">
+		<h3>{{ post.date | date: "%d" }}</h3>
+		<h4>{% include months.html %}<br>{{ post.date | date: '%Y' }}</h4>
 	</time>
 	<div class="place">
-		<h3>Auditorio Gertrudis Bocanegra</h3>
-		<h5>Centro Cultural Antiguo Colegio Jesuita</h5>
-		<h4>Pátzcuaro, Michoacán</h4>
-	</div></a>
-</li>
-<li class="event"><a href="{{ site.baseurl }}{% post_url 2024-04-12-Teatro-Ocampo %}">
-	<time class="date" datetime="2024-04-12">
-		<h3>12</h3>
-		<h4>Abr<br/>2024</h4>
-	</time>
-	<div class="place">
-		<h3>Teatro Melchor Ocampo</h3>
-		<h5>SECUM Secretaría de Cultura</h5>
-		<h4>Morelia, Michoacán</h4>
-	</div></a>
-</li>
-<li class="event"><a href="{{ site.baseurl }}{% post_url 2024-03-22-ColMich-45 %}">
-	<time class="date" datetime="2024-03-22">
-		<h3>22</h3>
-		<h4>Mar<br/>2024</h4>
-	</time>
-	<div class="place">
-		<h3>Auditorio ColMich</h3>
-		<h5>El Colegio de Michoacán, A.C.</h5>
-		<h4>Zamora, Michoacán</h4>
-	</div></a>
-</li>
-</ul>
+		<h3>{{ post.theatre }}</h3>
+		<h5>{{ post.centre }}</h5>
+		<h4>{{ post.city }}</h4>
+	</div>
+</a></li>
+{%- endif %}{%- endfor %}
+</ol>
 </section>
