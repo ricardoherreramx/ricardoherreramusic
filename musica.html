@@ -7,9 +7,7 @@ shortname: music
 <style type="text/css">
 @charset "utf-8";
 
-@media all { /* GENERAL */ 
-	
-	/* Gallery Display */
+@media all { /* General */ 
 	
 	figure.door {
 	display: block;
@@ -34,17 +32,17 @@ shortname: music
 	figure.albm, figure.albm > img {transition: 0.5s ease}
 	@media (prefers-reduced-motion: no-preference) { /* Motions */ 
 	a:focus-visible figure.albm > img {opacity: 0}
-	  @media (pointer: fine) { /* Cursor Hover */ 
-		  figure.albm:hover > img {opacity: 0}
-	  }
-  }
+		@media (pointer: fine) { /* Cursor Hover */ 
+			figure.albm:hover > img {opacity: 0}
+		}
+	}
 }
 
-@media (orientation: portrait) { /* VERTICAL */ 
+@media (orientation: portrait) { /* Vertical */ 
 	
 	figure.door {
 	background-size: auto 100%;
-  background-position: right;
+	background-position: right;
 	}
 	
 	a.film {aspect-ratio: 3/2}
@@ -61,107 +59,97 @@ shortname: music
 	
 }
 
-@media (orientation: landscape) { /* HORIZONTAL */ 
+@media (orientation: landscape) { /* Horizontal */ 
 	
 	figure.door {
-		aspect-ratio: 1/1;
-		background-size: auto 100%;
+	aspect-ratio: 1/1;
+	background-size: auto 100%;
 	}
-
+	
 	a.film {aspect-ratio: 4/3}
 	a.book {aspect-ratio: initial}
 
 }
 
-@media (min-width: 1111px) { /* DESKTOP */ 
+@media (min-width: 1111px) { /* Desktop */ 
 	
-	/* Gallery Display */
 	figure.reel {min-width: 465px}
 	figure.vidt::after {font-size: 120px}
 	figure.door {margin-bottom: 15px}
 	
 	@media (orientation: landscape) { /* Horizontal Desktop */
-	figure.door {height: calc(100% - 65px)}
-	@-moz-document url-prefix() {figure.door {width: calc(100vh - 285px)}}
+		figure.door {height: calc(100% - 65px)}
+		@-moz-document url-prefix() {figure.door {width: calc(100vh - 285px)}}
 	}
 	
 	@media (orientation: portrait) { /* Vertical Desktop */ 
-		
 		figure {
 		background-position: right;
 		aspect-ratio: 3/2;
 		}
-		
 		figure > img {
 		width: 66.66%;
 		height: auto;
 		}
-		
 	}
-	
 }
 
-@media (max-width: 1110px), (max-height: 670px) { /* TABLET */ 
+@media (max-width: 1110px), (max-height: 670px) { /* Tablet */ 
 	
 	figure.door {margin-bottom: 10px}
 	figure.vidt::after {font-size: 100px}
 	
 	@media (orientation: landscape) { /* Horizontal Tablet */ 
-	figure.door {height: calc(100% - 56px)}
-	@-moz-document url-prefix() {figure.door {width: calc(100vh - 236px)}}
+		figure.door {height: calc(100% - 56px)}
+		@-moz-document url-prefix() {figure.door {width: calc(100vh - 236px)}}
 	}
 	
 	@media (orientation: portrait) { /* Vertical Tablet */ 
-	
-	figure.albm > img {
-	width: 66.66%;
-	height: auto;
+		figure.albm > img {
+		width: 66.66%;
+		height: auto;
+		}
 	}
-	
-	}
-	
 }
 
-@media (max-width: 500px), (max-height: 480px) { /* SMARTPHONE */ 
+@media (max-width: 500px), (max-height: 480px) { /* SmartPhone */ 
 	
 	figure.door {margin-bottom: 10px}
 	
 	@media (orientation: portrait) { /* Vertical Phone */ 
-	
-	figure.albm > img {
-	width: 66.66%;
-	height: auto;
-	}
-	
+		figure.albm > img {
+		width: 66.66%;
+		height: auto;
+		}
 	}
 	
 	@media (orientation: landscape) { /* Horizontal Phone */ 
 		figure.door {height: calc(100% - 50px)}
 		@-moz-document url-prefix() {figure.door {width: calc(100vh - 176px)}}
 	}
-	
 }
 </style>
-<a href="{{ "/albatroz" | relative_url }}">
-  <figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /albums/coverart/albatroz_disco.png %}')">
-    <img src="{{ site.baseurl }}{% link /albums/coverart/albatroz_frontal.jpg %}" alt="Una Carta (2017)">
-  </figure>
-  <h3>Albatroz</h3>
-  <h4>2019</h4>
+
+<a draggable="false" href="{{ "/albatroz" | relative_url }}">
+	<figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /albums/coverart/albatroz_disco.png %}')">
+		<img draggable="false" src="{{ site.baseurl }}{% link /albums/coverart/albatroz_frontal.jpg %}" alt="Una Carta (2017)">
+	</figure>
+	<h3>Albatroz</h3>
+	<h4>2019</h4>
 </a>
 
-<a href="{{ "/domino" | relative_url }}">
-  <figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /albums/coverart/domino_disco.png %}')">
-    <img src="{{ site.baseurl }}{% link /albums/coverart/domino_frontal.jpg %}" alt="Dominó (2018)">
-  </figure>
-  <h3>Dominó</h3>
-  <h4>2018</h4>
+<a draggable="false" href="{{ "/domino" | relative_url }}">
+	<figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /albums/coverart/domino_disco.png %}')">
+		<img draggable="false" src="{{ site.baseurl }}{% link /albums/coverart/domino_frontal.jpg %}" alt="Dominó (2018)">
+	</figure>
+	<h3>Dominó</h3>
+	<h4>2018</h4>
 </a>
 
-<a href="{{ "/unacarta" | relative_url }}">
-  <figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /albums/coverart/unacarta_disco.png %}')">
-    <img src="{{ site.baseurl }}{% link /albums/coverart/unacarta_frontal.jpg %}" alt="Albatroz (2019)">
-  </figure>
-  <h3>Una Carta</h3>
-  <h4>2017</h4>
+<a draggable="false" href="{{ "/unacarta" | relative_url }}">
+	<figure class="door albm" style="background-image: url('{{ site.baseurl }}{% link /albums/coverart/unacarta_disco.png %}')">
+		<img draggable="false" src="{{ site.baseurl }}{% link /albums/coverart/unacarta_frontal.jpg %}" alt="Albatroz (2019)">
+	</figure>
+	<h3>Una Carta</h3>
+	<h4>2017</h4>
 </a>

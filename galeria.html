@@ -6,9 +6,9 @@ shortname: photos
 ---
 <!-- Automatic Post List -->
 {%- for post in site.posts %}{%- if post.cover %}
-<a href="{{ post.url | relative_url }}">
-  <figure class="door reel" style="background-image: url('{{ post.cover | relative_url }}')"></figure>
-  <h3>{{ post.title }}</h3>
-  <h4>{{ post.place }} • {{ post.date | date: '%Y' }}</h4>
+<a draggable="false" href="{{ post.url | relative_url }}">
+	<figure class="door reel" style="background-image: url('{{ post.cover | relative_url }}')"></figure>
+	<h3>{{ post.title }}</h3>
+	<h4>{{ post.place }} • {{ post.date | date: '%Y' }}</h4>
 </a>
 {%- endif %}{%- endfor %}
