@@ -6,7 +6,7 @@ shortname: bio
 ---
 <style type="text/css">
 @media (orientation: landscape) { /* Horizontal */ 
-  
+	
 	main .bio {
 	width: calc(1000px - 100vh);
 	text-align: left;
@@ -20,30 +20,28 @@ shortname: bio
 	}
 	
 	@media (orientation: landscape) { /* Desktop Horizontal */ 
-	  main .bio {
-	  width: calc(1188px - 100vh);
-	  min-width: 330px;
-	  }
+		main .bio {
+		width: calc(1188px - 100vh);
+		min-width: 330px;
+		}
 	}
-	
 }
 
 @media (orientation: portrait) { /* Vertical */
-  
-  @media (min-width: 1111px) { /* Vertical Desktop */
-	  main .bio {
-	  margin-bottom: 20px;
-	  text-align: justify;
-	  }
-  }
-
-  @media (max-width: 1110px), (max-height: 670px) { /* Vertical Tablet */
-	  main .bio {
-	  margin-bottom: 15px;
-	  text-align: justify;
-	  }
-  }
-
+	
+	@media (min-width: 1111px) { /* Vertical Desktop */
+		main .bio {
+		margin-bottom: 20px;
+		text-align: justify;
+		}
+	}
+	
+	@media (max-width: 1110px), (max-height: 670px) { /* Vertical Tablet */
+		main .bio {
+		margin-bottom: 15px;
+		text-align: justify;
+		}
+	}
 }
 
 @media (max-width: 500px), (max-height: 480px) { /* SmartPhone */

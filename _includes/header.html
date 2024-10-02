@@ -1,23 +1,23 @@
 <!-- Site Header -->
 <header role="banner" {% if page.shortname %}id="{{ page.shortname }}"{%- endif -%}>
-  <!-- Imagotype -->
-  <a href="{{ "/" | relative_url }}" aria-label="Regresar a Página Principal">
-    <img id="avatar" src="{{ site.baseurl }}{% link /assets/HR.png %}" alt="logotipo" draggable="false"></a>
-  <div id="logo">
-    <h1 id="title">{{ site.title }}</h1>
-    <h2 id="subtitle">{{ site.subtitle }}</h2>
-  </div>
-  <!-- Hamburger -->
-  <input type="checkbox" role="switch" id="toggler"/>
-  <div id="hamburger" aria-label="abrir y cerrar menu">
-    <hr id="hr-up">
-    <hr id="hr-md">
-    <hr id="hr-dn">
-  </div>
-  <!-- Main Menu -->
-  <nav id="menu" role="navigation">
-    {%- for nav in site.data.menu %}
-    <a role="button" href="{{ nav.link | relative_url }}" id="{{ nav.short }}">{{ nav.title }}</a>
-    {%- endfor %}
-  </nav>
+	<!-- Imagotype -->
+	<a href="{{ "/" | relative_url }}" aria-label="Regresar a Página Principal">
+		<img id="avatar" src="{{ site.baseurl }}{% link /assets/HR.png %}" alt="logotipo" draggable="false"></a>
+	<div id="logo">
+		<h1 id="title">{{ site.title }}</h1>
+		<h2 id="subtitle">{{ site.subtitle }}</h2>
+	</div>
+	<!-- Hamburger -->
+	<input type="checkbox" role="switch" id="toggler"/>
+	<div id="hamburger" aria-label="abrir y cerrar menu">
+		<hr id="hr-up">
+		<hr id="hr-md">
+		<hr id="hr-dn">
+	</div>
+	<!-- Main Menu -->
+	<nav id="menu" role="navigation">
+		{%- for nav in site.data.menu %}
+		<a role="button" href="{{ nav.link | relative_url }}" id="{{ nav.short }}">{{ nav.title }}</a>
+		{%- endfor %}
+	</nav>
 </header>
