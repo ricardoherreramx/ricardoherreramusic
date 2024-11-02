@@ -7,6 +7,17 @@ shortname: dates
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /styles/eventstyle.css %}">
 
 <ol class="events">
+li class="event">
+	<time class="date" datetime="2024-11-30">
+		<h3>30</h3>
+		<h4>Nov<br>2024</h4>
+	</time>
+	<div class="place">
+		<h3>Facultad de Medicina</h3>
+		<h5><abbr title="Universidad La Salle">ULSA</abbr> Campus Nezahualcóyotl</h5>
+		<h4>Ciudad de México</h4>
+	</div>
+</li>
 <!-- Automatic Post List -->
 {%- for post in site.posts %}{%- if post.centre %}
 <li class="event"><a href="{{ post.url | relative_url }}">
