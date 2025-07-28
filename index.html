@@ -4,13 +4,6 @@ title: Pianista y Compositor
 shortname: home
 ---
 <style type="text/css">
-@font-face {
-	font-family: 'Nexa';
-	font-weight: bold;
-	font-display: swap;
-	src:url('{{ site.baseurl }}{% link /fonts/nexabold.otf %}') format('opentype');
-}
-
 @media all { /* General */ 
 	
 	header#home a#home {
@@ -39,7 +32,6 @@ shortname: home
 	footer {z-index: 1}
 	
 	#homediv {
-	font-family: 'Nexa';
 	position: absolute;
 	display: flex;
 	top: 0px;
@@ -50,6 +42,7 @@ shortname: home
 	#homediv h1 {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
+  font-weight: 900;
 	font-size: 60pt;
 	}
 	
@@ -164,10 +157,9 @@ shortname: home
 	
 	#horzdiv::after {
 	position: absolute;
-	bottom: -24px;
+	bottom: -28px;
 	content: '•';
 	font-size: 45px;
-	font-family: 'Nexa';
 	}
 	
 }
